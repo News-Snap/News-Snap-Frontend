@@ -8,22 +8,39 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+    
+    @IBOutlet weak var contentView: UIView!
+    
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    @IBOutlet weak var usernameChangeBtn: UIButton!
+    
+    @IBOutlet weak var logoutBtn: UIButton!
+    
+    @IBOutlet weak var pushAlertBtn: UIButton!
+    
+    @IBOutlet weak var settingDayBtn: UIButton!
+    
+    @IBOutlet weak var selectecDayLabel: UILabel!
+    
+    @IBOutlet weak var settingTimeBtn: UIButton!
+    
+    @IBOutlet weak var selectedTimeLabel: UILabel!
+    
+    @IBOutlet weak var googleDriveBtn: UIButton!
+    
+    @IBOutlet weak var toMainBtn: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // 모서리 둥글게 설정
+        contentView.layer.cornerRadius = 15
+        contentView.layer.masksToBounds = true
+        toMainBtn.layer.cornerRadius = 10
+        toMainBtn.layer.masksToBounds = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
