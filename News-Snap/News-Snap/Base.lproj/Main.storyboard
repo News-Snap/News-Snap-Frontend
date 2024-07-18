@@ -1,24 +1,200 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SbG-N0-MAE">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="News_Snap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="102" y="4"/>
+        </scene>
+        <!--CreateScrapViewController-->
+        <scene sceneID="JEz-WX-NHM">
+            <objects>
+                <viewController storyboardIdentifier="CreateScrapViewController" title="CreateScrapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SbG-N0-MAE" customClass="CreateScrapViewController" customModule="News_Snap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kqV-FO-8JJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UKY-Gc-EsO">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <items>
+                                    <navigationItem title="NEW 기사 스크랩" id="9kk-ES-Gnd">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="nji-2O-5aM">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="v0Z-bU-t6x">
+                                                <rect key="frame" x="16.000000000000004" y="5" width="46.333333333333343" height="34.333333333333336"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system">
+                                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <connections>
+                                                <action selector="closeButton:" destination="SbG-N0-MAE" id="HxX-x4-4fy"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="qgx-22-NLV">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Txe-pz-sd1">
+                                                <rect key="frame" x="323.33333333333331" y="4.6666666666666679" width="53.666666666666686" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="저장">
+                                                    <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <connections>
+                                                <action selector="saveButton:" destination="SbG-N0-MAE" id="ol4-mF-UGz"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="#스크랩 #키워드 #입력" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pdE-j0-r0G">
+                                <rect key="frame" x="0.0" y="113" width="393" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="기사 링크를 입력하세요." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Sr-uD-Cwv">
+                                <rect key="frame" x="0.0" y="157" width="393" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="요약 내용을 입력해주세요." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hk-Ex-n2t">
+                                <rect key="frame" x="0.0" y="201" width="393" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="nP3-4W-0qU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="첨부파일 등록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGn-CN-Zny">
+                                <rect key="frame" x="15" y="616" width="87" height="19.333333333333371"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="0.30588235294117649" green="0.39215686274509803" blue="0.75686274509803919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxz-Ie-nQ5">
+                                <rect key="frame" x="358" y="615.66666666666663" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="qKK-bT-oY2"/>
+                                    <constraint firstAttribute="height" constant="20" id="vBx-Aq-Uhp"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="doc.badge.plus" catalog="system" title="">
+                                    <color key="baseForegroundColor" red="0.30588235289999999" green="0.3921568627" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveAttachmentFileButton:" destination="SbG-N0-MAE" eventType="touchUpInside" id="Fjz-N1-d1j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VB0-rN-BjK">
+                                <rect key="frame" x="358" y="715.66666666666663" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="osj-fZ-b8p"/>
+                                    <constraint firstAttribute="width" constant="20" id="wrt-g9-lHJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="doc.badge.plus" catalog="system" title="">
+                                    <color key="baseForegroundColor" red="0.30588235289999999" green="0.3921568627" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveReferenceFileButton:" destination="SbG-N0-MAE" eventType="touchUpInside" id="9OH-Sb-80k"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="등록된 파일이 없습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPM-Pc-xsn">
+                                <rect key="frame" x="5" y="650.66666666666663" width="383" height="50"/>
+                                <color key="backgroundColor" red="0.5490196078431373" green="0.85098039215686272" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="m6F-XJ-MVK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="참고자료 등록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8V-Hu-Lj3">
+                                <rect key="frame" x="15" y="715.66666666666663" width="87" height="19.333333333333332"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="0.30588235289999999" green="0.3921568627" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="등록된 파일이 없습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1v-2o-Pdj">
+                                <rect key="frame" x="5" y="750" width="383" height="50"/>
+                                <color key="backgroundColor" red="0.54901960780000003" green="0.85098039219999999" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="URj-vV-uzK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wk6-Pd-Zu2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pdE-j0-r0G" firstAttribute="centerX" secondItem="kqV-FO-8JJ" secondAttribute="centerX" id="04C-55-mi9"/>
+                            <constraint firstItem="Wk6-Pd-Zu2" firstAttribute="trailing" secondItem="2hk-Ex-n2t" secondAttribute="trailing" id="1uz-N8-heD"/>
+                            <constraint firstItem="zxz-Ie-nQ5" firstAttribute="centerY" secondItem="SGn-CN-Zny" secondAttribute="centerY" id="4C7-cA-Qfn"/>
+                            <constraint firstItem="pdE-j0-r0G" firstAttribute="top" secondItem="UKY-Gc-EsO" secondAttribute="bottom" constant="10" id="645-SP-lLf"/>
+                            <constraint firstItem="SGn-CN-Zny" firstAttribute="top" secondItem="2hk-Ex-n2t" secondAttribute="bottom" constant="15" id="6FA-sl-lPr"/>
+                            <constraint firstItem="v8V-Hu-Lj3" firstAttribute="leading" secondItem="Wk6-Pd-Zu2" secondAttribute="leading" constant="15" id="8j1-Ig-mQp"/>
+                            <constraint firstItem="Wk6-Pd-Zu2" firstAttribute="trailing" secondItem="zxz-Ie-nQ5" secondAttribute="trailing" constant="15" id="EcJ-a1-5oj"/>
+                            <constraint firstItem="EPM-Pc-xsn" firstAttribute="top" secondItem="zxz-Ie-nQ5" secondAttribute="bottom" constant="15" id="GYx-00-1mw"/>
+                            <constraint firstItem="2hk-Ex-n2t" firstAttribute="leading" secondItem="Wk6-Pd-Zu2" secondAttribute="leading" id="HWm-Qa-SWY"/>
+                            <constraint firstItem="k1v-2o-Pdj" firstAttribute="centerX" secondItem="kqV-FO-8JJ" secondAttribute="centerX" id="Hyk-Jb-HoT"/>
+                            <constraint firstItem="pdE-j0-r0G" firstAttribute="leading" secondItem="Wk6-Pd-Zu2" secondAttribute="leading" id="Jyy-7h-bvz"/>
+                            <constraint firstItem="Wk6-Pd-Zu2" firstAttribute="trailing" secondItem="EPM-Pc-xsn" secondAttribute="trailing" constant="5" id="O2P-9x-X2L"/>
+                            <constraint firstItem="UKY-Gc-EsO" firstAttribute="leading" secondItem="Wk6-Pd-Zu2" secondAttribute="leading" id="PrH-f9-xHQ"/>
+                            <constraint firstItem="Wk6-Pd-Zu2" firstAttribute="trailing" secondItem="VB0-rN-BjK" secondAttribute="trailing" constant="15" id="PzH-M8-WIG"/>
+                            <constraint firstItem="2hk-Ex-n2t" firstAttribute="top" secondItem="6Sr-uD-Cwv" secondAttribute="bottom" constant="10" id="Wzp-gW-67b"/>
+                            <constraint firstItem="EPM-Pc-xsn" firstAttribute="centerX" secondItem="kqV-FO-8JJ" secondAttribute="centerX" id="X1Z-R2-frO"/>
+                            <constraint firstItem="Wk6-Pd-Zu2" firstAttribute="trailing" secondItem="6Sr-uD-Cwv" secondAttribute="trailing" id="X3a-y6-EOK"/>
+                            <constraint firstItem="2hk-Ex-n2t" firstAttribute="centerX" secondItem="kqV-FO-8JJ" secondAttribute="centerX" id="YHB-xy-HhU"/>
+                            <constraint firstItem="v8V-Hu-Lj3" firstAttribute="top" secondItem="EPM-Pc-xsn" secondAttribute="bottom" constant="15" id="YUv-4J-WGJ"/>
+                            <constraint firstItem="Wk6-Pd-Zu2" firstAttribute="trailing" secondItem="pdE-j0-r0G" secondAttribute="trailing" id="ZpX-uL-vVC"/>
+                            <constraint firstItem="EPM-Pc-xsn" firstAttribute="leading" secondItem="Wk6-Pd-Zu2" secondAttribute="leading" constant="5" id="duH-HU-E0Y"/>
+                            <constraint firstItem="SGn-CN-Zny" firstAttribute="leading" secondItem="Wk6-Pd-Zu2" secondAttribute="leading" constant="15" id="eS9-wa-d6u"/>
+                            <constraint firstItem="6Sr-uD-Cwv" firstAttribute="leading" secondItem="Wk6-Pd-Zu2" secondAttribute="leading" id="em2-G0-jq4"/>
+                            <constraint firstItem="VB0-rN-BjK" firstAttribute="top" secondItem="EPM-Pc-xsn" secondAttribute="bottom" constant="15" id="hYS-v3-veN"/>
+                            <constraint firstItem="UKY-Gc-EsO" firstAttribute="trailing" secondItem="Wk6-Pd-Zu2" secondAttribute="trailing" id="jZS-kU-Fyf"/>
+                            <constraint firstItem="6Sr-uD-Cwv" firstAttribute="centerX" secondItem="kqV-FO-8JJ" secondAttribute="centerX" id="m3C-Xs-lqY"/>
+                            <constraint firstItem="Wk6-Pd-Zu2" firstAttribute="trailing" secondItem="k1v-2o-Pdj" secondAttribute="trailing" constant="5" id="oJr-P8-2LI"/>
+                            <constraint firstItem="6Sr-uD-Cwv" firstAttribute="top" secondItem="pdE-j0-r0G" secondAttribute="bottom" constant="10" id="pWh-fG-zHz"/>
+                            <constraint firstItem="k1v-2o-Pdj" firstAttribute="top" secondItem="v8V-Hu-Lj3" secondAttribute="bottom" constant="15" id="qX9-HC-FmH"/>
+                            <constraint firstItem="k1v-2o-Pdj" firstAttribute="leading" secondItem="Wk6-Pd-Zu2" secondAttribute="leading" constant="5" id="ur7-qm-jgT"/>
+                            <constraint firstItem="UKY-Gc-EsO" firstAttribute="top" secondItem="Wk6-Pd-Zu2" secondAttribute="top" id="vOs-7O-oru"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="articleLinkTextField" destination="6Sr-uD-Cwv" id="oIn-mW-zWv"/>
+                        <outlet property="keywordTextField" destination="pdE-j0-r0G" id="JVo-U5-IXV"/>
+                        <outlet property="scrapContentTextField" destination="2hk-Ex-n2t" id="5bR-uW-6d0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7uS-J3-g28" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1106" y="28"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="doc.badge.plus" catalog="system" width="116" height="128"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
