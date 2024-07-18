@@ -53,10 +53,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBr-Op-MDX">
-                                        <rect key="frame" x="350.66666666666669" y="44.333333333333343" width="17.333333333333314" height="22"/>
+                                        <rect key="frame" x="343" y="43" width="25" height="25"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="pencil" catalog="system"/>
+                                        <state key="normal" image="edit"/>
                                         <connections>
                                             <action selector="editUsernameDidTap:" destination="jVt-id-6V0" eventType="touchUpInside" id="BTo-4u-n3t"/>
                                         </connections>
@@ -92,9 +92,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acr-E1-0Fd">
-                                        <rect key="frame" x="348.33333333333331" y="157.33333333333331" width="19.666666666666686" height="22"/>
+                                        <rect key="frame" x="344" y="156.33333333333331" width="24" height="24"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="togglepower" catalog="system"/>
+                                        <state key="normal" image="toggle-left"/>
+                                        <state key="selected" image="toggle-right"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xu-N0-wbM">
                                         <rect key="frame" x="15" y="193" width="60" height="32"/>
@@ -201,9 +202,10 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyT-Wa-drW">
-                                        <rect key="frame" x="348.33333333333331" y="346" width="19.666666666666686" height="22"/>
+                                        <rect key="frame" x="344" y="345" width="24" height="24"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="togglepower" catalog="system"/>
+                                        <state key="normal" image="toggle-left"/>
+                                        <state key="selected" image="toggle-right"/>
                                         <connections>
                                             <action selector="googleDriveDidTap:" destination="jVt-id-6V0" eventType="touchUpInside" id="Lj2-IR-LrG"/>
                                         </connections>
@@ -391,9 +393,10 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7I-uD-w8G">
-                                        <rect key="frame" x="253.33333333333329" y="72.666666666666686" width="19.666666666666657" height="22"/>
+                                        <rect key="frame" x="249" y="71.666666666666686" width="24" height="24"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="checkmark.circle" catalog="system"/>
+                                        <state key="normal" image="check_box_outline_blank"/>
+                                        <state key="selected" image="check-square"/>
                                         <connections>
                                             <action selector="mondayDidTap:" destination="gGN-vB-mOg" eventType="touchUpInside" id="q60-c1-1Uw"/>
                                         </connections>
@@ -401,23 +404,26 @@
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8Q-RC-xHX">
                                         <rect key="frame" x="253" y="113" width="19.666666666666742" height="22"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="checkmark.circle" catalog="system"/>
+                                        <state key="normal" image="check_box_outline_blank"/>
+                                        <state key="selected" image="check-square"/>
                                         <connections>
                                             <action selector="tuesdayDidTap:" destination="gGN-vB-mOg" eventType="touchUpInside" id="b2Z-5o-XQx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHk-jH-ane">
-                                        <rect key="frame" x="253.33333333333329" y="151.33333333333331" width="19.666666666666657" height="22"/>
+                                        <rect key="frame" x="249" y="150.33333333333331" width="24" height="24"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="checkmark.circle" catalog="system"/>
+                                        <state key="normal" image="check_box_outline_blank"/>
+                                        <state key="selected" image="check-square"/>
                                         <connections>
                                             <action selector="wednesdayDidTap:" destination="gGN-vB-mOg" eventType="touchUpInside" id="ggW-XC-ygj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1A-VI-6hU">
-                                        <rect key="frame" x="253.33333333333329" y="190.66666666666669" width="19.666666666666657" height="22"/>
+                                        <rect key="frame" x="249" y="189.66666666666669" width="24" height="24"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="checkmark.circle" catalog="system"/>
+                                        <state key="normal" image="check_box_outline_blank"/>
+                                        <state key="selected" image="check-square"/>
                                         <connections>
                                             <action selector="thursdayDidTap:" destination="gGN-vB-mOg" eventType="touchUpInside" id="ORs-nu-Ebc"/>
                                         </connections>
@@ -425,7 +431,8 @@
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEg-sz-i6H">
                                         <rect key="frame" x="253" y="231" width="19.666666666666742" height="22"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="checkmark.circle" catalog="system"/>
+                                        <state key="normal" image="check_box_outline_blank"/>
+                                        <state key="selected" image="check-square"/>
                                         <connections>
                                             <action selector="fridayDidTap:" destination="gGN-vB-mOg" eventType="touchUpInside" id="SLd-VP-mhb"/>
                                         </connections>
@@ -433,7 +440,8 @@
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfB-8o-WcO">
                                         <rect key="frame" x="254" y="268" width="19.666666666666742" height="22"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="checkmark.circle" catalog="system"/>
+                                        <state key="normal" image="check_box_outline_blank"/>
+                                        <state key="selected" image="check-square"/>
                                         <connections>
                                             <action selector="saturdayDidTap:" destination="gGN-vB-mOg" eventType="touchUpInside" id="5oO-o6-1eZ"/>
                                         </connections>
@@ -441,7 +449,8 @@
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kr-1e-KQB">
                                         <rect key="frame" x="254" y="310" width="19.666666666666742" height="22"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="checkmark.circle" catalog="system"/>
+                                        <state key="normal" image="check_box_outline_blank"/>
+                                        <state key="selected" image="check-square"/>
                                         <connections>
                                             <action selector="sundayDidTap:" destination="gGN-vB-mOg" eventType="touchUpInside" id="ELV-WM-BJo"/>
                                         </connections>
@@ -525,6 +534,7 @@
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="32t-dC-4rG">
                                         <rect key="frame" x="30" y="42" width="253" height="216"/>
+                                        <locale key="locale" localeIdentifier="ko_KR"/>
                                     </datePicker>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Roi-Ja-RYW">
                                         <rect key="frame" x="0.0" y="250" width="313" height="50"/>
@@ -610,7 +620,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZZ-ut-waO">
-                                <rect key="frame" x="40" y="326" width="313" height="200.00000000000006"/>
+                                <rect key="frame" x="40" y="336" width="313" height="180"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="권한 요청" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI4-Uf-SdN">
                                         <rect key="frame" x="119.33333333333334" y="20" width="74.333333333333343" height="24"/>
@@ -619,7 +629,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YsL-ZD-1t2">
-                                        <rect key="frame" x="0.0" y="150" width="313" height="50"/>
+                                        <rect key="frame" x="0.0" y="130" width="313" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEq-nq-TYW">
                                                 <rect key="frame" x="0.0" y="0.0" width="156.66666666666666" height="50"/>
@@ -652,7 +662,7 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="구글 드라이브 계정 연동을 위해서는 주소록 권한을 필요로 합니다. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1o-Kz-i6h">
-                                        <rect key="frame" x="44.333333333333329" y="81" width="224.66666666666669" height="38.333333333333343"/>
+                                        <rect key="frame" x="44.333333333333329" y="71" width="224.66666666666669" height="38.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
@@ -667,7 +677,7 @@
                                     <constraint firstAttribute="bottom" secondItem="YsL-ZD-1t2" secondAttribute="bottom" id="f8c-bG-ios"/>
                                     <constraint firstItem="YsL-ZD-1t2" firstAttribute="leading" secondItem="bZZ-ut-waO" secondAttribute="leading" id="mKj-0g-czV"/>
                                     <constraint firstAttribute="trailing" secondItem="YsL-ZD-1t2" secondAttribute="trailing" id="qAk-0L-gfF"/>
-                                    <constraint firstAttribute="height" constant="200" id="z7U-Yc-oXJ"/>
+                                    <constraint firstAttribute="height" constant="180" id="z7U-Yc-oXJ"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -692,9 +702,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark.circle" catalog="system" width="128" height="123"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="togglepower" catalog="system" width="128" height="123"/>
+        <image name="check-square" width="24" height="24"/>
+        <image name="check_box_outline_blank" width="24" height="24"/>
+        <image name="edit" width="25" height="25"/>
+        <image name="toggle-left" width="24" height="24"/>
+        <image name="toggle-right" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
