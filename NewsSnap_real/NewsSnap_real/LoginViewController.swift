@@ -16,6 +16,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var LoginButton: UIButton!
     
+    @IBAction func InvisibleButton(_ sender: Any) {
+    }
     
     
     override func viewDidLoad() {

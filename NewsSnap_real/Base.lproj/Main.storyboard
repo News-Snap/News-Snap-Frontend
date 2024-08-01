@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gB0-Qz-Y5C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mmN-UH-AZQ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -9,29 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="OPB-Cn-56B">
-            <objects>
-                <navigationController id="6Yi-1Z-P1r" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qyH-B9-XjF">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Clg-f8-UnJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-657" y="25"/>
-        </scene>
         <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="StartViewController" id="BYZ-38-t0r" customClass="StartViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartVC" id="BYZ-38-t0r" customClass="StartViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NewsSnapLOGO" translatesAutoresizingMaskIntoConstraints="NO" id="o7w-1x-vnv">
-                                <rect key="frame" x="109.66666666666669" y="348" width="174" height="181"/>
+                                <rect key="frame" x="109.66666666666669" y="370" width="174" height="181"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="181" id="QYT-MS-REd"/>
                                     <constraint firstAttribute="width" constant="174" id="mnu-2i-LOc"/>
@@ -45,15 +32,16 @@
                             <constraint firstItem="o7w-1x-vnv" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Mng-YK-zfN"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="u8x-jR-i6a"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="158" y="25"/>
+            <point key="canvasLocation" x="1080.1526717557251" y="24.647887323943664"/>
         </scene>
         <!--Select View Controller-->
         <scene sceneID="Ddq-oj-m02">
             <objects>
-                <viewController storyboardIdentifier="SelectViewController" id="bpk-eh-oPG" customClass="SelectViewController" customModule="NewsSnap_real" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectVC" id="bpk-eh-oPG" customClass="SelectViewController" customModule="NewsSnap_real" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Toj-O5-uGz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,7 +77,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="게스트 계정으로 시작"/>
                                 <connections>
-                                    <segue destination="vXa-3D-2oy" kind="show" id="WLU-r6-9O0"/>
+                                    <action selector="GuestButton:" destination="bpk-eh-oPG" eventType="touchUpInside" id="Bgu-Lk-sPS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMH-Le-ePn">
@@ -97,12 +85,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="KakaoLOGO" title=""/>
+                                <connections>
+                                    <action selector="KakaoButton:" destination="bpk-eh-oPG" eventType="touchUpInside" id="FnI-PN-6DP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCv-ZL-8hw">
                                 <rect key="frame" x="215" y="409" width="84" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="AppleLOGO" title=""/>
+                                <connections>
+                                    <action selector="AppleButton:" destination="bpk-eh-oPG" eventType="touchUpInside" id="8FQ-BJ-85M"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yZp-bo-90d">
                                 <rect key="frame" x="94" y="314" width="61" height="63"/>
@@ -113,6 +107,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="GoogleLOGO" title=""/>
+                                        <connections>
+                                            <action selector="GoogleButton:" destination="bpk-eh-oPG" eventType="touchUpInside" id="Bsg-l1-hZe"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -123,6 +120,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="NaverLOGO" title=""/>
+                                <connections>
+                                    <action selector="NaverButton:" destination="bpk-eh-oPG" eventType="touchUpInside" id="JvC-S4-8B4"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NewsSnapLOGO" translatesAutoresizingMaskIntoConstraints="NO" id="3pn-X6-74T">
                                 <rect key="frame" x="117" y="110" width="151" height="126"/>
@@ -133,12 +133,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="GoogleView" destination="yZp-bo-90d" id="BMI-3w-Tqq"/>
+                        <outlet property="Background" destination="yZp-bo-90d" id="fky-X8-1av"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="daQ-cj-rh4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1739.6946564885495" y="24.647887323943664"/>
+            <point key="canvasLocation" x="2663.3587786259541" y="24.647887323943664"/>
         </scene>
         <!--Alarm View Controller-->
         <scene sceneID="V9v-9A-cAG">
@@ -191,24 +191,24 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jN2-e1-DKS">
-                                        <rect key="frame" x="8" y="160" width="268" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" name="MainColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="허용"/>
-                                        <connections>
-                                            <action selector="AdmitButton:" destination="Y2W-Ag-Ba5" eventType="touchUpInside" id="vyx-eR-Uy0"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uel-65-oSm">
-                                        <rect key="frame" x="8" y="203" width="268" height="35"/>
+                                        <rect key="frame" x="17" y="203" width="251" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="허용 안함"/>
                                         <connections>
                                             <action selector="DisAdmitButton:" destination="Y2W-Ag-Ba5" eventType="touchUpInside" id="y94-L5-C0u"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jN2-e1-DKS">
+                                        <rect key="frame" x="17" y="160" width="251" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" name="MainColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="허용"/>
+                                        <connections>
+                                            <action selector="AdmitButton:" destination="Y2W-Ag-Ba5" eventType="touchUpInside" id="vyx-eR-Uy0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -225,22 +225,22 @@
                     </view>
                     <navigationItem key="navigationItem" id="QEA-Pg-phh"/>
                     <connections>
-                        <outlet property="AdmitButton" destination="jN2-e1-DKS" id="iK3-Bb-Ogj"/>
-                        <outlet property="DisAdmitButton" destination="Uel-65-oSm" id="sb9-sg-Xha"/>
+                        <outlet property="AdmitButton" destination="jN2-e1-DKS" id="KHk-jK-1ht"/>
+                        <outlet property="DisAdmitButton" destination="Uel-65-oSm" id="TuA-t5-9aZ"/>
                         <outlet property="FirstView" destination="G1v-ZI-VyV" id="4ap-lm-yJQ"/>
                         <outlet property="SecondView" destination="cZH-gt-rPW" id="3Yl-jf-Oy7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5WV-Br-MF4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="914" y="25"/>
+            <point key="canvasLocation" x="1863.3587786259541" y="24.647887323943664"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="e87-9E-C2E">
             <objects>
-                <viewController storyboardIdentifier="RegisterViewController" id="vXa-3D-2oy" customClass="RegisterViewController" customModule="NewsSnap_real" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterVC" id="vXa-3D-2oy" customClass="RegisterViewController" customModule="NewsSnap_real" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bEQ-ug-5Mi">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NewsSnapLOGO" translatesAutoresizingMaskIntoConstraints="NO" id="stI-Ad-pjS">
@@ -353,17 +353,17 @@
                         <outlet property="NameTextField" destination="trC-bQ-DJc" id="byk-yB-thd"/>
                         <outlet property="PasswordConfirmTextField" destination="Jqs-HH-W0e" id="pL1-T9-yGw"/>
                         <outlet property="PasswordTextField" destination="5hg-qf-FY9" id="NiG-RB-lXG"/>
-                        <outlet property="SigninButton" destination="AYc-jv-0Yp" id="vwd-RU-0Fe"/>
+                        <outlet property="SigninButton" destination="AYc-jv-0Yp" id="CkJ-4W-qqE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Or-IS-nO0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2527.4809160305344" y="24.647887323943664"/>
+            <point key="canvasLocation" x="3451.1450381679388" y="24.647887323943664"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="KgF-KF-63N">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="gB0-Qz-Y5C" customClass="LoginViewController" customModule="NewsSnap_real" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="gB0-Qz-Y5C" customClass="LoginViewController" customModule="NewsSnap_real" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KQY-DB-3ke">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -415,6 +415,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Invisibility" title=""/>
+                                <connections>
+                                    <action selector="InvisibleButton:" destination="gB0-Qz-Y5C" eventType="touchUpInside" id="X35-ST-pF0"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGh-iJ-IuJ">
                                 <rect key="frame" x="30" y="378" width="45" height="16"/>
@@ -448,7 +451,213 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rvB-mO-L5S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3327.480916030534" y="24.647887323943664"/>
+            <point key="canvasLocation" x="4280.1526717557254" y="24.647887323943664"/>
+        </scene>
+        <!--Email Verification View Controller-->
+        <scene sceneID="b5s-Rm-3Ac">
+            <objects>
+                <viewController storyboardIdentifier="EmailVerificationVC" id="mmN-UH-AZQ" customClass="EmailVerificationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pda-pt-WsU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NewsSnapLOGO" translatesAutoresizingMaskIntoConstraints="NO" id="NKL-pl-XlL">
+                                <rect key="frame" x="121" y="104" width="151" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hO8-jf-AK8">
+                                <rect key="frame" x="29" y="251" width="23" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" name="MainColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UrL-Ih-AKc">
+                                <rect key="frame" x="29" y="278" width="334" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" name="MainColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQd-2w-aWi">
+                                <rect key="frame" x="321" y="279" width="42" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Checkblue"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kvu-BN-QzX">
+                                <rect key="frame" x="29" y="368" width="334" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이메일 주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCB-xi-3AZ">
+                                <rect key="frame" x="29" y="334" width="60" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" name="MainColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hQj-lM-0CX">
+                                <rect key="frame" x="29" y="465" width="334" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="인증번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eU5-uI-IE1">
+                                <rect key="frame" x="29" y="431" width="45" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itz-fe-mBY">
+                                <rect key="frame" x="309" y="367" width="54" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="MainColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="인증"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7q7-fU-T74">
+                                <rect key="frame" x="97" y="576" width="199" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="MainColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="확인"/>
+                                <connections>
+                                    <action selector="ConfirmButton:" destination="mmN-UH-AZQ" eventType="touchUpInside" id="ilt-EF-w9c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zkd-AY-8K9">
+                                <rect key="frame" x="326" y="469" width="37" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Invisibility" title=""/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hgq-9s-gzE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uyF-U3-mUw"/>
+                    <connections>
+                        <outlet property="AuthButton" destination="itz-fe-mBY" id="92w-hR-s0k"/>
+                        <outlet property="AuthnumberTextField" destination="hQj-lM-0CX" id="3b5-V4-Sfw"/>
+                        <outlet property="ConfirmButton" destination="7q7-fU-T74" id="TIi-ce-O3P"/>
+                        <outlet property="EmailTextField" destination="kvu-BN-QzX" id="2tz-If-vQz"/>
+                        <outlet property="InvisibleButton" destination="Zkd-AY-8K9" id="VY0-Uv-cVO"/>
+                        <outlet property="NameTextField" destination="UrL-Ih-AKc" id="bhw-tY-hUV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WhC-Zb-beh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5060" y="25"/>
+        </scene>
+        <!--New Password View Controller-->
+        <scene sceneID="5EU-bl-4Vv">
+            <objects>
+                <viewController storyboardIdentifier="NewPasswordVC" id="1xG-vr-dvl" customClass="NewPasswordViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ICa-BG-5j5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NewsSnapLOGO" translatesAutoresizingMaskIntoConstraints="NO" id="c33-RF-Ext">
+                                <rect key="frame" x="121" y="107" width="151" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPr-Sj-HPr">
+                                <rect key="frame" x="97" y="579" width="199" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="MainColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="확인"/>
+                                <connections>
+                                    <action selector="ConfirmButton:" destination="1xG-vr-dvl" eventType="touchUpInside" id="mbs-a8-q2e"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KQb-UV-ehU">
+                                <rect key="frame" x="25" y="284" width="334" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8D-fX-rFD">
+                                <rect key="frame" x="330" y="288" width="37" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Invisibility" title=""/>
+                                <connections>
+                                    <action selector="InvisibleButton:" destination="1xG-vr-dvl" eventType="touchUpInside" id="thm-zJ-39M"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="새 비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Itw-3W-jEF">
+                                <rect key="frame" x="25" y="249" width="60" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zyA-d2-0ZV">
+                                <rect key="frame" x="25" y="372" width="334" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfC-2r-sSq">
+                                <rect key="frame" x="330" y="376" width="37" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Invisibility" title=""/>
+                                <connections>
+                                    <action selector="ConfirmInvisibleButton:" destination="1xG-vr-dvl" eventType="touchUpInside" id="ZXP-Cf-F4i"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비밀번호 확인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdD-Sf-kLL">
+                                <rect key="frame" x="25" y="341" width="72" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jk9-7p-KPp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FZI-0r-wKu"/>
+                    <connections>
+                        <outlet property="ConfirmButton" destination="zPr-Sj-HPr" id="kWE-Gs-K4K"/>
+                        <outlet property="NewPasswordTextfield" destination="KQb-UV-ehU" id="WPZ-pq-clT"/>
+                        <outlet property="PasswordconfirmTextField" destination="zyA-d2-0ZV" id="OoL-Is-Yri"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CMx-fG-Odw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5843.5114503816794" y="24.647887323943664"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Gl2-Pe-W2O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hDh-pl-ClZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qm1-Lv-kTK">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wgg-vf-blc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oS4-19-cBM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156.4885496183206" y="24.647887323943664"/>
         </scene>
     </scenes>
     <resources>

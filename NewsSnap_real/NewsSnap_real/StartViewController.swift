@@ -9,25 +9,20 @@ import UIKit
 
 class StartViewController: UIViewController {
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // 2초 후에 자동으로 AlarmViewController로 전환
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        // 0.5초 후에 화면 전환
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.navigateToAlarmViewController()
+                }
+            }
+            
+        func navigateToAlarmViewController() {
+            if let alarmVC = storyboard?.instantiateViewController(withIdentifier: "AlarmVC") as? AlarmViewController {
+                    self.navigationController?.pushViewController(alarmVC, animated: true)
+                }
+            }
         }
-    }
-
-    func navigateToAlarmViewController() {
-        // Storyboard 인스턴스 생성
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        // AlarmViewController 인스턴스 생성
-        if let alarmViewController = storyboard.instantiateViewController(withIdentifier: "AlarmViewController") as? AlarmViewController {
-            // 전환 애니메이션을 위해 present 메서드 사용
-            alarmViewController.modalTransitionStyle = .crossDissolve
-            alarmViewController.modalPresentationStyle = .fullScreen
-            self.present(alarmViewController, animated: true, completion: nil)
-        }
-    }
-}
+    

@@ -8,24 +8,34 @@
 import UIKit
 
 class SelectViewController: UIViewController {
-
     
+    @IBOutlet weak var Background: UIView!
     
+    @IBAction func GoogleButton(_ sender: Any) {
+    }
     
+    @IBAction func KakaoButton(_ sender: Any) {
+    }
     
+    @IBAction func NaverButton(_ sender: Any) {
+    }
     
+    @IBAction func AppleButton(_ sender: Any) {
+    }
     
-    
+    @IBAction func GuestButton(_ sender: Any) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-        // GoogleView의 모양을 원으로 만들기 ( 뒷베경 설정 code )
-        GoogleView.layer.cornerRadius = GoogleView.frame.size.width / 2
-        GoogleView.layer.masksToBounds = true
+        
+        // Background 뷰를 둥글게 만들기
+            Background.layer.cornerRadius = Background.frame.size.height / 2
+            Background.layer.masksToBounds = true
+        
+        
         
     }
-    
 
 }
