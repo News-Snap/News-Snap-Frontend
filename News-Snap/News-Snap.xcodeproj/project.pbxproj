@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2C0966A82C47E4CE005FBA4E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0966A72C47E4CE005FBA4E /* SettingsViewController.swift */; };
+		2C33B1C32C5A4CE000000BD2 /* ImprovementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C33B1C22C5A4CE000000BD2 /* ImprovementsViewController.swift */; };
+		2C33B1C62C64CA9500000BD2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C33B1C52C64CA9500000BD2 /* HomeViewController.swift */; };
 		2CC1D8C32C48A45D00561214 /* DaySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC1D8C22C48A45C00561214 /* DaySettingsViewController.swift */; };
 		2CC1D8C52C492E9B00561214 /* TimeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC1D8C42C492E9B00561214 /* TimeSettingsViewController.swift */; };
-		2CC1D8C72C492EBE00561214 /* GoogleDriveSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC1D8C62C492EBE00561214 /* GoogleDriveSettingViewController.swift */; };
 		9DEBADE52C465AB700A8C8B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBADE42C465AB700A8C8B4 /* AppDelegate.swift */; };
 		9DEBADE72C465AB700A8C8B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBADE62C465AB700A8C8B4 /* SceneDelegate.swift */; };
 		9DEBADE92C465AB700A8C8B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBADE82C465AB700A8C8B4 /* ViewController.swift */; };
@@ -21,9 +22,11 @@
 
 /* Begin PBXFileReference section */
 		2C0966A72C47E4CE005FBA4E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		2C33B1C22C5A4CE000000BD2 /* ImprovementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImprovementsViewController.swift; sourceTree = "<group>"; };
+		2C33B1C42C5B925000000BD2 /* News-Snap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "News-Snap.entitlements"; sourceTree = "<group>"; };
+		2C33B1C52C64CA9500000BD2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2CC1D8C22C48A45C00561214 /* DaySettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySettingsViewController.swift; sourceTree = "<group>"; };
 		2CC1D8C42C492E9B00561214 /* TimeSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingsViewController.swift; sourceTree = "<group>"; };
-		2CC1D8C62C492EBE00561214 /* GoogleDriveSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDriveSettingViewController.swift; sourceTree = "<group>"; };
 		9DEBADE12C465AB700A8C8B4 /* News-Snap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News-Snap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DEBADE42C465AB700A8C8B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DEBADE62C465AB700A8C8B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +54,7 @@
 				2C0966A72C47E4CE005FBA4E /* SettingsViewController.swift */,
 				2CC1D8C22C48A45C00561214 /* DaySettingsViewController.swift */,
 				2CC1D8C42C492E9B00561214 /* TimeSettingsViewController.swift */,
-				2CC1D8C62C492EBE00561214 /* GoogleDriveSettingViewController.swift */,
+				2C33B1C22C5A4CE000000BD2 /* ImprovementsViewController.swift */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -75,9 +78,11 @@
 		9DEBADE32C465AB700A8C8B4 /* News-Snap */ = {
 			isa = PBXGroup;
 			children = (
+				2C33B1C42C5B925000000BD2 /* News-Snap.entitlements */,
 				2CC1D8C82C492F4800561214 /* settings */,
 				9DEBADE42C465AB700A8C8B4 /* AppDelegate.swift */,
 				9DEBADE62C465AB700A8C8B4 /* SceneDelegate.swift */,
+				2C33B1C52C64CA9500000BD2 /* HomeViewController.swift */,
 				9DEBADE82C465AB700A8C8B4 /* ViewController.swift */,
 				9DEBADEA2C465AB700A8C8B4 /* Main.storyboard */,
 				9DEBADED2C465AB900A8C8B4 /* Assets.xcassets */,
@@ -160,8 +165,9 @@
 			files = (
 				9DEBADE92C465AB700A8C8B4 /* ViewController.swift in Sources */,
 				2CC1D8C32C48A45D00561214 /* DaySettingsViewController.swift in Sources */,
-				2CC1D8C72C492EBE00561214 /* GoogleDriveSettingViewController.swift in Sources */,
 				2CC1D8C52C492E9B00561214 /* TimeSettingsViewController.swift in Sources */,
+				2C33B1C62C64CA9500000BD2 /* HomeViewController.swift in Sources */,
+				2C33B1C32C5A4CE000000BD2 /* ImprovementsViewController.swift in Sources */,
 				9DEBADE52C465AB700A8C8B4 /* AppDelegate.swift in Sources */,
 				9DEBADE72C465AB700A8C8B4 /* SceneDelegate.swift in Sources */,
 				2C0966A82C47E4CE005FBA4E /* SettingsViewController.swift in Sources */,
@@ -314,6 +320,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "News-Snap/News-Snap.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -341,6 +348,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "News-Snap/News-Snap.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

@@ -9,21 +9,34 @@ import UIKit
 
 class ImprovementsViewController: UIViewController {
 
+    @IBOutlet weak var contentView: UIView!
+    
+    @IBOutlet weak var textField: UITextField!
+    
+    @IBOutlet weak var cancelBtn: UIButton!
+    
+    @IBOutlet weak var dismissBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = .clear
+        
+        // 모서리 둥글게 설정
+        contentView.layer.cornerRadius = 20
+        contentView.layer.masksToBounds = true
+        
+        // 테두리 설정
+        contentView.layer.borderWidth = 1
+        cancelBtn.layer.borderWidth = 1
+        dismissBtn.layer.borderWidth = 1
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func cancelDidTap(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
-    */
-
+    
+    @IBAction func dismissDidTap(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

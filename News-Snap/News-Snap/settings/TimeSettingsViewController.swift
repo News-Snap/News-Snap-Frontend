@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol TimeSettingsDelegate: AnyObject {
+    func didSelectTime(_ selectedTime: String)
+}
+
 class TimeSettingsViewController: UIViewController {
+    
+    weak var delegate: TimeSettingsDelegate?
     
     @IBOutlet weak var contentView: UIView!
     
@@ -37,6 +43,12 @@ class TimeSettingsViewController: UIViewController {
     }
     
     @IBAction func saveDidTap(_ sender: UIButton) {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_KR")
+        formatter.timeStyle = .short
+        let selectedTime = formatter.string(from: datePicker.date)
+                
+        delegate?.didSelectTime(selectedTime)
         dismiss(animated: true, completion: nil)
     }
     
