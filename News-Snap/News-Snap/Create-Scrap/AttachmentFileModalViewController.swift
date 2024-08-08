@@ -8,14 +8,28 @@
 import UIKit
 
 class AttachmentFileModalViewController: UIViewController {
+    @IBOutlet var RootView: UIView!
+    @IBOutlet weak var MainView: UIView!
+    @IBOutlet weak var linkTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        RootView.backgroundColor = nil
+        MainView.layer.cornerRadius = 25
+        MainView.layer.masksToBounds = true
+
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func confirmButtonTapped(_ sender: Any) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
