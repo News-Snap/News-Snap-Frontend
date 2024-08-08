@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,6 +23,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="12" y="-34"/>
+        </scene>
+        <!--Keyword Board View Controller-->
+        <scene sceneID="4S4-ZE-1uk">
+            <objects>
+                <viewController storyboardIdentifier="KeywordBoardViewController" id="g3c-WL-cm5" customClass="KeywordBoardViewController" customModule="News_Snap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="njQ-8I-ad9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRE-Dq-bT4">
+                                <rect key="frame" x="20" y="79" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="PS3-xc-72q"/>
+                                    <constraint firstAttribute="height" constant="30" id="f3O-9M-hCx"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xTN-Sl-3bE">
+                                <rect key="frame" x="0.0" y="109" width="393" height="743"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;키워드&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNl-AH-wam">
+                                <rect key="frame" x="70" y="83.666666666666671" width="66.333333333333314" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="키워드 보드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1b-d9-uv0">
+                                <rect key="frame" x="141.33333333333334" y="83" width="83" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6KC-qF-HHp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="xTN-Sl-3bE" secondAttribute="bottom" id="2ux-Jf-0aO"/>
+                            <constraint firstItem="HNl-AH-wam" firstAttribute="leading" secondItem="oRE-Dq-bT4" secondAttribute="trailing" constant="20" id="5ge-T0-bTc"/>
+                            <constraint firstItem="oRE-Dq-bT4" firstAttribute="leading" secondItem="6KC-qF-HHp" secondAttribute="leading" constant="20" id="FQJ-fG-a1H"/>
+                            <constraint firstItem="T1b-d9-uv0" firstAttribute="leading" secondItem="HNl-AH-wam" secondAttribute="trailing" constant="5" id="GXq-ko-9wg"/>
+                            <constraint firstItem="HNl-AH-wam" firstAttribute="centerY" secondItem="oRE-Dq-bT4" secondAttribute="centerY" id="Iru-fJ-IJp"/>
+                            <constraint firstItem="xTN-Sl-3bE" firstAttribute="top" secondItem="oRE-Dq-bT4" secondAttribute="bottom" id="aZu-f1-bq1"/>
+                            <constraint firstItem="oRE-Dq-bT4" firstAttribute="top" secondItem="6KC-qF-HHp" secondAttribute="top" constant="20" id="f9n-Vs-uzH"/>
+                            <constraint firstItem="xTN-Sl-3bE" firstAttribute="leading" secondItem="6KC-qF-HHp" secondAttribute="leading" id="mmt-GJ-AE6"/>
+                            <constraint firstItem="6KC-qF-HHp" firstAttribute="trailing" secondItem="xTN-Sl-3bE" secondAttribute="trailing" id="mqf-8e-HzN"/>
+                            <constraint firstItem="T1b-d9-uv0" firstAttribute="centerY" secondItem="oRE-Dq-bT4" secondAttribute="centerY" id="z0B-TL-AB2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backBtn" destination="oRE-Dq-bT4" id="HVx-Ud-DWe"/>
+                        <outlet property="keywordLabel" destination="HNl-AH-wam" id="3po-eN-SWQ"/>
+                        <outlet property="tableView" destination="xTN-Sl-3bE" id="gRf-W3-RYS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PXD-bS-a6w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979" y="1518"/>
         </scene>
         <!--홈-->
         <scene sceneID="UU5-z0-2AA">
@@ -809,6 +872,7 @@
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="toggle-left" width="24" height="24"/>
         <image name="toggle-right" width="24" height="24"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
