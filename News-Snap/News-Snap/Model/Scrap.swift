@@ -8,22 +8,21 @@
 import Foundation
 
 struct Scrap {
-    let id : Int
+    var id : Int
     var link : String
     var contents : String
     var keywords : [String]
-    
+    var date : Date
     var attachmentFile : FileManager?
-    var referenceFile : FileManager?
+    var referenceFile : URL?
     
-    init(id: Int, link: String, contents: String, keywords: [String]) {
+    init(id: Int, link: String, contents: String, keywords: [String], date : Date) {
         self.id = id
         self.link = link
         self.contents = contents
         self.keywords = keywords
+        self.date = date
     }
-    
-    
     
 }
 
