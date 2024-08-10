@@ -36,6 +36,9 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate {
         
         scrap = Scrap(id: id, link: articleLink, contents: contents, keywords: keywords, date: Date())
         print("Scrap saved:", scrap!)
+        
+        // API 통신 - POST 요청
+        sendScrapDataToServer(scrap)
     }
 
     @IBAction func saveAttachmentFileButtonTapped(_ sender: Any) {
@@ -58,13 +61,19 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate {
     
     
     @IBAction func saveReferenceLinkButtonTapped(_ sender: Any) {
-        guard let scrap = scrap else {
-            print("Scrap is not initialized.")
-            return
-        }
+//        guard let scrap = scrap else {
+//            print("Scrap is not initialized.")
+//            return
+//        }
         // 예제 URL 사용, 실제 파일을 선택하고 URL을 지정해야 함
         // scrap.referenceFile = URL(fileURLWithPath: "path/to/reference/file")
-        print("Reference file saved:", scrap.referenceFile ?? "None")
+//        print("Reference file saved:", scrap.referenceFile ?? "None")
+        
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ReferenceLinkModalVC") as? ReferenceLinkModalViewController else { return }
+        
+        nextVC.modalTransitionStyle = .coverVertical
+        nextVC.modalPresentationStyle = .overFullScreen
+        self.present(nextVC, animated: true, completion: nil)
     }
     
     
@@ -121,6 +130,50 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate {
         saveButton.isEnabled = isFormValid
         saveButton.setTitleColor(isFormValid ? UIColor.systemBlue : UIColor.lightGray, for: .normal)
     }
+    
+    private func sendScrapDataToServer(_ scrap: Scrap) {
+            guard let url = URL(string: "ScrapURL입력.com") else {
+                print("Invalid URL")
+                return
+            }
+            
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            
+            // JSON 데이터로 변환
+            let scrapData: [String: Any] = [
+                "id": scrap.id,
+                "link": scrap.link,
+                "contents": scrap.contents,
+                "keywords": scrap.keywords,
+                "date": scrap.date.ISO8601Format() // ISO8601 형식으로 변환된 날짜
+            ]
+            
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: scrapData, options: [])
+                request.httpBody = jsonData
+                request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            } catch {
+                print("Failed to serialize data:", error)
+                return
+            }
+            
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                if let error = error {
+                    print("Request error:", error)
+                    return
+                }
+                
+                guard let httpResponse = response as? HTTPURLResponse,
+                      (200...299).contains(httpResponse.statusCode) else {
+                    print("Invalid response")
+                    return
+                }
+                print("Scrap successfully sent to the server")
+            }
+            task.resume()
+        }
+    
 }
 
 extension CreateScrapViewController: UITableViewDelegate, UITableViewDataSource {
