@@ -13,7 +13,7 @@ struct Scrap {
     var contents : String
     var keywords : [String]
     var date : Date
-    var attachmentFile : FileManager?
+    var attachmentFile : URL?
     var referenceFile : URL?
     
     init(id: Int, link: String, contents: String, keywords: [String], date : Date) {
@@ -23,6 +23,7 @@ struct Scrap {
         self.keywords = keywords
         self.date = date
     }
+    
     
 }
 

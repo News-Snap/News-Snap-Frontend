@@ -8,14 +8,26 @@
 import UIKit
 
 class ReferenceLinkModalViewController: UIViewController {
-
+    @IBOutlet weak var referenceLinkTextField: UITextField!
+    @IBOutlet var rootView: UIView!
+    @IBOutlet weak var mainView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        rootView.backgroundColor = nil
+        mainView.layer.cornerRadius = 25
+        mainView.layer.masksToBounds = true
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func confirmButtonTapped(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 
