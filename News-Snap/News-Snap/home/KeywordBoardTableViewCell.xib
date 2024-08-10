@@ -25,11 +25,11 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVc-fd-2ei">
                         <rect key="frame" x="20" y="222" width="33" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCF-sF-EgO">
-                        <rect key="frame" x="36" y="190" width="34" height="22"/>
+                        <rect key="frame" x="20" y="190" width="34" height="22"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -38,14 +38,19 @@
                 <constraints>
                     <constraint firstItem="6DE-27-uNL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="3fH-M5-UA4"/>
                     <constraint firstItem="6DE-27-uNL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="9dA-Yf-4cG"/>
-                    <constraint firstItem="bVc-fd-2ei" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="AbK-Me-ZBZ"/>
                     <constraint firstItem="ZCF-sF-EgO" firstAttribute="top" secondItem="6DE-27-uNL" secondAttribute="bottom" constant="20" id="L8x-FR-3Yd"/>
+                    <constraint firstItem="ZCF-sF-EgO" firstAttribute="leading" secondItem="6DE-27-uNL" secondAttribute="leading" id="WH9-LI-phB"/>
                     <constraint firstAttribute="trailing" secondItem="6DE-27-uNL" secondAttribute="trailing" constant="20" id="XHn-rt-Aax"/>
-                    <constraint firstItem="ZCF-sF-EgO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="sSS-sL-QM6"/>
+                    <constraint firstItem="bVc-fd-2ei" firstAttribute="leading" secondItem="6DE-27-uNL" secondAttribute="leading" id="nOn-nX-Sk3"/>
                     <constraint firstItem="bVc-fd-2ei" firstAttribute="top" secondItem="ZCF-sF-EgO" secondAttribute="bottom" constant="10" id="x1m-t5-lu8"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="newsDataLabel" destination="bVc-fd-2ei" id="YK5-Kc-I6r"/>
+                <outlet property="newsImageView" destination="6DE-27-uNL" id="3hd-uV-G6K"/>
+                <outlet property="newsTitleLabel" destination="ZCF-sF-EgO" id="wXC-RY-JzD"/>
+            </connections>
             <point key="canvasLocation" x="62.595419847328245" y="69.366197183098592"/>
         </tableViewCell>
     </objects>

@@ -8,10 +8,16 @@
 import UIKit
 
 class KeywordBoardTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var newsImageView: UIImageView!
+    @IBOutlet weak var newsTitleLabel: UILabel!
+    @IBOutlet weak var newsDataLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        newsImageView.layer.cornerRadius = 10
+        newsImageView.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

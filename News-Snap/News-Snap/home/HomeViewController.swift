@@ -32,5 +32,20 @@ class HomeViewController: UIViewController {
         myScrapBtn.layer.cornerRadius = 10
         myScrapBtn.layer.masksToBounds = true
     }
-
+    
+    @IBAction func key1DidTap(_ sender: UIButton) {
+    }
+    
+    @IBAction func key2DidTap(_ sender: UIButton) {
+    }
+    
+    @IBAction func key3DidTap(_ sender: UIButton) {
+    }
+    
+    @IBAction func key4DidTap(_ sender: UIButton) {
+    }
+    
+    @IBAction func myScrapDidTap(_ sender: UIButton) {
+    }
+    
 }
