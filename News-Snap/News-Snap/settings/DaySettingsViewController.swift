@@ -20,7 +20,7 @@ class DaySettingsViewController: UIViewController {
     
     @IBOutlet weak var mondayBtn: UIButton!
     
-    @IBOutlet weak var tuesday: UIButton!
+    @IBOutlet weak var tuesdayBtn: UIButton!
     
     @IBOutlet weak var wednesdayBtn: UIButton!
     
@@ -63,11 +63,11 @@ class DaySettingsViewController: UIViewController {
     }
     
     @IBAction func tuesdayDidTap(_ sender: UIButton) {
-        if thursdayBtn.isSelected {
-            thursdayBtn.isSelected = false
+        if tuesdayBtn.isSelected {
+            tuesdayBtn.isSelected = false
         }
         else {
-            thursdayBtn.isSelected = true
+            tuesdayBtn.isSelected = true
         }
     }
     
@@ -123,7 +123,7 @@ class DaySettingsViewController: UIViewController {
     @IBAction func saveDidTap(_ sender: UIButton) {
         var selectedDays = [String]()
         if mondayBtn.isSelected { selectedDays.append("월") }
-        if tuesday.isSelected { selectedDays.append("화") }
+        if tuesdayBtn.isSelected { selectedDays.append("화") }
         if wednesdayBtn.isSelected { selectedDays.append("수") }
         if thursdayBtn.isSelected { selectedDays.append("목") }
         if fridayBtn.isSelected { selectedDays.append("금") }
