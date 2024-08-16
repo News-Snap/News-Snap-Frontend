@@ -8,6 +8,8 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    var scrap : Scrap!
+    var selectedKeyword: String?
     
     @IBOutlet weak var key1Btn: UIButton!
     @IBOutlet weak var key2Btn: UIButton!
@@ -54,22 +56,93 @@ class HomeViewController: UIViewController {
         news2View.layer.cornerRadius = 10
         news2View.layer.masksToBounds = true
         
+        // API 통신 - GET 요청
+        getKeywordScrap()
     }
     
+    private func getKeywordScrap() {
+        let urlString = APIConstants.fetureURL
+        guard let url = URL(string: urlString) else {
+            print("Invalid URL")
+            return
+        }
+        
+        // URLSession을 사용하여 GET 요청
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            // 에러 처리
+            if let error = error {
+                print("Error fetching data: \(error)")
+                return
+            }
+                    
+            // 데이터 유효성 확인
+            guard let data = data else {
+                print("No data received")
+                return
+            }
+                
+            // JSON 파싱
+            do {
+                if let jsonArray = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] {
+                    // JSON 데이터에서 키워드 추출
+                    let keywords = jsonArray.compactMap { $0["keyword"] as? String }
+                        
+                    DispatchQueue.main.async {
+                        if keywords.count > 0 {
+                            self.key1Btn.setTitle(keywords[0], for: .normal)
+                        }
+                        if keywords.count > 1 {
+                            self.key2Btn.setTitle(keywords[1], for: .normal)
+                        }
+                        if keywords.count > 2 {
+                            self.key3Btn.setTitle(keywords[2], for: .normal)
+                        }
+                        if keywords.count > 3 {
+                            self.key4Btn.setTitle(keywords[3], for: .normal)
+                        }
+                    }
+                }
+            } catch {
+                print("Error parsing JSON: \(error)")
+            }
+        }
+            
+        // 네트워크 요청 시작
+        task.resume()
+    }
+    
+    
+    // Actions
     @IBAction func key1DidTap(_ sender: UIButton) {
+        selectedKeyword = key1Btn.titleLabel?.text
+        performSegue(withIdentifier: "showKeywordBoard", sender: self)
     }
     
     @IBAction func key2DidTap(_ sender: UIButton) {
+        selectedKeyword = key2Btn.titleLabel?.text
+        performSegue(withIdentifier: "showKeywordBoard", sender: self)
     }
     
     @IBAction func key3DidTap(_ sender: UIButton) {
+        selectedKeyword = key3Btn.titleLabel?.text
+        performSegue(withIdentifier: "showKeywordBoard", sender: self)
     }
     
     @IBAction func key4DidTap(_ sender: UIButton) {
+        selectedKeyword = key4Btn.titleLabel?.text
+        performSegue(withIdentifier: "showKeywordBoard", sender: self)
     }
     
     @IBAction func myScrapDidTap(_ sender: UIButton) {
+        // 스크랩 조회 페이지로 이동
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showKeywordBoard" {
+            if let destinationVC = segue.destination as? KeywordBoardViewController {
+                destinationVC.keyword = selectedKeyword
+            }
+        }
+    }
     
 }

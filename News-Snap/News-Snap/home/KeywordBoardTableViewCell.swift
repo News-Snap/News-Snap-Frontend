@@ -11,7 +11,7 @@ class KeywordBoardTableViewCell: UITableViewCell {
     
     @IBOutlet weak var newsImageView: UIImageView!
     @IBOutlet weak var newsTitleLabel: UILabel!
-    @IBOutlet weak var newsDataLabel: UILabel!
+    @IBOutlet weak var newsDateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

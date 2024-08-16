@@ -54,12 +54,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="키워드 보드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1b-d9-uv0">
-                                <rect key="frame" x="141.33333333333334" y="83" width="83" height="22"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6KC-qF-HHp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -67,13 +61,11 @@
                             <constraint firstAttribute="bottom" secondItem="xTN-Sl-3bE" secondAttribute="bottom" id="2ux-Jf-0aO"/>
                             <constraint firstItem="HNl-AH-wam" firstAttribute="leading" secondItem="oRE-Dq-bT4" secondAttribute="trailing" constant="20" id="5ge-T0-bTc"/>
                             <constraint firstItem="oRE-Dq-bT4" firstAttribute="leading" secondItem="6KC-qF-HHp" secondAttribute="leading" constant="20" id="FQJ-fG-a1H"/>
-                            <constraint firstItem="T1b-d9-uv0" firstAttribute="leading" secondItem="HNl-AH-wam" secondAttribute="trailing" constant="5" id="GXq-ko-9wg"/>
                             <constraint firstItem="HNl-AH-wam" firstAttribute="centerY" secondItem="oRE-Dq-bT4" secondAttribute="centerY" id="Iru-fJ-IJp"/>
                             <constraint firstItem="xTN-Sl-3bE" firstAttribute="top" secondItem="oRE-Dq-bT4" secondAttribute="bottom" id="aZu-f1-bq1"/>
                             <constraint firstItem="oRE-Dq-bT4" firstAttribute="top" secondItem="6KC-qF-HHp" secondAttribute="top" constant="20" id="f9n-Vs-uzH"/>
                             <constraint firstItem="xTN-Sl-3bE" firstAttribute="leading" secondItem="6KC-qF-HHp" secondAttribute="leading" id="mmt-GJ-AE6"/>
                             <constraint firstItem="6KC-qF-HHp" firstAttribute="trailing" secondItem="xTN-Sl-3bE" secondAttribute="trailing" id="mqf-8e-HzN"/>
-                            <constraint firstItem="T1b-d9-uv0" firstAttribute="centerY" secondItem="oRE-Dq-bT4" secondAttribute="centerY" id="z0B-TL-AB2"/>
                         </constraints>
                     </view>
                     <connections>
@@ -771,7 +763,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2f-qD-NXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="201" y="27"/>
+            <point key="canvasLocation" x="3619" y="1518"/>
         </scene>
         <!--CreateScrapViewController-->
         <scene sceneID="JEz-WX-NHM">
@@ -1016,7 +1008,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLR-WY-etr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1927" y="27"/>
-        </scene>                       
+        </scene>
         <!--ReferenceLinkModalViewController-->
         <scene sceneID="TfD-4t-3ea">
             <objects>
@@ -1093,7 +1085,6 @@
             </objects>
             <point key="canvasLocation" x="2715" y="26"/>
         </scene>
-
         <!--Time Settings View Controller-->
         <scene sceneID="7jL-2H-tPZ">
             <objects>
@@ -1274,6 +1265,7 @@
             </objects>
             <point key="canvasLocation" x="4981" y="1518"/>
         </scene>
+        <!--Scrap Search By Date View Controller-->
         <scene sceneID="ty7-Ts-rlX">
             <objects>
                 <viewController storyboardIdentifier="ScrapSearchByDateVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ox2-En-Fnp" customClass="ScrapSearchByDateViewController" customModule="News_Snap" customModuleProvider="target" sceneMemberID="viewController">
@@ -1292,27 +1284,27 @@
     <resources>
         <image name="check-square" width="24" height="24"/>
         <image name="check_box_outline_blank" width="24" height="24"/>
+        <image name="doc.badge.plus" catalog="system" width="116" height="128"/>
         <image name="edit" width="25" height="25"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="toggle-left" width="24" height="24"/>
         <image name="toggle-right" width="24" height="24"/>
-        <image name="doc.badge.plus" catalog="system" width="116" height="128"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -13,6 +13,16 @@
 		2C33B1C92C64F22700000BD2 /* KeywordBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C33B1C82C64F22700000BD2 /* KeywordBoardViewController.swift */; };
 		2C33B1CC2C64F2FE00000BD2 /* KeywordBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C33B1CA2C64F2FE00000BD2 /* KeywordBoardTableViewCell.swift */; };
 		2C33B1CD2C64F2FE00000BD2 /* KeywordBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C33B1CB2C64F2FE00000BD2 /* KeywordBoardTableViewCell.xib */; };
+		2C68AE252C6CB05C00319406 /* AttachmentFileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68AE192C6CB05C00319406 /* AttachmentFileTableViewCell.swift */; };
+		2C68AE262C6CB05C00319406 /* AttachmentFileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C68AE1A2C6CB05C00319406 /* AttachmentFileTableViewCell.xib */; };
+		2C68AE272C6CB05C00319406 /* ReferenceLinklTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68AE1B2C6CB05C00319406 /* ReferenceLinklTableViewCell.swift */; };
+		2C68AE282C6CB05C00319406 /* ReferenceLinklTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C68AE1C2C6CB05C00319406 /* ReferenceLinklTableViewCell.xib */; };
+		2C68AE292C6CB05C00319406 /* Scrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68AE1E2C6CB05C00319406 /* Scrap.swift */; };
+		2C68AE2A2C6CB05C00319406 /* AttachmentFileModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68AE202C6CB05C00319406 /* AttachmentFileModalViewController.swift */; };
+		2C68AE2B2C6CB05C00319406 /* CreateScrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68AE212C6CB05C00319406 /* CreateScrapViewController.swift */; };
+		2C68AE2C2C6CB05C00319406 /* ReferenceLinkModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68AE222C6CB05C00319406 /* ReferenceLinkModalViewController.swift */; };
+		2C68AE2D2C6CB05C00319406 /* ScrapSearchByDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68AE232C6CB05C00319406 /* ScrapSearchByDateViewController.swift */; };
+		2C68AE322C6CC9BB00319406 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68AE312C6CC9BB00319406 /* APIConstants.swift */; };
 		2CC1D8C32C48A45D00561214 /* DaySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC1D8C22C48A45C00561214 /* DaySettingsViewController.swift */; };
 		2CC1D8C52C492E9B00561214 /* TimeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC1D8C42C492E9B00561214 /* TimeSettingsViewController.swift */; };
 		9DEBADE52C465AB700A8C8B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBADE42C465AB700A8C8B4 /* AppDelegate.swift */; };
@@ -31,6 +41,16 @@
 		2C33B1C82C64F22700000BD2 /* KeywordBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordBoardViewController.swift; sourceTree = "<group>"; };
 		2C33B1CA2C64F2FE00000BD2 /* KeywordBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordBoardTableViewCell.swift; sourceTree = "<group>"; };
 		2C33B1CB2C64F2FE00000BD2 /* KeywordBoardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeywordBoardTableViewCell.xib; sourceTree = "<group>"; };
+		2C68AE192C6CB05C00319406 /* AttachmentFileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentFileTableViewCell.swift; sourceTree = "<group>"; };
+		2C68AE1A2C6CB05C00319406 /* AttachmentFileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttachmentFileTableViewCell.xib; sourceTree = "<group>"; };
+		2C68AE1B2C6CB05C00319406 /* ReferenceLinklTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceLinklTableViewCell.swift; sourceTree = "<group>"; };
+		2C68AE1C2C6CB05C00319406 /* ReferenceLinklTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReferenceLinklTableViewCell.xib; sourceTree = "<group>"; };
+		2C68AE1E2C6CB05C00319406 /* Scrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scrap.swift; sourceTree = "<group>"; };
+		2C68AE202C6CB05C00319406 /* AttachmentFileModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentFileModalViewController.swift; sourceTree = "<group>"; };
+		2C68AE212C6CB05C00319406 /* CreateScrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateScrapViewController.swift; sourceTree = "<group>"; };
+		2C68AE222C6CB05C00319406 /* ReferenceLinkModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceLinkModalViewController.swift; sourceTree = "<group>"; };
+		2C68AE232C6CB05C00319406 /* ScrapSearchByDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrapSearchByDateViewController.swift; sourceTree = "<group>"; };
+		2C68AE312C6CC9BB00319406 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		2CC1D8C22C48A45C00561214 /* DaySettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySettingsViewController.swift; sourceTree = "<group>"; };
 		2CC1D8C42C492E9B00561214 /* TimeSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingsViewController.swift; sourceTree = "<group>"; };
 		9DEBADE12C465AB700A8C8B4 /* News-Snap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News-Snap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +85,44 @@
 			path = home;
 			sourceTree = "<group>";
 		};
+		2C68AE1D2C6CB05C00319406 /* ScrapCell */ = {
+			isa = PBXGroup;
+			children = (
+				2C68AE192C6CB05C00319406 /* AttachmentFileTableViewCell.swift */,
+				2C68AE1A2C6CB05C00319406 /* AttachmentFileTableViewCell.xib */,
+				2C68AE1B2C6CB05C00319406 /* ReferenceLinklTableViewCell.swift */,
+				2C68AE1C2C6CB05C00319406 /* ReferenceLinklTableViewCell.xib */,
+			);
+			path = ScrapCell;
+			sourceTree = "<group>";
+		};
+		2C68AE1F2C6CB05C00319406 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C68AE1E2C6CB05C00319406 /* Scrap.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2C68AE242C6CB05C00319406 /* Create-Scrap */ = {
+			isa = PBXGroup;
+			children = (
+				2C68AE202C6CB05C00319406 /* AttachmentFileModalViewController.swift */,
+				2C68AE212C6CB05C00319406 /* CreateScrapViewController.swift */,
+				2C68AE222C6CB05C00319406 /* ReferenceLinkModalViewController.swift */,
+				2C68AE232C6CB05C00319406 /* ScrapSearchByDateViewController.swift */,
+			);
+			path = "Create-Scrap";
+			sourceTree = "<group>";
+		};
+		2C68AE302C6CC95600319406 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2C68AE312C6CC9BB00319406 /* APIConstants.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		2CC1D8C82C492F4800561214 /* settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +153,11 @@
 		9DEBADE32C465AB700A8C8B4 /* News-Snap */ = {
 			isa = PBXGroup;
 			children = (
+				2C68AE302C6CC95600319406 /* Network */,
 				2C33B1C42C5B925000000BD2 /* News-Snap.entitlements */,
+				2C68AE242C6CB05C00319406 /* Create-Scrap */,
+				2C68AE1F2C6CB05C00319406 /* Model */,
+				2C68AE1D2C6CB05C00319406 /* ScrapCell */,
 				2CC1D8C82C492F4800561214 /* settings */,
 				2C33B1C72C64F18600000BD2 /* home */,
 				9DEBADE42C465AB700A8C8B4 /* AppDelegate.swift */,
@@ -168,8 +230,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DEBADEE2C465AB900A8C8B4 /* Assets.xcassets in Resources */,
+				2C68AE262C6CB05C00319406 /* AttachmentFileTableViewCell.xib in Resources */,
 				9DEBADF12C465AB900A8C8B4 /* Base in Resources */,
 				2C33B1CD2C64F2FE00000BD2 /* KeywordBoardTableViewCell.xib in Resources */,
+				2C68AE282C6CB05C00319406 /* ReferenceLinklTableViewCell.xib in Resources */,
 				9DEBADEC2C465AB700A8C8B4 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,11 +245,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C68AE272C6CB05C00319406 /* ReferenceLinklTableViewCell.swift in Sources */,
+				2C68AE252C6CB05C00319406 /* AttachmentFileTableViewCell.swift in Sources */,
 				9DEBADE92C465AB700A8C8B4 /* ViewController.swift in Sources */,
+				2C68AE292C6CB05C00319406 /* Scrap.swift in Sources */,
 				2CC1D8C32C48A45D00561214 /* DaySettingsViewController.swift in Sources */,
+				2C68AE322C6CC9BB00319406 /* APIConstants.swift in Sources */,
+				2C68AE2A2C6CB05C00319406 /* AttachmentFileModalViewController.swift in Sources */,
 				2C33B1CC2C64F2FE00000BD2 /* KeywordBoardTableViewCell.swift in Sources */,
+				2C68AE2D2C6CB05C00319406 /* ScrapSearchByDateViewController.swift in Sources */,
+				2C68AE2B2C6CB05C00319406 /* CreateScrapViewController.swift in Sources */,
 				2CC1D8C52C492E9B00561214 /* TimeSettingsViewController.swift in Sources */,
 				2C33B1C62C64CA9500000BD2 /* HomeViewController.swift in Sources */,
+				2C68AE2C2C6CB05C00319406 /* ReferenceLinkModalViewController.swift in Sources */,
 				2C33B1C32C5A4CE000000BD2 /* ImprovementsViewController.swift in Sources */,
 				9DEBADE52C465AB700A8C8B4 /* AppDelegate.swift in Sources */,
 				9DEBADE72C465AB700A8C8B4 /* SceneDelegate.swift in Sources */,

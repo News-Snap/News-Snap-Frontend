@@ -47,7 +47,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="newsDataLabel" destination="bVc-fd-2ei" id="YK5-Kc-I6r"/>
+                <outlet property="newsDateLabel" destination="bVc-fd-2ei" id="YK5-Kc-I6r"/>
                 <outlet property="newsImageView" destination="6DE-27-uNL" id="3hd-uV-G6K"/>
                 <outlet property="newsTitleLabel" destination="ZCF-sF-EgO" id="wXC-RY-JzD"/>
             </connections>
