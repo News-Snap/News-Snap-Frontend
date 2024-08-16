@@ -7,7 +7,16 @@
 
 import UIKit
 
+protocol AttachmentFileDelegatge : AnyObject {
+    func fileEntered(_ fileLink : String)
+}
+
 class AttachmentFileModalViewController: UIViewController {
+    
+    
+    weak var delegate : AttachmentFileDelegatge?
+    var fileLink : String?
+    
     @IBOutlet var RootView: UIView!
     @IBOutlet weak var MainView: UIView!
     @IBOutlet weak var linkTextField: UITextField!
@@ -27,7 +36,9 @@ class AttachmentFileModalViewController: UIViewController {
     }
     
     @IBAction func confirmButtonTapped(_ sender: Any) {
-        
+        guard let fileLink = linkTextField.text else { return }
+        delegate?.fileEntered(fileLink)
+        self.dismiss(animated: true, completion: nil)
     }
     
     /*

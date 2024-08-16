@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D13D6CF2C6B91AE0064B42A /* AttachmentFileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6C92C6B91AE0064B42A /* AttachmentFileTableViewCell.swift */; };
+		9D13D6D02C6B91AE0064B42A /* AttachmentFileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D13D6CA2C6B91AE0064B42A /* AttachmentFileTableViewCell.xib */; };
+		9D13D6D12C6B91AE0064B42A /* ReferenceLinklTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6CB2C6B91AE0064B42A /* ReferenceLinklTableViewCell.swift */; };
+		9D13D6D22C6B91AE0064B42A /* ReferenceLinklTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D13D6CC2C6B91AE0064B42A /* ReferenceLinklTableViewCell.xib */; };
+		9D13D6D92C6B92E90064B42A /* AttachmentFileModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6D32C6B92E90064B42A /* AttachmentFileModalViewController.swift */; };
+		9D13D6DA2C6B92E90064B42A /* CreateScrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6D42C6B92E90064B42A /* CreateScrapViewController.swift */; };
+		9D13D6DB2C6B92E90064B42A /* ReferenceLinkModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6D62C6B92E90064B42A /* ReferenceLinkModalViewController.swift */; };
+		9D13D6DC2C6B92E90064B42A /* ScrapSearchByDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6D72C6B92E90064B42A /* ScrapSearchByDateViewController.swift */; };
+		9D13D6DF2C6B92F20064B42A /* Scrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6DD2C6B92F20064B42A /* Scrap.swift */; };
 		9DEBADE52C465AB700A8C8B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBADE42C465AB700A8C8B4 /* AppDelegate.swift */; };
 		9DEBADE72C465AB700A8C8B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBADE62C465AB700A8C8B4 /* SceneDelegate.swift */; };
 		9DEBADE92C465AB700A8C8B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBADE82C465AB700A8C8B4 /* ViewController.swift */; };
@@ -16,6 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D13D6C92C6B91AE0064B42A /* AttachmentFileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentFileTableViewCell.swift; sourceTree = "<group>"; };
+		9D13D6CA2C6B91AE0064B42A /* AttachmentFileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttachmentFileTableViewCell.xib; sourceTree = "<group>"; };
+		9D13D6CB2C6B91AE0064B42A /* ReferenceLinklTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceLinklTableViewCell.swift; sourceTree = "<group>"; };
+		9D13D6CC2C6B91AE0064B42A /* ReferenceLinklTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReferenceLinklTableViewCell.xib; sourceTree = "<group>"; };
+		9D13D6D32C6B92E90064B42A /* AttachmentFileModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentFileModalViewController.swift; sourceTree = "<group>"; };
+		9D13D6D42C6B92E90064B42A /* CreateScrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateScrapViewController.swift; sourceTree = "<group>"; };
+		9D13D6D62C6B92E90064B42A /* ReferenceLinkModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceLinkModalViewController.swift; sourceTree = "<group>"; };
+		9D13D6D72C6B92E90064B42A /* ScrapSearchByDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrapSearchByDateViewController.swift; sourceTree = "<group>"; };
+		9D13D6DD2C6B92F20064B42A /* Scrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scrap.swift; sourceTree = "<group>"; };
 		9DEBADE12C465AB700A8C8B4 /* News-Snap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News-Snap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DEBADE42C465AB700A8C8B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DEBADE62C465AB700A8C8B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +55,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D13D6CD2C6B91AE0064B42A /* ScrapCell */ = {
+			isa = PBXGroup;
+			children = (
+				9D13D6C92C6B91AE0064B42A /* AttachmentFileTableViewCell.swift */,
+				9D13D6CA2C6B91AE0064B42A /* AttachmentFileTableViewCell.xib */,
+				9D13D6CB2C6B91AE0064B42A /* ReferenceLinklTableViewCell.swift */,
+				9D13D6CC2C6B91AE0064B42A /* ReferenceLinklTableViewCell.xib */,
+			);
+			path = ScrapCell;
+			sourceTree = "<group>";
+		};
+		9D13D6D82C6B92E90064B42A /* Create-Scrap */ = {
+			isa = PBXGroup;
+			children = (
+				9D13D6D42C6B92E90064B42A /* CreateScrapViewController.swift */,
+				9D13D6D32C6B92E90064B42A /* AttachmentFileModalViewController.swift */,
+				9D13D6D62C6B92E90064B42A /* ReferenceLinkModalViewController.swift */,
+				9D13D6D72C6B92E90064B42A /* ScrapSearchByDateViewController.swift */,
+			);
+			path = "Create-Scrap";
+			sourceTree = "<group>";
+		};
+		9D13D6DE2C6B92F20064B42A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D13D6DD2C6B92F20064B42A /* Scrap.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9DEBADD82C465AB700A8C8B4 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +104,9 @@
 		9DEBADE32C465AB700A8C8B4 /* News-Snap */ = {
 			isa = PBXGroup;
 			children = (
+				9D13D6DE2C6B92F20064B42A /* Model */,
+				9D13D6D82C6B92E90064B42A /* Create-Scrap */,
+				9D13D6CD2C6B91AE0064B42A /* ScrapCell */,
 				9DEBADE42C465AB700A8C8B4 /* AppDelegate.swift */,
 				9DEBADE62C465AB700A8C8B4 /* SceneDelegate.swift */,
 				9DEBADE82C465AB700A8C8B4 /* ViewController.swift */,
@@ -126,7 +177,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DEBADEE2C465AB900A8C8B4 /* Assets.xcassets in Resources */,
+				9D13D6D02C6B91AE0064B42A /* AttachmentFileTableViewCell.xib in Resources */,
 				9DEBADF12C465AB900A8C8B4 /* Base in Resources */,
+				9D13D6D22C6B91AE0064B42A /* ReferenceLinklTableViewCell.xib in Resources */,
 				9DEBADEC2C465AB700A8C8B4 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,8 +192,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DEBADE92C465AB700A8C8B4 /* ViewController.swift in Sources */,
+				9D13D6DF2C6B92F20064B42A /* Scrap.swift in Sources */,
+				9D13D6CF2C6B91AE0064B42A /* AttachmentFileTableViewCell.swift in Sources */,
+				9D13D6DC2C6B92E90064B42A /* ScrapSearchByDateViewController.swift in Sources */,
 				9DEBADE52C465AB700A8C8B4 /* AppDelegate.swift in Sources */,
+				9D13D6D92C6B92E90064B42A /* AttachmentFileModalViewController.swift in Sources */,
 				9DEBADE72C465AB700A8C8B4 /* SceneDelegate.swift in Sources */,
+				9D13D6D12C6B91AE0064B42A /* ReferenceLinklTableViewCell.swift in Sources */,
+				9D13D6DB2C6B92E90064B42A /* ReferenceLinkModalViewController.swift in Sources */,
+				9D13D6DA2C6B92E90064B42A /* CreateScrapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

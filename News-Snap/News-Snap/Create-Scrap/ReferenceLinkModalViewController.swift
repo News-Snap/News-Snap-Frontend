@@ -7,7 +7,14 @@
 
 import UIKit
 
+protocol ReferenceLinkDelegate : AnyObject {
+    func linkEntered(_ referenceLink : String)
+}
+
 class ReferenceLinkModalViewController: UIViewController {
+    
+    weak var delegate : ReferenceLinkDelegate?
+    var referenceLink : String?
     @IBOutlet weak var referenceLinkTextField: UITextField!
     @IBOutlet var rootView: UIView!
     @IBOutlet weak var mainView: UIView!
@@ -27,6 +34,9 @@ class ReferenceLinkModalViewController: UIViewController {
     }
     
     @IBAction func confirmButtonTapped(_ sender: Any) {
+        guard let referenceLink = referenceLinkTextField.text else { return }
+        delegate?.linkEntered(referenceLink)
+        self.dismiss(animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation
