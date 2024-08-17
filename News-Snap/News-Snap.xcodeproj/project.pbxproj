@@ -149,7 +149,7 @@
 			path = "News-Snap/settings";
 			sourceTree = SOURCE_ROOT;
 		};
-		9DEBA37A2C71153700281CBA /* Login_Joinin */ = {
+		9DEBA37A2C71153700281CBA /* Register */ = {
 			isa = PBXGroup;
 			children = (
 				9DEBA3732C71153700281CBA /* AlarmViewController.swift */,
@@ -160,7 +160,7 @@
 				9DEBA3782C71153700281CBA /* SelectViewController.swift */,
 				9DEBA3792C71153700281CBA /* StartViewController.swift */,
 			);
-			name = Login_Joinin;
+			name = Register;
 			path = "News-Snap/Register";
 			sourceTree = SOURCE_ROOT;
 		};
@@ -214,7 +214,7 @@
 				9DEBADEF2C465AB900A8C8B4 /* LaunchScreen.storyboard */,
 				9DEBADF22C465AB900A8C8B4 /* Info.plist */,
 				9DEBA3872C71154000281CBA /* Scrap_DB */,
-				9DEBA37A2C71153700281CBA /* Login_Joinin */,
+				9DEBA37A2C71153700281CBA /* Register */,
 				9DEBA36E2C71151000281CBA /* settings */,
 				9DEBA3652C71150B00281CBA /* home */,
 			);
