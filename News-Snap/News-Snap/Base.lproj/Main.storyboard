@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZGY-eF-iEU">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -771,7 +771,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2f-qD-NXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="201" y="27"/>
+            <point key="canvasLocation" x="-71" y="704"/>
         </scene>
         <!--CreateScrapViewController-->
         <scene sceneID="JEz-WX-NHM">
@@ -1016,7 +1016,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLR-WY-etr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1927" y="27"/>
-        </scene>                       
+        </scene>
         <!--ReferenceLinkModalViewController-->
         <scene sceneID="TfD-4t-3ea">
             <objects>
@@ -1093,7 +1093,6 @@
             </objects>
             <point key="canvasLocation" x="2715" y="26"/>
         </scene>
-
         <!--Time Settings View Controller-->
         <scene sceneID="7jL-2H-tPZ">
             <objects>
@@ -1274,6 +1273,7 @@
             </objects>
             <point key="canvasLocation" x="4981" y="1518"/>
         </scene>
+        <!--Scrap Search By Date View Controller-->
         <scene sceneID="ty7-Ts-rlX">
             <objects>
                 <viewController storyboardIdentifier="ScrapSearchByDateVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ox2-En-Fnp" customClass="ScrapSearchByDateViewController" customModule="News_Snap" customModuleProvider="target" sceneMemberID="viewController">
@@ -1292,12 +1292,12 @@
     <resources>
         <image name="check-square" width="24" height="24"/>
         <image name="check_box_outline_blank" width="24" height="24"/>
+        <image name="doc.badge.plus" catalog="system" width="116" height="128"/>
         <image name="edit" width="25" height="25"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="toggle-left" width="24" height="24"/>
         <image name="toggle-right" width="24" height="24"/>
-        <image name="doc.badge.plus" catalog="system" width="116" height="128"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
