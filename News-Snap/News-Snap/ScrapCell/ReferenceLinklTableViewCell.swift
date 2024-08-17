@@ -7,32 +7,13 @@
 
 import UIKit
 
-class ReferenceLinklTableViewCell: UITableViewCell , ReferenceLinkDelegate {
-    
-    func linkEntered(_ referenceLink: String) {
-        self.referenceLink = referenceLink
-    }
-    
+class ReferenceLinklTableViewCell: UITableViewCell {
     
     @IBOutlet weak var referenceLabel: UILabel!
     
-    @IBOutlet weak var mainView: UIView!
-    var referenceLink : String!
 
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        mainView.backgroundColor = UIColor(red: 140/255, green: 217/255, blue: 233/255, alpha: 1)
-        mainView.layer.cornerRadius = 0.4
-        mainView.layer.masksToBounds = true
-        // referenceLabel.text = referenceLink
-        
-//        NSLayoutConstraint.activate([
-//            mainView.heightAnchor.constraint(equalToConstant: 48),
-//            mainView.widthAnchor.constraint(equalToConstant: 383)
-//        ])
-        
         // Initialization code
     }
 
