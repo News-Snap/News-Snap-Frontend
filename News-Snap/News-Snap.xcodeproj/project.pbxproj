@@ -16,17 +16,29 @@
 		9D13D6DB2C6B92E90064B42A /* ReferenceLinkModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6D62C6B92E90064B42A /* ReferenceLinkModalViewController.swift */; };
 		9D13D6DC2C6B92E90064B42A /* ScrapSearchByDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6D72C6B92E90064B42A /* ScrapSearchByDateViewController.swift */; };
 		9D13D6DF2C6B92F20064B42A /* Scrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6DD2C6B92F20064B42A /* Scrap.swift */; };
-		2C0966A82C47E4CE005FBA4E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0966A72C47E4CE005FBA4E /* SettingsViewController.swift */; };
-		2C33B1C32C5A4CE000000BD2 /* ImprovementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C33B1C22C5A4CE000000BD2 /* ImprovementsViewController.swift */; };
-		2C33B1C62C64CA9500000BD2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C33B1C52C64CA9500000BD2 /* HomeViewController.swift */; };
-		2C33B1C92C64F22700000BD2 /* KeywordBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C33B1C82C64F22700000BD2 /* KeywordBoardViewController.swift */; };
-		2C33B1CC2C64F2FE00000BD2 /* KeywordBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C33B1CA2C64F2FE00000BD2 /* KeywordBoardTableViewCell.swift */; };
-		2C33B1CD2C64F2FE00000BD2 /* KeywordBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C33B1CB2C64F2FE00000BD2 /* KeywordBoardTableViewCell.xib */; };
-		2CC1D8C32C48A45D00561214 /* DaySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC1D8C22C48A45C00561214 /* DaySettingsViewController.swift */; };
-		2CC1D8C52C492E9B00561214 /* TimeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC1D8C42C492E9B00561214 /* TimeSettingsViewController.swift */; };
+		9DEBA35E2C71133E00281CBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA35D2C71133E00281CBA /* ViewController.swift */; };
+		9DEBA3602C7114E400281CBA /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA35F2C7114E400281CBA /* Member.swift */; };
+		9DEBA3662C71150B00281CBA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3612C71150B00281CBA /* HomeViewController.swift */; };
+		9DEBA3672C71150B00281CBA /* KeywordBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3622C71150B00281CBA /* KeywordBoardTableViewCell.swift */; };
+		9DEBA3682C71150B00281CBA /* KeywordBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBA3632C71150B00281CBA /* KeywordBoardTableViewCell.xib */; };
+		9DEBA3692C71150B00281CBA /* KeywordBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3642C71150B00281CBA /* KeywordBoardViewController.swift */; };
+		9DEBA36F2C71151000281CBA /* DaySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA36A2C71151000281CBA /* DaySettingsViewController.swift */; };
+		9DEBA3702C71151000281CBA /* ImprovementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA36B2C71151000281CBA /* ImprovementsViewController.swift */; };
+		9DEBA3712C71151000281CBA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA36C2C71151000281CBA /* SettingsViewController.swift */; };
+		9DEBA3722C71151000281CBA /* TimeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA36D2C71151000281CBA /* TimeSettingsViewController.swift */; };
+		9DEBA37B2C71153800281CBA /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3732C71153700281CBA /* AlarmViewController.swift */; };
+		9DEBA37C2C71153800281CBA /* EmailVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3742C71153700281CBA /* EmailVerificationViewController.swift */; };
+		9DEBA37D2C71153800281CBA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3752C71153700281CBA /* LoginViewController.swift */; };
+		9DEBA37E2C71153800281CBA /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3762C71153700281CBA /* NewPasswordViewController.swift */; };
+		9DEBA37F2C71153800281CBA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3772C71153700281CBA /* RegisterViewController.swift */; };
+		9DEBA3802C71153800281CBA /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3782C71153700281CBA /* SelectViewController.swift */; };
+		9DEBA3812C71153800281CBA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3792C71153700281CBA /* StartViewController.swift */; };
+		9DEBA3882C71154000281CBA /* FirstCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3822C71154000281CBA /* FirstCellTableViewCell.swift */; };
+		9DEBA3892C71154000281CBA /* FirstCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBA3832C71154000281CBA /* FirstCellTableViewCell.xib */; };
+		9DEBA38A2C71154000281CBA /* MyScrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3852C71154000281CBA /* MyScrapViewController.swift */; };
+		9DEBA38B2C71154000281CBA /* ScrapStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3862C71154000281CBA /* ScrapStatsViewController.swift */; };
 		9DEBADE52C465AB700A8C8B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBADE42C465AB700A8C8B4 /* AppDelegate.swift */; };
 		9DEBADE72C465AB700A8C8B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBADE62C465AB700A8C8B4 /* SceneDelegate.swift */; };
-		9DEBADE92C465AB700A8C8B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBADE82C465AB700A8C8B4 /* ViewController.swift */; };
 		9DEBADEC2C465AB700A8C8B4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBADEB2C465AB700A8C8B4 /* Base */; };
 		9DEBADEE2C465AB900A8C8B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBADED2C465AB900A8C8B4 /* Assets.xcassets */; };
 		9DEBADF12C465AB900A8C8B4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBADF02C465AB900A8C8B4 /* Base */; };
@@ -42,19 +54,30 @@
 		9D13D6D62C6B92E90064B42A /* ReferenceLinkModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceLinkModalViewController.swift; sourceTree = "<group>"; };
 		9D13D6D72C6B92E90064B42A /* ScrapSearchByDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrapSearchByDateViewController.swift; sourceTree = "<group>"; };
 		9D13D6DD2C6B92F20064B42A /* Scrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scrap.swift; sourceTree = "<group>"; };
-		2C0966A72C47E4CE005FBA4E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		2C33B1C22C5A4CE000000BD2 /* ImprovementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImprovementsViewController.swift; sourceTree = "<group>"; };
-		2C33B1C42C5B925000000BD2 /* News-Snap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "News-Snap.entitlements"; sourceTree = "<group>"; };
-		2C33B1C52C64CA9500000BD2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		2C33B1C82C64F22700000BD2 /* KeywordBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordBoardViewController.swift; sourceTree = "<group>"; };
-		2C33B1CA2C64F2FE00000BD2 /* KeywordBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordBoardTableViewCell.swift; sourceTree = "<group>"; };
-		2C33B1CB2C64F2FE00000BD2 /* KeywordBoardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeywordBoardTableViewCell.xib; sourceTree = "<group>"; };
-		2CC1D8C22C48A45C00561214 /* DaySettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySettingsViewController.swift; sourceTree = "<group>"; };
-		2CC1D8C42C492E9B00561214 /* TimeSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingsViewController.swift; sourceTree = "<group>"; };
+		9DEBA35D2C71133E00281CBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9DEBA35F2C7114E400281CBA /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		9DEBA3612C71150B00281CBA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9DEBA3622C71150B00281CBA /* KeywordBoardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeywordBoardTableViewCell.swift; sourceTree = "<group>"; };
+		9DEBA3632C71150B00281CBA /* KeywordBoardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeywordBoardTableViewCell.xib; sourceTree = "<group>"; };
+		9DEBA3642C71150B00281CBA /* KeywordBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeywordBoardViewController.swift; sourceTree = "<group>"; };
+		9DEBA36A2C71151000281CBA /* DaySettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaySettingsViewController.swift; sourceTree = "<group>"; };
+		9DEBA36B2C71151000281CBA /* ImprovementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImprovementsViewController.swift; sourceTree = "<group>"; };
+		9DEBA36C2C71151000281CBA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9DEBA36D2C71151000281CBA /* TimeSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSettingsViewController.swift; sourceTree = "<group>"; };
+		9DEBA3732C71153700281CBA /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		9DEBA3742C71153700281CBA /* EmailVerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailVerificationViewController.swift; sourceTree = "<group>"; };
+		9DEBA3752C71153700281CBA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9DEBA3762C71153700281CBA /* NewPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
+		9DEBA3772C71153700281CBA /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9DEBA3782C71153700281CBA /* SelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
+		9DEBA3792C71153700281CBA /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		9DEBA3822C71154000281CBA /* FirstCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCellTableViewCell.swift; sourceTree = "<group>"; };
+		9DEBA3832C71154000281CBA /* FirstCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstCellTableViewCell.xib; sourceTree = "<group>"; };
+		9DEBA3852C71154000281CBA /* MyScrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyScrapViewController.swift; sourceTree = "<group>"; };
+		9DEBA3862C71154000281CBA /* ScrapStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrapStatsViewController.swift; sourceTree = "<group>"; };
 		9DEBADE12C465AB700A8C8B4 /* News-Snap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News-Snap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DEBADE42C465AB700A8C8B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DEBADE62C465AB700A8C8B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9DEBADE82C465AB700A8C8B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9DEBADEB2C465AB700A8C8B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9DEBADED2C465AB900A8C8B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DEBADF02C465AB900A8C8B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,6 +120,7 @@
 		9D13D6DE2C6B92F20064B42A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9DEBA35F2C7114E400281CBA /* Member.swift */,
 				9D13D6DD2C6B92F20064B42A /* Scrap.swift */,
 			);
 			path = Model;
@@ -121,6 +145,64 @@
 				2C33B1C22C5A4CE000000BD2 /* ImprovementsViewController.swift */,
 			);
 			path = settings;
+			sourceTree = "<group>";
+		};
+		9DEBA3652C71150B00281CBA /* home */ = {
+			isa = PBXGroup;
+			children = (
+				9DEBA3612C71150B00281CBA /* HomeViewController.swift */,
+				9DEBA3622C71150B00281CBA /* KeywordBoardTableViewCell.swift */,
+				9DEBA3632C71150B00281CBA /* KeywordBoardTableViewCell.xib */,
+				9DEBA3642C71150B00281CBA /* KeywordBoardViewController.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		9DEBA36E2C71151000281CBA /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				9DEBA36A2C71151000281CBA /* DaySettingsViewController.swift */,
+				9DEBA36B2C71151000281CBA /* ImprovementsViewController.swift */,
+				9DEBA36C2C71151000281CBA /* SettingsViewController.swift */,
+				9DEBA36D2C71151000281CBA /* TimeSettingsViewController.swift */,
+			);
+			name = settings;
+			path = "News-Snap/settings";
+			sourceTree = SOURCE_ROOT;
+		};
+		9DEBA37A2C71153700281CBA /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				9DEBA3732C71153700281CBA /* AlarmViewController.swift */,
+				9DEBA3742C71153700281CBA /* EmailVerificationViewController.swift */,
+				9DEBA3752C71153700281CBA /* LoginViewController.swift */,
+				9DEBA3762C71153700281CBA /* NewPasswordViewController.swift */,
+				9DEBA3772C71153700281CBA /* RegisterViewController.swift */,
+				9DEBA3782C71153700281CBA /* SelectViewController.swift */,
+				9DEBA3792C71153700281CBA /* StartViewController.swift */,
+			);
+			name = Register;
+			path = "News-Snap/Register";
+			sourceTree = SOURCE_ROOT;
+		};
+		9DEBA3842C71154000281CBA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9DEBA3822C71154000281CBA /* FirstCellTableViewCell.swift */,
+				9DEBA3832C71154000281CBA /* FirstCellTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9DEBA3872C71154000281CBA /* Scrap_DB */ = {
+			isa = PBXGroup;
+			children = (
+				9DEBA3842C71154000281CBA /* Cell */,
+				9DEBA3852C71154000281CBA /* MyScrapViewController.swift */,
+				9DEBA3862C71154000281CBA /* ScrapStatsViewController.swift */,
+			);
+			name = Scrap_DB;
+			path = Controller/Scrap_DB;
 			sourceTree = "<group>";
 		};
 		9DEBADD82C465AB700A8C8B4 = {
@@ -150,11 +232,15 @@
 				2C33B1C72C64F18600000BD2 /* home */,
 				9DEBADE42C465AB700A8C8B4 /* AppDelegate.swift */,
 				9DEBADE62C465AB700A8C8B4 /* SceneDelegate.swift */,
-				9DEBADE82C465AB700A8C8B4 /* ViewController.swift */,
 				9DEBADEA2C465AB700A8C8B4 /* Main.storyboard */,
+				9DEBA35D2C71133E00281CBA /* ViewController.swift */,
 				9DEBADED2C465AB900A8C8B4 /* Assets.xcassets */,
 				9DEBADEF2C465AB900A8C8B4 /* LaunchScreen.storyboard */,
 				9DEBADF22C465AB900A8C8B4 /* Info.plist */,
+				9DEBA3872C71154000281CBA /* Scrap_DB */,
+				9DEBA37A2C71153700281CBA /* Register */,
+				9DEBA36E2C71151000281CBA /* settings */,
+				9DEBA3652C71150B00281CBA /* home */,
 			);
 			path = "News-Snap";
 			sourceTree = "<group>";
@@ -221,7 +307,8 @@
 				9D13D6D02C6B91AE0064B42A /* AttachmentFileTableViewCell.xib in Resources */,
 				9DEBADF12C465AB900A8C8B4 /* Base in Resources */,
 				9D13D6D22C6B91AE0064B42A /* ReferenceLinklTableViewCell.xib in Resources */,
-				2C33B1CD2C64F2FE00000BD2 /* KeywordBoardTableViewCell.xib in Resources */,
+				9DEBA3682C71150B00281CBA /* KeywordBoardTableViewCell.xib in Resources */,
+				9DEBA3892C71154000281CBA /* FirstCellTableViewCell.xib in Resources */,
 				9DEBADEC2C465AB700A8C8B4 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,23 +320,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DEBADE92C465AB700A8C8B4 /* ViewController.swift in Sources */,
+				9DEBA37D2C71153800281CBA /* LoginViewController.swift in Sources */,
+				9DEBA3692C71150B00281CBA /* KeywordBoardViewController.swift in Sources */,
+				9DEBA3882C71154000281CBA /* FirstCellTableViewCell.swift in Sources */,
+				9DEBA3672C71150B00281CBA /* KeywordBoardTableViewCell.swift in Sources */,
+				9DEBA3722C71151000281CBA /* TimeSettingsViewController.swift in Sources */,
+				9DEBA3802C71153800281CBA /* SelectViewController.swift in Sources */,
+				9DEBA35E2C71133E00281CBA /* ViewController.swift in Sources */,
+				9DEBA38A2C71154000281CBA /* MyScrapViewController.swift in Sources */,
 				9D13D6DF2C6B92F20064B42A /* Scrap.swift in Sources */,
+				9DEBA37B2C71153800281CBA /* AlarmViewController.swift in Sources */,
 				9D13D6CF2C6B91AE0064B42A /* AttachmentFileTableViewCell.swift in Sources */,
 				9D13D6DC2C6B92E90064B42A /* ScrapSearchByDateViewController.swift in Sources */,
-				2CC1D8C32C48A45D00561214 /* DaySettingsViewController.swift in Sources */,
-				2C33B1CC2C64F2FE00000BD2 /* KeywordBoardTableViewCell.swift in Sources */,
-				2CC1D8C52C492E9B00561214 /* TimeSettingsViewController.swift in Sources */,
-				2C33B1C62C64CA9500000BD2 /* HomeViewController.swift in Sources */,
-				2C33B1C32C5A4CE000000BD2 /* ImprovementsViewController.swift in Sources */,
+				9DEBA38B2C71154000281CBA /* ScrapStatsViewController.swift in Sources */,
+				9DEBA3702C71151000281CBA /* ImprovementsViewController.swift in Sources */,
+				9DEBA36F2C71151000281CBA /* DaySettingsViewController.swift in Sources */,
+				9DEBA37C2C71153800281CBA /* EmailVerificationViewController.swift in Sources */,
 				9DEBADE52C465AB700A8C8B4 /* AppDelegate.swift in Sources */,
 				9D13D6D92C6B92E90064B42A /* AttachmentFileModalViewController.swift in Sources */,
+				9DEBA37F2C71153800281CBA /* RegisterViewController.swift in Sources */,
 				9DEBADE72C465AB700A8C8B4 /* SceneDelegate.swift in Sources */,
 				9D13D6D12C6B91AE0064B42A /* ReferenceLinklTableViewCell.swift in Sources */,
+				9DEBA37E2C71153800281CBA /* NewPasswordViewController.swift in Sources */,
+				9DEBA3712C71151000281CBA /* SettingsViewController.swift in Sources */,
+				9DEBA3812C71153800281CBA /* StartViewController.swift in Sources */,
 				9D13D6DB2C6B92E90064B42A /* ReferenceLinkModalViewController.swift in Sources */,
 				9D13D6DA2C6B92E90064B42A /* CreateScrapViewController.swift in Sources */,
-				2C0966A82C47E4CE005FBA4E /* SettingsViewController.swift in Sources */,
-				2C33B1C92C64F22700000BD2 /* KeywordBoardViewController.swift in Sources */,
+				9DEBA3602C7114E400281CBA /* Member.swift in Sources */,
+				9DEBA3662C71150B00281CBA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
