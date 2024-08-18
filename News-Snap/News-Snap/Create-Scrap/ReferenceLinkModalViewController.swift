@@ -11,10 +11,18 @@ protocol ReferenceLinkDelegate : AnyObject {
     func linkEntered(_ referenceLink : String)
 }
 
+protocol RefereceLinkCountDelegate : AnyObject {
+    func referenceLinkCount(_ referenceLinkCount : Int)
+}
+
 class ReferenceLinkModalViewController: UIViewController {
     
     weak var delegate : ReferenceLinkDelegate?
     var referenceLink : String?
+    
+    weak var countDelegate : RefereceLinkCountDelegate?
+    var referenceLinkCount : Int = 1
+    
     @IBOutlet weak var referenceLinkTextField: UITextField!
     @IBOutlet var rootView: UIView!
     @IBOutlet weak var mainView: UIView!
@@ -36,6 +44,8 @@ class ReferenceLinkModalViewController: UIViewController {
     @IBAction func confirmButtonTapped(_ sender: Any) {
         guard let referenceLink = referenceLinkTextField.text else { return }
         delegate?.linkEntered(referenceLink)
+        referenceLinkCount += 1
+        countDelegate?.referenceLinkCount(referenceLinkCount)
         self.dismiss(animated: true, completion: nil)
     }
     /*

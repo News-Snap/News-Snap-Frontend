@@ -11,11 +11,17 @@ protocol AttachmentFileDelegatge : AnyObject {
     func fileEntered(_ fileLink : String)
 }
 
+protocol AttachmentFileCountDelegate : AnyObject {
+    func attachmentFileCount(_ attachmentFileCount : Int)
+}
+
 class AttachmentFileModalViewController: UIViewController {
-    
     
     weak var delegate : AttachmentFileDelegatge?
     var fileLink : String?
+    
+    weak var fileCountDelegate : AttachmentFileCountDelegate?
+    var attachementFileCount : Int = 1
     
     @IBOutlet var RootView: UIView!
     @IBOutlet weak var MainView: UIView!
@@ -38,6 +44,8 @@ class AttachmentFileModalViewController: UIViewController {
     @IBAction func confirmButtonTapped(_ sender: Any) {
         guard let fileLink = linkTextField.text else { return }
         delegate?.fileEntered(fileLink)
+        attachementFileCount += 1
+        fileCountDelegate?.attachmentFileCount(attachementFileCount)
         self.dismiss(animated: true, completion: nil)
     }
     

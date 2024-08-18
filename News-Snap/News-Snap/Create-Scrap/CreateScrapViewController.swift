@@ -18,11 +18,21 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate, Refere
         self.referenceLink = referenceLink
     }
     
+    func attachmentFileCount(_ attachmentFileCount : Int){
+        self.attachmentFileCount = attachmentFileCount
+    }
+    
+    func referenceLinkCount(_ referenceLinkCount : Int){
+        self.refereceLinkCount = referenceLinkCount
+    }
+
     
     var scrap : Scrap!
-    
     var referenceLink : String!
     var fileLink : String!
+    var attachmentFileCount : Int = 1
+    var refereceLinkCount : Int = 1
+    
     
     
     @IBOutlet weak var scrapContentTextField: UITextField!
@@ -198,16 +208,13 @@ extension CreateScrapViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView.tag == 1 {
-            return 1
-        } else if tableView.tag == 2 {
-            return 1
+            return attachmentFileCount
         } else {
-            return 1
+            return refereceLinkCount
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if tableView.tag == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AttachmentFileTableViewCell", for: indexPath) as! AttachmentFileTableViewCell
             return cell
@@ -220,6 +227,4 @@ extension CreateScrapViewController: UITableViewDelegate, UITableViewDataSource 
             return UITableViewCell()
         }
     }
-    
-
 }
