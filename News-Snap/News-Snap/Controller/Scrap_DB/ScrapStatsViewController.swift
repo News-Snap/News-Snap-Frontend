@@ -9,6 +9,15 @@ import UIKit
 
 class ScrapStatsViewController: UIViewController {
 
+    // Outlet //
+    
+    
+    
+    // Action //
+    @IBAction func BackToTabVarVCTapped(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "TabBarVC") as! UITabBarController
+                  self.view.window?.windowScene?.keyWindow?.rootViewController = vc
+    }
     
     
     
