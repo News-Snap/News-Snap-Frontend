@@ -3,7 +3,7 @@
 //  News-Snap
 //
 //  Created by Jinyoung Leem on 7/16/24.
-//
+//  1차 merge의 실패로 인해 다시 clone 파일 복붙
 
 import UIKit
 

@@ -57,21 +57,26 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate, Refere
         
         let id = generateID()
         
-        // nil 일 경우 처리
-        let safeReferenceLink = referenceLink ?? "No reference link provided"
-        let safeFileLink = fileLink ?? "No file link provided"
-        
-        scrap = Scrap(id: id, link: articleLink, contents: contents, keywords: keywords, date: Date(), attachmentFile: safeFileLink, referenceFile: safeReferenceLink)
+        scrap = Scrap(id: id, link: articleLink, contents: contents, keywords: keywords, date: Date())
         print("Scrap saved:", scrap!)
         
         // API 통신 - POST 요청
-        // sendScrapDataToServer(scrap)
+        sendScrapDataToServer(scrap)
     }
 
     @IBAction func saveAttachmentFileButtonTapped(_ sender: Any) {
+//        guard let scrap = scrap else {
+//            print("초기화 필요")
+//            return
+//        }
+//        
+//        // 예제 URL 사용, 실제 파일을 선택하고 URL을 지정해야 함
+//        // scrap.attachmentFile = URL(fileURLWithPath: "path/to/attachment/file")
+//        
+//        print("Attachment file saved:", scrap.attachmentFile ?? "None")
+        
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "AttachmentFileModalVC") as? AttachmentFileModalViewController else { return }
         
-        nextVC.delegate = self
         nextVC.modalTransitionStyle = .coverVertical
         nextVC.modalPresentationStyle = .overFullScreen
         self.present(nextVC, animated: true, completion: nil)
@@ -89,7 +94,6 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate, Refere
         
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ReferenceLinkModalVC") as? ReferenceLinkModalViewController else { return }
         
-        nextVC.delegate = self
         nextVC.modalTransitionStyle = .coverVertical
         nextVC.modalPresentationStyle = .overFullScreen
         self.present(nextVC, animated: true, completion: nil)
@@ -98,7 +102,6 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate, Refere
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
         // Do any additional setup after loading the view.
         
         scrapContentTextField.delegate = self
@@ -114,18 +117,16 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate, Refere
         attachmentFileTableView.delegate = self
         attachmentFileTableView.dataSource = self
         let attachmentFileNib = UINib(nibName: "AttachmentFileTableViewCell", bundle: nil)
-        attachmentFileTableView.register(attachmentFileNib, forCellReuseIdentifier: "AttachmentFileTableViewCell")
-        attachmentFileTableView.layer.cornerRadius = 10
-        attachmentFileTableView.clipsToBounds = true
-
+        referenceTableView.register(attachmentFileNib, forCellReuseIdentifier: "AttachmentFileTableViewCell")
         
         // 참고자료 관련
         referenceTableView.delegate = self
         referenceTableView.dataSource = self
-        let referenceNib = UINib(nibName: "ReferenceLinklTableViewCell", bundle: nil)
-        referenceTableView.register(referenceNib, forCellReuseIdentifier: "ReferenceLinklTableViewCell")
-        referenceTableView.layer.cornerRadius = 10
-        referenceTableView.clipsToBounds = true
+        let referenceNib = UINib(nibName: "ReferenceTableViewCell", bundle: nil)
+        referenceTableView.register(referenceNib, forCellReuseIdentifier: "ReferenceTableViewCell")
+        
+
+        
     }
     
     private func generateID() -> Int {
@@ -168,9 +169,7 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate, Refere
                 "link": scrap.link,
                 "contents": scrap.contents,
                 "keywords": scrap.keywords,
-                "date": scrap.date.ISO8601Format(), // ISO8601 형식으로 변환된 날짜
-                "attachmentFileLink": scrap.attachmentFile,
-                "referenceLink": scrap.referenceFile
+                "date": scrap.date.ISO8601Format() // ISO8601 형식으로 변환된 날짜
             ]
             
             do {
@@ -201,29 +200,24 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate, Refere
 }
 
 extension CreateScrapViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        48
-    }
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView.tag == 1 {
             return attachmentFileCount
         } else {
             return refereceLinkCount
         }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView.tag == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AttachmentFileTableViewCell", for: indexPath) as! AttachmentFileTableViewCell
             return cell
-        }
-        else if tableView.tag == 2 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ReferenceLinklTableViewCell", for: indexPath) as! ReferenceLinklTableViewCell
+        } else if tableView == referenceTableView {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath)
+            //cell.textLabel?.text = data2[indexPath.row]
             return cell
-        } 
-        else {
+        } else {
             return UITableViewCell()
         }
     }
