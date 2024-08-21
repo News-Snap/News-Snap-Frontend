@@ -7,7 +7,22 @@
 
 import UIKit
 
+protocol AttachmentFileDelegatge : AnyObject {
+    func fileEntered(_ fileLink : String)
+}
+
+protocol AttachmentFileCountDelegate : AnyObject {
+    func attachmentFileCount(_ attachmentFileCount : Int)
+}
+
 class AttachmentFileModalViewController: UIViewController {
+    
+    weak var delegate : AttachmentFileDelegatge?
+    var fileLink : String = "파일이 존재하지 않습니다"
+    
+    weak var fileCountDelegate : AttachmentFileCountDelegate?
+    var attachementFileCount : Int = 1
+    
     @IBOutlet var RootView: UIView!
     @IBOutlet weak var MainView: UIView!
     @IBOutlet weak var linkTextField: UITextField!
@@ -17,8 +32,6 @@ class AttachmentFileModalViewController: UIViewController {
         RootView.backgroundColor = nil
         MainView.layer.cornerRadius = 25
         MainView.layer.masksToBounds = true
-
-
         // Do any additional setup after loading the view.
     }
     
@@ -27,7 +40,11 @@ class AttachmentFileModalViewController: UIViewController {
     }
     
     @IBAction func confirmButtonTapped(_ sender: Any) {
-        
+        guard let fileLink = linkTextField.text else { return }
+        delegate?.fileEntered(fileLink)
+        attachementFileCount += 1
+        fileCountDelegate?.attachmentFileCount(attachementFileCount)
+        self.dismiss(animated: true, completion: nil)
     }
     
     /*
