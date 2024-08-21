@@ -8,10 +8,16 @@
 import UIKit
 
 class AttachmentFileTableViewCell: UITableViewCell {
-
     @IBOutlet weak var AttachmentFilePath: UILabel!
+    
+    @IBOutlet weak var mainView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        mainView.layer.borderWidth = 0.8 // 보더 두께 설정
+        mainView.layer.cornerRadius = 8.0 // 원하는 반경 값 설정
+        mainView.layer.masksToBounds = true // 코너 반경 적용
         // Initialization code
     }
 

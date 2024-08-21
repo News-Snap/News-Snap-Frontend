@@ -18,7 +18,7 @@ protocol AttachmentFileCountDelegate : AnyObject {
 class AttachmentFileModalViewController: UIViewController {
     
     weak var delegate : AttachmentFileDelegatge?
-    var fileLink : String?
+    var fileLink : String = "파일이 존재하지 않습니다"
     
     weak var fileCountDelegate : AttachmentFileCountDelegate?
     var attachementFileCount : Int = 1
@@ -32,8 +32,6 @@ class AttachmentFileModalViewController: UIViewController {
         RootView.backgroundColor = nil
         MainView.layer.cornerRadius = 25
         MainView.layer.masksToBounds = true
-
-
         // Do any additional setup after loading the view.
     }
     

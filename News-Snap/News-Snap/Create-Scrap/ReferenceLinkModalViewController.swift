@@ -43,6 +43,8 @@ class ReferenceLinkModalViewController: UIViewController {
     
     @IBAction func confirmButtonTapped(_ sender: Any) {
         guard let referenceLink = referenceLinkTextField.text else { return }
+        print("Reference link: \(referenceLink)") // 디버깅용 출력
+
         delegate?.linkEntered(referenceLink)
         referenceLinkCount += 1
         countDelegate?.referenceLinkCount(referenceLinkCount)

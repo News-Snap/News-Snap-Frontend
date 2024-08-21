@@ -16,13 +16,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iC-4a-a4M">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="파일이 존재하지 않습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iC-4a-a4M">
                         <rect key="frame" x="3" y="3" width="314" height="38"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="0.54901960780000003" green="0.85098039219999999" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="2iC-4a-a4M" secondAttribute="bottom" constant="3" id="QGn-Fl-8O6"/>
                     <constraint firstAttribute="trailing" secondItem="2iC-4a-a4M" secondAttribute="trailing" constant="3" id="hPD-6W-IMa"/>
@@ -33,6 +34,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="AttachmentFilePath" destination="2iC-4a-a4M" id="g3V-xt-WMZ"/>
+                <outlet property="mainView" destination="H2p-sc-9uM" id="JEQ-1e-Ad9"/>
             </connections>
             <point key="canvasLocation" x="131" y="-11"/>
         </tableViewCell>

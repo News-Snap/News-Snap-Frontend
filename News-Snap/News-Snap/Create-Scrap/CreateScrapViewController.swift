@@ -16,6 +16,7 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate, Refere
     
     func linkEntered(_ referenceLink: String) {
         self.referenceLink = referenceLink
+        
     }
     
     func attachmentFileCount(_ attachmentFileCount : Int){
@@ -24,12 +25,13 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate, Refere
     
     func referenceLinkCount(_ referenceLinkCount : Int){
         self.refereceLinkCount = referenceLinkCount
+        
     }
 
     
     var scrap : Scrap!
-    var referenceLink : String!
-    var fileLink : String!
+    var referenceLink : String?
+    var fileLink : String?
     var attachmentFileCount : Int = 1
     var refereceLinkCount : Int = 1
     
@@ -57,11 +59,12 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate, Refere
         
         let id = generateID()
         
-        scrap = Scrap(id: id, link: articleLink, contents: contents, keywords: keywords, date: Date())
+        scrap = Scrap(id: id, link: articleLink, contents: contents, keywords: keywords, date: Date(), attachmentFile: fileLink ?? "null", referenceLink: referenceLink ?? "null")
+        
         print("Scrap saved:", scrap!)
         
         // API 통신 - POST 요청
-        sendScrapDataToServer(scrap)
+         sendScrapDataToServer(scrap)
     }
 
     @IBAction func saveAttachmentFileButtonTapped(_ sender: Any) {
@@ -77,6 +80,7 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate, Refere
         
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "AttachmentFileModalVC") as? AttachmentFileModalViewController else { return }
         
+        nextVC.delegate = self
         nextVC.modalTransitionStyle = .coverVertical
         nextVC.modalPresentationStyle = .overFullScreen
         self.present(nextVC, animated: true, completion: nil)
@@ -94,6 +98,7 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate, Refere
         
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ReferenceLinkModalVC") as? ReferenceLinkModalViewController else { return }
         
+        nextVC.delegate = self
         nextVC.modalTransitionStyle = .coverVertical
         nextVC.modalPresentationStyle = .overFullScreen
         self.present(nextVC, animated: true, completion: nil)
@@ -117,15 +122,19 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate, Refere
         attachmentFileTableView.delegate = self
         attachmentFileTableView.dataSource = self
         let attachmentFileNib = UINib(nibName: "AttachmentFileTableViewCell", bundle: nil)
-        referenceTableView.register(attachmentFileNib, forCellReuseIdentifier: "AttachmentFileTableViewCell")
+        attachmentFileTableView.register(attachmentFileNib, forCellReuseIdentifier: "AttachmentFileTableViewCell")
+        attachmentFileTableView.layer.cornerRadius = 8.0
+        attachmentFileTableView.layer.masksToBounds = true
         
         // 참고자료 관련
         referenceTableView.delegate = self
         referenceTableView.dataSource = self
-        let referenceNib = UINib(nibName: "ReferenceTableViewCell", bundle: nil)
-        referenceTableView.register(referenceNib, forCellReuseIdentifier: "ReferenceTableViewCell")
+        let referenceNib = UINib(nibName: "ReferenceLinklTableViewCell", bundle: nil)
+        referenceTableView.register(referenceNib, forCellReuseIdentifier: "ReferenceLinklTableViewCell")
         
-
+        referenceTableView.layer.cornerRadius = 8.0
+        referenceTableView.layer.masksToBounds = true
+        
         
     }
     
@@ -155,7 +164,7 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate, Refere
     }
     
     private func sendScrapDataToServer(_ scrap: Scrap) {
-            guard let url = URL(string: "ScrapURL입력.com") else {
+            guard let url = URL(string: "http://52.78.37.90:8080/api/v1/scrap") else {
                 print("Invalid URL")
                 return
             }
@@ -169,7 +178,8 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate, Refere
                 "link": scrap.link,
                 "contents": scrap.contents,
                 "keywords": scrap.keywords,
-                "date": scrap.date.ISO8601Format() // ISO8601 형식으로 변환된 날짜
+                "date": scrap.date.ISO8601Format(),// ISO8601 형식으로 변환된 날짜
+                "relatedUrlList" : scrap.refereceLink
             ]
             
             do {
@@ -196,26 +206,27 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate, Refere
             }
             task.resume()
         }
-    
 }
 
 extension CreateScrapViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        40
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView.tag == 1 {
             return attachmentFileCount
         } else {
             return refereceLinkCount
         }
-        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView.tag == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AttachmentFileTableViewCell", for: indexPath) as! AttachmentFileTableViewCell
             return cell
-        } else if tableView == referenceTableView {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath)
-            //cell.textLabel?.text = data2[indexPath.row]
+        } else if tableView.tag == 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ReferenceLinklTableViewCell", for: indexPath) as! ReferenceLinklTableViewCell
             return cell
         } else {
             return UITableViewCell()

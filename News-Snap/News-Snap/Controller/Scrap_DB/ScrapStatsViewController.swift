@@ -8,20 +8,17 @@
 import UIKit
 
 class ScrapStatsViewController: UIViewController {
-
     
     
     
     
+    @IBAction func backButtonTapped(_ sender: Any) {
+        print("hello")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-
-   
-    
-    
     
 
 }

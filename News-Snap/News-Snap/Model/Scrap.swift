@@ -13,17 +13,17 @@ struct Scrap {
     var contents : String
     var keywords : [String]
     var date : Date
-    var attachmentFile : URL?
-    var referenceFile : URL?
+    var attachmentFile : String
+    var refereceLink : [String]
     
-    init(id: Int, link: String, contents: String, keywords: [String], date : Date) {
+    init(id: Int, link: String, contents: String, keywords: [String], date : Date, attachmentFile : String, referenceLink : [String]) {
         self.id = id
         self.link = link
         self.contents = contents
         self.keywords = keywords
         self.date = date
+        self.attachmentFile = attachmentFile
+        self.refereceLink = referenceLink
     }
-    
-    
 }
 
