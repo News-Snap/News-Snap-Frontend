@@ -57,13 +57,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lta-av-1rA">
-                                                <rect key="frame" x="0.0" y="113" width="393" height="100"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="p0B-Bv-Coc"/>
-                                                </constraints>
-                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 &quot;삼성&quot; 관련 소식" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcw-nn-vMb">
                                                 <rect key="frame" x="20" y="233" width="172.33333333333334" height="21"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
@@ -276,6 +269,12 @@
                                                     <outlet property="delegate" destination="Tpo-IA-8Z6" id="Eyv-Ot-Vd1"/>
                                                 </connections>
                                             </searchBar>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5sG-kq-zLd">
+                                                <rect key="frame" x="0.0" y="113" width="393" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="YVD-5P-ZDg"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -287,28 +286,28 @@
                                             <constraint firstItem="gpI-gD-IgC" firstAttribute="top" secondItem="U8R-i3-tao" secondAttribute="bottom" id="6sR-og-6m6"/>
                                             <constraint firstItem="zJP-hu-W7X" firstAttribute="top" secondItem="BAE-F0-4Yn" secondAttribute="bottom" constant="20" id="8mL-4h-pp6"/>
                                             <constraint firstItem="aUf-PC-Yuj" firstAttribute="leading" secondItem="06Q-BE-kD2" secondAttribute="leading" constant="20" id="B2N-i3-gqB"/>
-                                            <constraint firstItem="wcw-nn-vMb" firstAttribute="top" secondItem="Lta-av-1rA" secondAttribute="bottom" constant="20" id="CB9-d2-Ytl"/>
+                                            <constraint firstItem="5sG-kq-zLd" firstAttribute="top" secondItem="61o-ee-aoz" secondAttribute="bottom" id="Ble-cs-NIN"/>
                                             <constraint firstItem="BAE-F0-4Yn" firstAttribute="top" secondItem="aUf-PC-Yuj" secondAttribute="bottom" constant="20" id="Etl-wg-5lC"/>
                                             <constraint firstAttribute="trailing" secondItem="L4v-5l-jOv" secondAttribute="trailing" id="HEn-W8-CE5"/>
                                             <constraint firstItem="61o-ee-aoz" firstAttribute="top" secondItem="DyM-3W-9t5" secondAttribute="bottom" constant="20" id="Ibk-gD-2oQ"/>
                                             <constraint firstItem="wcw-nn-vMb" firstAttribute="leading" secondItem="06Q-BE-kD2" secondAttribute="leading" constant="20" id="JRP-Ud-n8d"/>
                                             <constraint firstItem="gpI-gD-IgC" firstAttribute="leading" secondItem="06Q-BE-kD2" secondAttribute="leading" id="KBl-Xu-A4P"/>
                                             <constraint firstItem="DyM-3W-9t5" firstAttribute="top" secondItem="06Q-BE-kD2" secondAttribute="top" constant="15" id="Lvj-6t-H8Y"/>
-                                            <constraint firstItem="Lta-av-1rA" firstAttribute="leading" secondItem="06Q-BE-kD2" secondAttribute="leading" id="OJU-QJ-2Fi"/>
                                             <constraint firstItem="L4v-5l-jOv" firstAttribute="top" secondItem="gpI-gD-IgC" secondAttribute="bottom" id="R4t-eN-6jt"/>
                                             <constraint firstItem="61o-ee-aoz" firstAttribute="leading" secondItem="06Q-BE-kD2" secondAttribute="leading" constant="20" id="cLv-MY-rKC"/>
                                             <constraint firstAttribute="trailing" secondItem="BAE-F0-4Yn" secondAttribute="trailing" id="cqG-n1-xIa"/>
+                                            <constraint firstItem="5sG-kq-zLd" firstAttribute="leading" secondItem="06Q-BE-kD2" secondAttribute="leading" id="d68-T2-lwk"/>
+                                            <constraint firstAttribute="trailing" secondItem="5sG-kq-zLd" secondAttribute="trailing" id="ds7-bq-aKe"/>
                                             <constraint firstItem="q9h-hN-mJw" firstAttribute="centerY" secondItem="zJP-hu-W7X" secondAttribute="centerY" id="i2i-lv-HBZ"/>
                                             <constraint firstItem="x9a-Oh-e84" firstAttribute="leading" secondItem="06Q-BE-kD2" secondAttribute="leading" constant="20" id="icV-rW-OT9"/>
-                                            <constraint firstAttribute="trailing" secondItem="Lta-av-1rA" secondAttribute="trailing" id="iiH-Q4-ura"/>
                                             <constraint firstItem="U8R-i3-tao" firstAttribute="top" secondItem="wcw-nn-vMb" secondAttribute="bottom" constant="20" id="jtX-lc-SyH"/>
                                             <constraint firstItem="L4v-5l-jOv" firstAttribute="leading" secondItem="06Q-BE-kD2" secondAttribute="leading" id="lw9-44-mRr"/>
                                             <constraint firstAttribute="trailing" secondItem="q9h-hN-mJw" secondAttribute="trailing" constant="20" id="mKM-XJ-1zV"/>
                                             <constraint firstItem="zJP-hu-W7X" firstAttribute="leading" secondItem="06Q-BE-kD2" secondAttribute="leading" constant="20" id="p2v-qG-eyJ"/>
                                             <constraint firstItem="BAE-F0-4Yn" firstAttribute="leading" secondItem="06Q-BE-kD2" secondAttribute="leading" id="pna-UJ-XCj"/>
+                                            <constraint firstItem="wcw-nn-vMb" firstAttribute="top" secondItem="5sG-kq-zLd" secondAttribute="bottom" constant="20" id="r1v-9e-xuM"/>
                                             <constraint firstAttribute="trailing" secondItem="x9a-Oh-e84" secondAttribute="trailing" constant="20" id="rKY-TU-SCQ"/>
                                             <constraint firstItem="DyM-3W-9t5" firstAttribute="leading" secondItem="06Q-BE-kD2" secondAttribute="leading" constant="15" id="rhH-5H-NVZ"/>
-                                            <constraint firstItem="Lta-av-1rA" firstAttribute="top" secondItem="61o-ee-aoz" secondAttribute="bottom" id="vCr-pG-5q1"/>
                                             <constraint firstItem="aUf-PC-Yuj" firstAttribute="top" secondItem="L4v-5l-jOv" secondAttribute="bottom" constant="20" id="woq-gZ-2Je"/>
                                             <constraint firstItem="x9a-Oh-e84" firstAttribute="top" secondItem="zJP-hu-W7X" secondAttribute="bottom" constant="20" id="xmL-ZX-CXs"/>
                                             <constraint firstAttribute="trailing" secondItem="U8R-i3-tao" secondAttribute="trailing" id="xqb-6i-8Tt"/>
@@ -337,6 +336,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="콘텐츠" image="news" id="5ng-n6-I1J"/>
+                    <connections>
+                        <outlet property="keywordsStackView" destination="5sG-kq-zLd" id="esg-47-Qdw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13Z-KG-34B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

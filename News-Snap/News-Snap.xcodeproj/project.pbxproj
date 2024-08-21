@@ -14,6 +14,16 @@
 		2C33B1CC2C64F2FE00000BD2 /* KeywordBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C33B1CA2C64F2FE00000BD2 /* KeywordBoardTableViewCell.swift */; };
 		2C33B1CD2C64F2FE00000BD2 /* KeywordBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C33B1CB2C64F2FE00000BD2 /* KeywordBoardTableViewCell.xib */; };
 		2C68AE372C70597900319406 /* ContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68AE362C70597900319406 /* ContentsViewController.swift */; };
+		2C68AE452C70864F00319406 /* AttachmentFileModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68AE392C70864F00319406 /* AttachmentFileModalViewController.swift */; };
+		2C68AE462C70864F00319406 /* CreateScrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68AE3A2C70864F00319406 /* CreateScrapViewController.swift */; };
+		2C68AE472C70864F00319406 /* ReferenceLinkModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68AE3B2C70864F00319406 /* ReferenceLinkModalViewController.swift */; };
+		2C68AE482C70864F00319406 /* ScrapSearchByDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68AE3C2C70864F00319406 /* ScrapSearchByDateViewController.swift */; };
+		2C68AE492C70864F00319406 /* Scrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68AE3E2C70864F00319406 /* Scrap.swift */; };
+		2C68AE4A2C70864F00319406 /* AttachmentFileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68AE402C70864F00319406 /* AttachmentFileTableViewCell.swift */; };
+		2C68AE4B2C70864F00319406 /* AttachmentFileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C68AE412C70864F00319406 /* AttachmentFileTableViewCell.xib */; };
+		2C68AE4C2C70864F00319406 /* ReferenceLinklTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68AE422C70864F00319406 /* ReferenceLinklTableViewCell.swift */; };
+		2C68AE4D2C70864F00319406 /* ReferenceLinklTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C68AE432C70864F00319406 /* ReferenceLinklTableViewCell.xib */; };
+		2C68AE4F2C70868100319406 /* popularStocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68AE4E2C70868100319406 /* popularStocks.swift */; };
 		2CC1D8C32C48A45D00561214 /* DaySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC1D8C22C48A45C00561214 /* DaySettingsViewController.swift */; };
 		2CC1D8C52C492E9B00561214 /* TimeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC1D8C42C492E9B00561214 /* TimeSettingsViewController.swift */; };
 		9DEBADE52C465AB700A8C8B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBADE42C465AB700A8C8B4 /* AppDelegate.swift */; };
@@ -33,6 +43,16 @@
 		2C33B1CA2C64F2FE00000BD2 /* KeywordBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordBoardTableViewCell.swift; sourceTree = "<group>"; };
 		2C33B1CB2C64F2FE00000BD2 /* KeywordBoardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeywordBoardTableViewCell.xib; sourceTree = "<group>"; };
 		2C68AE362C70597900319406 /* ContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsViewController.swift; sourceTree = "<group>"; };
+		2C68AE392C70864F00319406 /* AttachmentFileModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentFileModalViewController.swift; sourceTree = "<group>"; };
+		2C68AE3A2C70864F00319406 /* CreateScrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateScrapViewController.swift; sourceTree = "<group>"; };
+		2C68AE3B2C70864F00319406 /* ReferenceLinkModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceLinkModalViewController.swift; sourceTree = "<group>"; };
+		2C68AE3C2C70864F00319406 /* ScrapSearchByDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrapSearchByDateViewController.swift; sourceTree = "<group>"; };
+		2C68AE3E2C70864F00319406 /* Scrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scrap.swift; sourceTree = "<group>"; };
+		2C68AE402C70864F00319406 /* AttachmentFileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentFileTableViewCell.swift; sourceTree = "<group>"; };
+		2C68AE412C70864F00319406 /* AttachmentFileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttachmentFileTableViewCell.xib; sourceTree = "<group>"; };
+		2C68AE422C70864F00319406 /* ReferenceLinklTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceLinklTableViewCell.swift; sourceTree = "<group>"; };
+		2C68AE432C70864F00319406 /* ReferenceLinklTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReferenceLinklTableViewCell.xib; sourceTree = "<group>"; };
+		2C68AE4E2C70868100319406 /* popularStocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popularStocks.swift; sourceTree = "<group>"; };
 		2CC1D8C22C48A45C00561214 /* DaySettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySettingsViewController.swift; sourceTree = "<group>"; };
 		2CC1D8C42C492E9B00561214 /* TimeSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingsViewController.swift; sourceTree = "<group>"; };
 		9DEBADE12C465AB700A8C8B4 /* News-Snap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News-Snap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +79,7 @@
 		2C33B1C72C64F18600000BD2 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				2C68AE3F2C70864F00319406 /* Model */,
 				2C33B1C52C64CA9500000BD2 /* HomeViewController.swift */,
 				2C33B1C82C64F22700000BD2 /* KeywordBoardViewController.swift */,
 				2C33B1CA2C64F2FE00000BD2 /* KeywordBoardTableViewCell.swift */,
@@ -74,6 +95,40 @@
 			);
 			path = Contents;
 			sourceTree = "<group>";
+		};
+		2C68AE3D2C70864F00319406 /* Create-Scrap */ = {
+			isa = PBXGroup;
+			children = (
+				2C68AE392C70864F00319406 /* AttachmentFileModalViewController.swift */,
+				2C68AE3A2C70864F00319406 /* CreateScrapViewController.swift */,
+				2C68AE3B2C70864F00319406 /* ReferenceLinkModalViewController.swift */,
+				2C68AE3C2C70864F00319406 /* ScrapSearchByDateViewController.swift */,
+			);
+			name = "Create-Scrap";
+			path = "News-Snap/Create-Scrap";
+			sourceTree = SOURCE_ROOT;
+		};
+		2C68AE3F2C70864F00319406 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C68AE3E2C70864F00319406 /* Scrap.swift */,
+				2C68AE4E2C70868100319406 /* popularStocks.swift */,
+			);
+			name = Model;
+			path = "News-Snap/home/Model";
+			sourceTree = SOURCE_ROOT;
+		};
+		2C68AE442C70864F00319406 /* ScrapCell */ = {
+			isa = PBXGroup;
+			children = (
+				2C68AE402C70864F00319406 /* AttachmentFileTableViewCell.swift */,
+				2C68AE412C70864F00319406 /* AttachmentFileTableViewCell.xib */,
+				2C68AE422C70864F00319406 /* ReferenceLinklTableViewCell.swift */,
+				2C68AE432C70864F00319406 /* ReferenceLinklTableViewCell.xib */,
+			);
+			name = ScrapCell;
+			path = "News-Snap/ScrapCell";
+			sourceTree = SOURCE_ROOT;
 		};
 		2CC1D8C82C492F4800561214 /* settings */ = {
 			isa = PBXGroup;
@@ -109,6 +164,8 @@
 				2CC1D8C82C492F4800561214 /* settings */,
 				2C68AE352C70593E00319406 /* Contents */,
 				2C33B1C72C64F18600000BD2 /* home */,
+				2C68AE442C70864F00319406 /* ScrapCell */,
+				2C68AE3D2C70864F00319406 /* Create-Scrap */,
 				9DEBADE42C465AB700A8C8B4 /* AppDelegate.swift */,
 				9DEBADE62C465AB700A8C8B4 /* SceneDelegate.swift */,
 				9DEBADE82C465AB700A8C8B4 /* ViewController.swift */,
@@ -179,8 +236,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DEBADEE2C465AB900A8C8B4 /* Assets.xcassets in Resources */,
+				2C68AE4B2C70864F00319406 /* AttachmentFileTableViewCell.xib in Resources */,
 				9DEBADF12C465AB900A8C8B4 /* Base in Resources */,
 				2C33B1CD2C64F2FE00000BD2 /* KeywordBoardTableViewCell.xib in Resources */,
+				2C68AE4D2C70864F00319406 /* ReferenceLinklTableViewCell.xib in Resources */,
 				9DEBADEC2C465AB700A8C8B4 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,15 +253,23 @@
 			files = (
 				9DEBADE92C465AB700A8C8B4 /* ViewController.swift in Sources */,
 				2C68AE372C70597900319406 /* ContentsViewController.swift in Sources */,
+				2C68AE472C70864F00319406 /* ReferenceLinkModalViewController.swift in Sources */,
 				2CC1D8C32C48A45D00561214 /* DaySettingsViewController.swift in Sources */,
+				2C68AE462C70864F00319406 /* CreateScrapViewController.swift in Sources */,
 				2C33B1CC2C64F2FE00000BD2 /* KeywordBoardTableViewCell.swift in Sources */,
+				2C68AE4C2C70864F00319406 /* ReferenceLinklTableViewCell.swift in Sources */,
 				2CC1D8C52C492E9B00561214 /* TimeSettingsViewController.swift in Sources */,
 				2C33B1C62C64CA9500000BD2 /* HomeViewController.swift in Sources */,
 				2C33B1C32C5A4CE000000BD2 /* ImprovementsViewController.swift in Sources */,
+				2C68AE4F2C70868100319406 /* popularStocks.swift in Sources */,
 				9DEBADE52C465AB700A8C8B4 /* AppDelegate.swift in Sources */,
+				2C68AE482C70864F00319406 /* ScrapSearchByDateViewController.swift in Sources */,
+				2C68AE4A2C70864F00319406 /* AttachmentFileTableViewCell.swift in Sources */,
 				9DEBADE72C465AB700A8C8B4 /* SceneDelegate.swift in Sources */,
 				2C0966A82C47E4CE005FBA4E /* SettingsViewController.swift in Sources */,
 				2C33B1C92C64F22700000BD2 /* KeywordBoardViewController.swift in Sources */,
+				2C68AE452C70864F00319406 /* AttachmentFileModalViewController.swift in Sources */,
+				2C68AE492C70864F00319406 /* Scrap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
