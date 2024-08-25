@@ -16,7 +16,6 @@
 		9D13D6DB2C6B92E90064B42A /* ReferenceLinkModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6D62C6B92E90064B42A /* ReferenceLinkModalViewController.swift */; };
 		9D13D6DC2C6B92E90064B42A /* ScrapSearchByDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6D72C6B92E90064B42A /* ScrapSearchByDateViewController.swift */; };
 		9D13D6DF2C6B92F20064B42A /* Scrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6DD2C6B92F20064B42A /* Scrap.swift */; };
-		9DEBA35E2C71133E00281CBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA35D2C71133E00281CBA /* ViewController.swift */; };
 		9DEBA3602C7114E400281CBA /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA35F2C7114E400281CBA /* Member.swift */; };
 		9DEBA3662C71150B00281CBA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3612C71150B00281CBA /* HomeViewController.swift */; };
 		9DEBA3672C71150B00281CBA /* KeywordBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3622C71150B00281CBA /* KeywordBoardTableViewCell.swift */; };
@@ -54,7 +53,6 @@
 		9D13D6D62C6B92E90064B42A /* ReferenceLinkModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceLinkModalViewController.swift; sourceTree = "<group>"; };
 		9D13D6D72C6B92E90064B42A /* ScrapSearchByDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrapSearchByDateViewController.swift; sourceTree = "<group>"; };
 		9D13D6DD2C6B92F20064B42A /* Scrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scrap.swift; sourceTree = "<group>"; };
-		9DEBA35D2C71133E00281CBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9DEBA35F2C7114E400281CBA /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		9DEBA3612C71150B00281CBA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9DEBA3622C71150B00281CBA /* KeywordBoardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeywordBoardTableViewCell.swift; sourceTree = "<group>"; };
@@ -209,7 +207,6 @@
 				9DEBADE42C465AB700A8C8B4 /* AppDelegate.swift */,
 				9DEBADE62C465AB700A8C8B4 /* SceneDelegate.swift */,
 				9DEBADEA2C465AB700A8C8B4 /* Main.storyboard */,
-				9DEBA35D2C71133E00281CBA /* ViewController.swift */,
 				9DEBADED2C465AB900A8C8B4 /* Assets.xcassets */,
 				9DEBADEF2C465AB900A8C8B4 /* LaunchScreen.storyboard */,
 				9DEBADF22C465AB900A8C8B4 /* Info.plist */,
@@ -302,7 +299,6 @@
 				9DEBA3672C71150B00281CBA /* KeywordBoardTableViewCell.swift in Sources */,
 				9DEBA3722C71151000281CBA /* TimeSettingsViewController.swift in Sources */,
 				9DEBA3802C71153800281CBA /* SelectViewController.swift in Sources */,
-				9DEBA35E2C71133E00281CBA /* ViewController.swift in Sources */,
 				9DEBA38A2C71154000281CBA /* MyScrapViewController.swift in Sources */,
 				9D13D6DF2C6B92F20064B42A /* Scrap.swift in Sources */,
 				9DEBA37B2C71153800281CBA /* AlarmViewController.swift in Sources */,
