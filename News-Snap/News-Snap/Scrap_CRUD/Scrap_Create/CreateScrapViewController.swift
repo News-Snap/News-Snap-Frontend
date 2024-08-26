@@ -164,48 +164,58 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate, Refere
     }
     
     private func sendScrapDataToServer(_ scrap: Scrap) {
-            guard let url = URL(string: "http://52.78.37.90:8080/api/v1/scrap") else {
-                print("Invalid URL")
-                return
-            }
-            
-            var request = URLRequest(url: url)
-            request.httpMethod = "POST"
-            
-            // JSON 데이터로 변환
-            let scrapData: [String: Any] = [
-                "id": scrap.id,
-                "link": scrap.link,
-                "contents": scrap.contents,
-                "keywords": scrap.keywords,
-                "date": scrap.date.ISO8601Format(),// ISO8601 형식으로 변환된 날짜
-                "relatedUrlList" : scrap.refereceLink
-            ]
-            
-            do {
-                let jsonData = try JSONSerialization.data(withJSONObject: scrapData, options: [])
-                request.httpBody = jsonData
-                request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            } catch {
-                print("Failed to serialize data:", error)
-                return
-            }
-            
-            let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                if let error = error {
-                    print("Request error:", error)
-                    return
-                }
-                
-                guard let httpResponse = response as? HTTPURLResponse,
-                      (200...299).contains(httpResponse.statusCode) else {
-                    print("Invalid response")
-                    return
-                }
-                print("Scrap successfully sent to the server")
-            }
-            task.resume()
+        guard let url = URL(string: "http://52.78.37.90:8080/api/v1/scrap") else {
+            print("Invalid URL")
+            return
         }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        let temp : [String] = ["1"]
+        // JSON 데이터로 변환
+        let scrapData: [String: Any] = [
+            "title": "scrap.id",
+            "articleUrl": scrap.link,
+            "content": scrap.contents,
+            "keywords": scrap.keywords,
+            "articleCreatedAt": ISO8601DateFormatter().string(from: scrap.date), // ISO8601 형식으로 변환된 날짜
+            "relatedUrlList": temp // URL을 문자열로 변환
+        ]
+        
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: scrapData, options: [])
+            request.httpBody = jsonData
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        } catch {
+            print("Failed to serialize data:", error)
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print("Request error:", error)
+                return
+            }
+            
+            if let httpResponse = response as? HTTPURLResponse {
+                print("HTTP Status Code:", httpResponse.statusCode)
+                if !(200...299).contains(httpResponse.statusCode) {
+                    print("Invalid response")
+                }
+            }
+
+            if let data = data {
+                if let responseString = String(data: data, encoding: .utf8) {
+                    print("Response data:", responseString)
+                } else {
+                    print("Unable to parse response data")
+                }
+            }
+        }
+        task.resume()
+    }
+
 }
 
 extension CreateScrapViewController: UITableViewDelegate, UITableViewDataSource {

@@ -1092,7 +1092,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uA9-fp-IcU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3521" y="27"/>
+            <point key="canvasLocation" x="2874" y="732"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7i2-j7-j6E">
+            <objects>
+                <viewController id="L9L-DV-x54" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="09z-MF-VXU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="P5w-Ii-bp0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nkb-JV-aps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3784" y="741"/>
         </scene>
         <!--Time Settings View Controller-->
         <scene sceneID="7jL-2H-tPZ">
@@ -2195,7 +2210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fbn-m1-3j9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2903" y="46"/>
+            <point key="canvasLocation" x="3611" y="-504"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="bBV-Q1-NmR">

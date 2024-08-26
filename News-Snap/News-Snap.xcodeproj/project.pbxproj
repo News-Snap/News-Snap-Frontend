@@ -95,7 +95,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9D13D6CD2C6B91AE0064B42A /* ScrapCell */ = {
+		9D13D6CD2C6B91AE0064B42A /* Scrap_Cell */ = {
 			isa = PBXGroup;
 			children = (
 				9D13D6C92C6B91AE0064B42A /* AttachmentFileTableViewCell.swift */,
@@ -103,18 +103,19 @@
 				9D13D6CB2C6B91AE0064B42A /* ReferenceLinklTableViewCell.swift */,
 				9D13D6CC2C6B91AE0064B42A /* ReferenceLinklTableViewCell.xib */,
 			);
-			path = ScrapCell;
+			path = Scrap_Cell;
 			sourceTree = "<group>";
 		};
-		9D13D6D82C6B92E90064B42A /* Create-Scrap */ = {
+		9D13D6D82C6B92E90064B42A /* Scrap_Create */ = {
 			isa = PBXGroup;
 			children = (
+				9D13D6CD2C6B91AE0064B42A /* Scrap_Cell */,
 				9D13D6D42C6B92E90064B42A /* CreateScrapViewController.swift */,
 				9D13D6D32C6B92E90064B42A /* AttachmentFileModalViewController.swift */,
 				9D13D6D62C6B92E90064B42A /* ReferenceLinkModalViewController.swift */,
 				9D13D6D72C6B92E90064B42A /* ScrapSearchByDateViewController.swift */,
 			);
-			path = "Create-Scrap";
+			path = Scrap_Create;
 			sourceTree = "<group>";
 		};
 		9D13D6DE2C6B92F20064B42A /* Model */ = {
@@ -180,8 +181,15 @@
 				9DEBA3852C71154000281CBA /* MyScrapViewController.swift */,
 				9DEBA3862C71154000281CBA /* ScrapStatsViewController.swift */,
 			);
-			name = Scrap_DB;
-			path = Controller/Scrap_DB;
+			path = Scrap_DB;
+			sourceTree = "<group>";
+		};
+		9DEBA38D2C7CC1BF00281CBA /* Scrap_CRUD */ = {
+			isa = PBXGroup;
+			children = (
+				9D13D6D82C6B92E90064B42A /* Scrap_Create */,
+			);
+			path = Scrap_CRUD;
 			sourceTree = "<group>";
 		};
 		9DEBADD82C465AB700A8C8B4 = {
@@ -203,9 +211,8 @@
 		9DEBADE32C465AB700A8C8B4 /* News-Snap */ = {
 			isa = PBXGroup;
 			children = (
+				9DEBA38D2C7CC1BF00281CBA /* Scrap_CRUD */,
 				9D13D6DE2C6B92F20064B42A /* Model */,
-				9D13D6D82C6B92E90064B42A /* Create-Scrap */,
-				9D13D6CD2C6B91AE0064B42A /* ScrapCell */,
 				9DEBADE42C465AB700A8C8B4 /* AppDelegate.swift */,
 				9DEBADE62C465AB700A8C8B4 /* SceneDelegate.swift */,
 				9DEBADEA2C465AB700A8C8B4 /* Main.storyboard */,
