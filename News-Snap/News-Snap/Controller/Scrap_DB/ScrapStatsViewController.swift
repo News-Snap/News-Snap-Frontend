@@ -3,8 +3,9 @@
 //  News-Snap
 //
 //  Created by 문정현 on 8/12/24.
-//  오늘 다시 보지 않기 설정하기(8/25/수정)
-//  다른 화면에서 홈(TabBarController)로 화면전환될 때 해당 VC 거치도록 설정하기(8/25/수정)
+//  UI 디테일 설정 끝 완성
+//  오늘 다시 보지 않기 설정하기
+//  다른 화면에서 홈(TabBarController)로 화면전환될 때 해당 VC 거치도록 설정하기
 
 import UIKit
 

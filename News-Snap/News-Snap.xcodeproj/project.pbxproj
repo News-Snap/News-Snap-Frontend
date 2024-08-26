@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6FC256F02C7CCE7600DC56A3 /* EachNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC256EE2C7CCE7600DC56A3 /* EachNewsTableViewCell.swift */; };
+		6FC256F12C7CCE7600DC56A3 /* EachNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC256EF2C7CCE7600DC56A3 /* EachNewsTableViewCell.xib */; };
 		9D13D6CF2C6B91AE0064B42A /* AttachmentFileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6C92C6B91AE0064B42A /* AttachmentFileTableViewCell.swift */; };
 		9D13D6D02C6B91AE0064B42A /* AttachmentFileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D13D6CA2C6B91AE0064B42A /* AttachmentFileTableViewCell.xib */; };
 		9D13D6D12C6B91AE0064B42A /* ReferenceLinklTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6CB2C6B91AE0064B42A /* ReferenceLinklTableViewCell.swift */; };
@@ -32,8 +34,6 @@
 		9DEBA37F2C71153800281CBA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3772C71153700281CBA /* RegisterViewController.swift */; };
 		9DEBA3802C71153800281CBA /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3782C71153700281CBA /* SelectViewController.swift */; };
 		9DEBA3812C71153800281CBA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3792C71153700281CBA /* StartViewController.swift */; };
-		9DEBA3882C71154000281CBA /* FirstCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3822C71154000281CBA /* FirstCellTableViewCell.swift */; };
-		9DEBA3892C71154000281CBA /* FirstCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBA3832C71154000281CBA /* FirstCellTableViewCell.xib */; };
 		9DEBA38A2C71154000281CBA /* MyScrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3852C71154000281CBA /* MyScrapViewController.swift */; };
 		9DEBA38B2C71154000281CBA /* ScrapStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3862C71154000281CBA /* ScrapStatsViewController.swift */; };
 		9DEBADE52C465AB700A8C8B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBADE42C465AB700A8C8B4 /* AppDelegate.swift */; };
@@ -44,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6FC256EE2C7CCE7600DC56A3 /* EachNewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachNewsTableViewCell.swift; sourceTree = "<group>"; };
+		6FC256EF2C7CCE7600DC56A3 /* EachNewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EachNewsTableViewCell.xib; sourceTree = "<group>"; };
 		9D13D6C92C6B91AE0064B42A /* AttachmentFileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentFileTableViewCell.swift; sourceTree = "<group>"; };
 		9D13D6CA2C6B91AE0064B42A /* AttachmentFileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttachmentFileTableViewCell.xib; sourceTree = "<group>"; };
 		9D13D6CB2C6B91AE0064B42A /* ReferenceLinklTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceLinklTableViewCell.swift; sourceTree = "<group>"; };
@@ -69,8 +71,6 @@
 		9DEBA3772C71153700281CBA /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9DEBA3782C71153700281CBA /* SelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
 		9DEBA3792C71153700281CBA /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
-		9DEBA3822C71154000281CBA /* FirstCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCellTableViewCell.swift; sourceTree = "<group>"; };
-		9DEBA3832C71154000281CBA /* FirstCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstCellTableViewCell.xib; sourceTree = "<group>"; };
 		9DEBA3852C71154000281CBA /* MyScrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyScrapViewController.swift; sourceTree = "<group>"; };
 		9DEBA3862C71154000281CBA /* ScrapStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrapStatsViewController.swift; sourceTree = "<group>"; };
 		9DEBADE12C465AB700A8C8B4 /* News-Snap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News-Snap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,8 +165,8 @@
 		9DEBA3842C71154000281CBA /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				9DEBA3822C71154000281CBA /* FirstCellTableViewCell.swift */,
-				9DEBA3832C71154000281CBA /* FirstCellTableViewCell.xib */,
+				6FC256EE2C7CCE7600DC56A3 /* EachNewsTableViewCell.swift */,
+				6FC256EF2C7CCE7600DC56A3 /* EachNewsTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -276,12 +276,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FC256F12C7CCE7600DC56A3 /* EachNewsTableViewCell.xib in Resources */,
 				9DEBADEE2C465AB900A8C8B4 /* Assets.xcassets in Resources */,
 				9D13D6D02C6B91AE0064B42A /* AttachmentFileTableViewCell.xib in Resources */,
 				9DEBADF12C465AB900A8C8B4 /* Base in Resources */,
 				9D13D6D22C6B91AE0064B42A /* ReferenceLinklTableViewCell.xib in Resources */,
 				9DEBA3682C71150B00281CBA /* KeywordBoardTableViewCell.xib in Resources */,
-				9DEBA3892C71154000281CBA /* FirstCellTableViewCell.xib in Resources */,
 				9DEBADEC2C465AB700A8C8B4 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,7 +295,6 @@
 			files = (
 				9DEBA37D2C71153800281CBA /* LoginViewController.swift in Sources */,
 				9DEBA3692C71150B00281CBA /* KeywordBoardViewController.swift in Sources */,
-				9DEBA3882C71154000281CBA /* FirstCellTableViewCell.swift in Sources */,
 				9DEBA3672C71150B00281CBA /* KeywordBoardTableViewCell.swift in Sources */,
 				9DEBA3722C71151000281CBA /* TimeSettingsViewController.swift in Sources */,
 				9DEBA3802C71153800281CBA /* SelectViewController.swift in Sources */,
@@ -314,6 +313,7 @@
 				9DEBADE72C465AB700A8C8B4 /* SceneDelegate.swift in Sources */,
 				9D13D6D12C6B91AE0064B42A /* ReferenceLinklTableViewCell.swift in Sources */,
 				9DEBA37E2C71153800281CBA /* NewPasswordViewController.swift in Sources */,
+				6FC256F02C7CCE7600DC56A3 /* EachNewsTableViewCell.swift in Sources */,
 				9DEBA3712C71151000281CBA /* SettingsViewController.swift in Sources */,
 				9DEBA3812C71153800281CBA /* StartViewController.swift in Sources */,
 				9D13D6DB2C6B92E90064B42A /* ReferenceLinkModalViewController.swift in Sources */,
