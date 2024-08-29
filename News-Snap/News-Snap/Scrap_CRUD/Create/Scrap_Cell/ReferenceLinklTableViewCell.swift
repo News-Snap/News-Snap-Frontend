@@ -29,4 +29,11 @@ class ReferenceLinklTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func layoutSubviews() {
+        // 테이블 뷰 셀 사이의 간격
+        super.layoutSubviews()
+
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 4, right: 0))
+    }
+    
 }

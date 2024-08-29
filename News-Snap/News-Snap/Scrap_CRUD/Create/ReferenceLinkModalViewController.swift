@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ReferenceLinkDelegate : AnyObject {
-    func linkEntered(_ referenceLink : String)
+    func linkEntered(_ referenceLink : [String])
 }
 
 protocol RefereceLinkCountDelegate : AnyObject {
@@ -16,9 +16,8 @@ protocol RefereceLinkCountDelegate : AnyObject {
 }
 
 class ReferenceLinkModalViewController: UIViewController {
-    
     weak var delegate : ReferenceLinkDelegate?
-    var referenceLink : String?
+    var referenceLinkList : [String] = []
     
     weak var countDelegate : RefereceLinkCountDelegate?
     var referenceLinkCount : Int = 1
@@ -43,9 +42,12 @@ class ReferenceLinkModalViewController: UIViewController {
     
     @IBAction func confirmButtonTapped(_ sender: Any) {
         guard let referenceLink = referenceLinkTextField.text else { return }
-        print("Reference link: \(referenceLink)") // 디버깅용 출력
+        // print("Reference link: \(referenceLink)") // 디버깅용 출력
+        
+        referenceLinkList.append(referenceLink)
+        print(referenceLinkList)
 
-        delegate?.linkEntered(referenceLink)
+        delegate?.linkEntered(referenceLinkList)
         referenceLinkCount += 1
         countDelegate?.referenceLinkCount(referenceLinkCount)
         self.dismiss(animated: true, completion: nil)
