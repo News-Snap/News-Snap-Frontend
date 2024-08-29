@@ -8,6 +8,8 @@
 import UIKit
 
 class KeywordBoardViewController: UIViewController {
+    
+    var selectedKeyword: String?
 
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var keywordLabel: UILabel!
@@ -22,7 +24,11 @@ class KeywordBoardViewController: UIViewController {
         // keywordBoardTableView 등록
         let keywordBoardNib = UINib(nibName: "KeywordBoardTableViewCell", bundle: nil)
         tableView.register(keywordBoardNib, forCellReuseIdentifier: "KeywordBoardTableViewCell")
-
+        
+        if let keyword = selectedKeyword {
+            print("Selected keyword: \(keyword)")
+            // 키워드에 맞는 데이터 로드
+        }
     }
 }
 

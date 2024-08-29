@@ -64,16 +64,16 @@ class ContentsViewController: UIViewController {
             for keyword in keywords {
                 let button = createKeywordButton(with: keyword)
                 
-                if currentStackView == nil || !canFitButtonInStackView(button, stackView: currentStackView!) {
-                    // 새로운 수평 스택 뷰 생성
-                    currentStackView = UIStackView()
-                    currentStackView?.axis = .horizontal
-                    currentStackView?.spacing = 10
-                    currentStackView?.alignment = .fill
-                    keywordsStackView.addArrangedSubview(currentStackView!)
-                }
+//                if currentStackView == nil || !canFitButtonInStackView(button, stackView: currentStackView!) {
+//                    // 새로운 수평 스택 뷰 생성
+//                    currentStackView = UIStackView()
+//                    currentStackView?.axis = .horizontal
+//                    currentStackView?.spacing = 10
+//                    currentStackView?.alignment = .fill
+//                    keywordsStackView.addArrangedSubview(currentStackView!)
+//                }
                 
-                currentStackView?.addArrangedSubview(button)
+                //currentStackView?.addArrangedSubview(button)
             }
         }
         

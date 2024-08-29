@@ -54,22 +54,117 @@ class HomeViewController: UIViewController {
         news2View.layer.cornerRadius = 10
         news2View.layer.masksToBounds = true
         
+        // TOP 4 키워드 조회
+        fetchKeywords { [weak self] keywords in
+            DispatchQueue.main.async {
+                self?.updateKeywordButtons(with: keywords)
+            }
+        }
+        
     }
     
+    func updateKeywordButtons(with keywords: [String]) {
+        if keywords.count > 0 {
+            key1Btn.setTitle(keywords[0], for: .normal)
+        }
+        if keywords.count > 1 {
+            key2Btn.setTitle(keywords[1], for: .normal)
+        }
+        if keywords.count > 2 {
+            key3Btn.setTitle(keywords[2], for: .normal)
+        }
+        if keywords.count > 3 {
+            key4Btn.setTitle(keywords[3], for: .normal)
+        }
+    }
+    
+    // 키워드 버튼 클릭했을 시 동작
     @IBAction func key1DidTap(_ sender: UIButton) {
+        guard let keyword = sender.titleLabel?.text else { return }
+        navigateToKeywordBoard(with: keyword)
     }
     
     @IBAction func key2DidTap(_ sender: UIButton) {
+        guard let keyword = sender.titleLabel?.text else { return }
+        navigateToKeywordBoard(with: keyword)
     }
     
     @IBAction func key3DidTap(_ sender: UIButton) {
+        guard let keyword = sender.titleLabel?.text else { return }
+        navigateToKeywordBoard(with: keyword)
     }
     
     @IBAction func key4DidTap(_ sender: UIButton) {
+        guard let keyword = sender.titleLabel?.text else { return }
+        navigateToKeywordBoard(with: keyword)
     }
     
     @IBAction func myScrapDidTap(_ sender: UIButton) {
+        guard let keyword = sender.titleLabel?.text else { return }
+        navigateToKeywordBoard(with: keyword)
     }
     
+    func navigateToKeywordBoard(with keyword: String) {
+        // 스토리보드에서 `KeywordBoardViewController`를 가져옴
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let keywordBoardVC = storyboard.instantiateViewController(withIdentifier: "KeywordBoardViewController") as? KeywordBoardViewController {
+            
+            keywordBoardVC.selectedKeyword = keyword
+            self.present(keywordBoardVC, animated: true, completion: nil)
+        }
+        
+//        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "KeywordBoardViewController") as? KeywordBoardViewController else { return }
+//        
+//        // nextVC.delegate = self
+//        nextVC.modalTransitionStyle = .coverVertical
+//        nextVC.modalPresentationStyle = .overFullScreen
+//        self.present(nextVC, animated: true, completion: nil)
+    }
     
+    // TOP 4 키워드 조회 GET 요청
+    func fetchKeywords(completion: @escaping ([String]) -> Void) {
+        let urlString = "http://52.78.37.90:8080/api/v1/scrap/keywords"
+        guard let url = URL(string: urlString) else { return }
+        
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, error == nil else {
+                print("Error fetching keywords: \(String(describing: error))")
+                completion([])
+                return
+            }
+            
+            do {
+                let keywords = try JSONDecoder().decode([String].self, from: data)
+                completion(keywords)
+            } catch {
+                print("Error decoding keywords: \(error)")
+                completion([])
+            }
+        }
+        
+        task.resume()
+    }
+        
+        //    func fetchScraps(for keyword: String) {
+        //        let urlString = "https://yourserver.com/api/scraps?keyword=\(keyword)"
+        //        guard let url = URL(string: urlString) else { return }
+        //
+        //        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        //            guard let data = data, error == nil else {
+        //                print("Error fetching data: \(String(describing: error))")
+        //                return
+        //            }
+        //
+        //            do {
+        //                let scraps = try JSONDecoder().decode([Scrap].self, from: data)
+        //                DispatchQueue.main.async {
+        //                    self.updateTableView(with: scraps)
+        //                }
+        //            } catch {
+        //                print("Error decoding data: \(error)")
+        //            }
+        //        }
+        //
+        //        task.resume()
+        //    }
 }
