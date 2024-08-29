@@ -69,25 +69,33 @@ class ScrapDetailedViewController: UIViewController, UITextFieldDelegate {
         })
         
         let delete = UIAction(title: "삭제하기", attributes: .destructive, handler: { [weak self] _ in
-            self?.deleteScrap(scrapId: "1", completion: { success in
+            guard let self = self else { return }  // self가 nil이 아닌지 확인
+            
+            self.deleteScrap(scrapId: "1", completion: { success in
                 DispatchQueue.main.async {
                     if success {
                         print("스크랩이 성공적으로 삭제되었습니다.")
+                        
                         // 필요한 경우 UI 업데이트 (예: 목록에서 해당 항목 제거)
-                        self?.navigationController?.popViewController(animated: true)
+                        if let navigationController = self.navigationController {
+                            navigationController.popViewController(animated: true)
+                        } else {
+                            print("Navigation controller is nil.")
+                        }
+                        
                     } else {
                         print("스크랩 삭제에 실패했습니다.")
+                        
                         // 사용자에게 알림 표시
                         let alert = UIAlertController(title: "Error", message: "스크랩을 삭제할 수 없습니다.", preferredStyle: .alert)
                         alert.addAction(UIAlertAction(title: "OK", style: .default))
-                        self?.present(alert, animated: true)
+                        self.present(alert, animated: true)
                     }
                 }
             })
         })
         
         let menu = UIMenu(title: "", children: [update, share, delete])
-
         menuButton.menu = menu
     }
     
@@ -101,44 +109,49 @@ class ScrapDetailedViewController: UIViewController, UITextFieldDelegate {
     }
     
     func deleteScrap(scrapId: String, completion: @escaping (Bool) -> Void) {
-        // API의 URL을 작성합니다. 예시로 /scraps/{scrapId} 라는 엔드포인트를 사용합니다.
-        let baseURL = "http://52.78.37.90:8080"
-        let urlString = "\(baseURL)/api/v1/scrap/\(scrapId)"
-
-          
-        guard let url = URL(string: "urlString") else {
+        guard let url = URL(string: "http://52.78.37.90:8080/api/v1/scrap/5") else {
+            print("Invalid URL")
             completion(false)
             return
         }
         
         var request = URLRequest(url: url)
-        request.httpMethod = "DELETE"  // DELETE 메서드를 사용
+        request.httpMethod = "DELETE"
         
-        // URLSession을 통해 DELETE 요청을 보냅니다.
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
-                print("Error occurred: \(error)")
+                print("Error occurred: \(error.localizedDescription)")
                 completion(false)
                 return
             }
             
-            if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
-                // 성공적으로 삭제됨
-                completion(true)
+            if let httpResponse = response as? HTTPURLResponse {
+                if (200...299).contains(httpResponse.statusCode) {
+                    print("Success: \(httpResponse.statusCode)")
+                    DispatchQueue.main.async {
+                        completion(true)
+                    }
+                } else {
+                    print("Failed with status code: \(httpResponse.statusCode)")
+                    DispatchQueue.main.async {
+                        completion(false)
+                    }
+                }
             } else {
-                // 삭제 실패
-                completion(false)
+                print("No HTTP response received")
+                DispatchQueue.main.async {
+                    completion(false)
+                }
             }
         }
         
         task.resume()
     }
-
 }
 
 
 // 키워드 CollectionView 설정
-extension ScrapDetailedViewController : UICollectionViewDelegate, UICollectionViewDataSource {
+extension ScrapDetailedViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView.tag == 0 {
             return 3
@@ -164,7 +177,32 @@ extension ScrapDetailedViewController : UICollectionViewDelegate, UICollectionVi
     }
     
     
+//    // 셀 간의 간격 설정
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        if collectionView.tag == 0 {
+//            return 4
+//        }
+//        else {
+//            return 5
+//        }
+//    }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 160, height: 153)
+    }
+    
+    
+    // 셀 선택 시 호출되는 메서드
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView.tag == 0 {
+            print("KeywordCollectionViewCell \(indexPath.row) 선택됨")
+            // 여기에 원하는 액션을 추가하세요
+            // 예: 다른 뷰 컨트롤러로 이동, 알림 표시, 데이터 처리 등
+        } else {
+            print("RelatedMediaCollectionViewCell \(indexPath.row) 선택됨")
+            // 다른 액션 추가
+        }
+    }
 }
 
 

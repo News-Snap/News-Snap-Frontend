@@ -13,9 +13,8 @@ class RelatedMediaCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         mainView.layer.cornerRadius = 10.0
         mainView.layer.masksToBounds = true
-        mainView.backgroundColor = UIColor.black
+//        mainView.backgroundColor = UIColor.black
         super.awakeFromNib()
         // Initialization code
     }
-
 }

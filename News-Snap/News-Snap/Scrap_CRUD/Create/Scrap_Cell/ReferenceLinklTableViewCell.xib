@@ -16,8 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="링크가 존재하지 않습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duO-Hg-WGO">
-                        <rect key="frame" x="5" y="11.666666666666664" width="310" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duO-Hg-WGO">
+                        <rect key="frame" x="5" y="0.0" width="310" height="44"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -28,6 +28,8 @@
                     <constraint firstItem="duO-Hg-WGO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="14l-tD-m7L"/>
                     <constraint firstItem="duO-Hg-WGO" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="J5r-2K-Z2s"/>
                     <constraint firstItem="duO-Hg-WGO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gbd-W8-G9E"/>
+                    <constraint firstItem="duO-Hg-WGO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ilo-Gh-f3V"/>
+                    <constraint firstAttribute="bottom" secondItem="duO-Hg-WGO" secondAttribute="bottom" id="nnJ-4y-Vsd"/>
                     <constraint firstAttribute="trailing" secondItem="duO-Hg-WGO" secondAttribute="trailing" constant="5" id="uP7-xR-wX7"/>
                 </constraints>
             </tableViewCellContentView>
