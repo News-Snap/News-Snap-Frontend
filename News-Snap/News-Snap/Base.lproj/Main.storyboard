@@ -1060,7 +1060,7 @@
                         <outlet property="saveBtn" destination="zlv-EF-TJO" id="wHd-zm-IDH"/>
                         <outlet property="sundayBtn" destination="7Kr-1e-KQB" id="cqY-Zy-ARv"/>
                         <outlet property="thursdayBtn" destination="k1A-VI-6hU" id="uF7-WB-Kxi"/>
-                        <outlet property="tuesday" destination="v8Q-RC-xHX" id="tul-b8-lGV"/>
+                        <outlet property="tuesdayBtn" destination="v8Q-RC-xHX" id="tul-b8-lGV"/>
                         <outlet property="wednesdayBtn" destination="LHk-jH-ane" id="6VJ-D0-kfz"/>
                     </connections>
                 </viewController>
