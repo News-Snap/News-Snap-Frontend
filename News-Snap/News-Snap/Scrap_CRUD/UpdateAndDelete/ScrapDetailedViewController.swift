@@ -71,7 +71,7 @@ class ScrapDetailedViewController: UIViewController, UITextFieldDelegate {
         let delete = UIAction(title: "삭제하기", attributes: .destructive, handler: { [weak self] _ in
             guard let self = self else { return }  // self가 nil이 아닌지 확인
             
-            self.deleteScrap(scrapId: "1", completion: { success in
+            self.deleteScrap(scrapId: "25", completion: { success in
                 DispatchQueue.main.async {
                     if success {
                         print("스크랩이 성공적으로 삭제되었습니다.")
@@ -109,7 +109,7 @@ class ScrapDetailedViewController: UIViewController, UITextFieldDelegate {
     }
     
     func deleteScrap(scrapId: String, completion: @escaping (Bool) -> Void) {
-        guard let url = URL(string: "http://52.78.37.90:8080/api/v1/scrap/5") else {
+        guard let url = URL(string: "http://52.78.37.90:8080/api/v1/scrap/25") else {
             print("Invalid URL")
             completion(false)
             return

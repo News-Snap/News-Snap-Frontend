@@ -250,7 +250,7 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate, Refere
 extension CreateScrapViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if tableView.tag == 1 {
-            return 100
+            return 44
         }
         return 44
     }
