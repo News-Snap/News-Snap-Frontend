@@ -26,7 +26,8 @@
 
 // 문제점 : 비밀번호쪽 toggle 선적용이 안됨 -> PasswordTF버튼 만들어서 Action 함수 설정했는데도 안됨
 
-
+// 나머지 문제점 해결
+// API 연결 후 로그인 버튼을 누를 때 서버에 저장된 이메일과 비밀번호인지를 확인하고 넘기도록 코드 수정(현재 무지성 넘어감)
 
 
 import UIKit
@@ -85,91 +86,76 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func LoginButtonTapped(_ sender: Any) {
-//        guard let email = EmailTextField.text, !email.isEmpty,
-//                      guard let password = PasswordTextField.text, !password.isEmpty else {
-//                    showAlert(message: "이메일과 비밀번호를 입력해주세요.")
-//                    return
-//                }
-//
-//                // 서버로 이메일과 비밀번호 보내기
-//                login(email: email, password: password)
+        // 새로운 코드: 이메일과 비밀번호가 입력되었는지 확인
+        guard let email = EmailTextField.text, !email.isEmpty,
+              let password = PasswordTextField.text, !password.isEmpty else {
+            showAlert(message: "이메일과 비밀번호를 입력해주세요.")
+            return
+        }
+
+        // 새로운 코드: 서버로 이메일과 비밀번호 보내기
+        login(email: email, password: password)
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
         configureLoginButton()
-
     }
     
-    
-  
-       private func login(email: String, password: String) {
-           // 여기에 서버 통신 코드를 추가하기. 예시 : URLSession
-           let url = URL(string: "https://yourserver.com/login")!
-           var request = URLRequest(url: url)
-           request.httpMethod = "POST"
-           request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-           
-           let parameters: [String: Any] = [
-               "email": email,
-               "password": password
-           ]
-           
-           request.httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: [])
-           
-           let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-               guard let data = data, error == nil else {
-                   DispatchQueue.main.async {
-                       self.showAlert(message: "네트워크 오류가 발생했습니다. 다시 시도해주세요.")
-                   }
-                   return
-               }
-               
-               if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
-                   DispatchQueue.main.async {
-                    //   self.navigateToMainViewController()-----------------------------------------------------아직MainVC,API가 없음
-                   }
-               } else {
-                   DispatchQueue.main.async {
-                       self.showAlert(message: "올바른 이메일과 비밀번호인지 확인해주세요!")
-                   }
-               }
-           }
-           
-           task.resume()
-       }
-    
-    
-
-    
-    // LoginButton - 디테일 설정하기
-    private func configureLoginButton() {
+    private func login(email: String, password: String) {
+        let url = URL(string: "http://52.78.37.90:8080/api/v1/auth/login")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        // LoginButton을 둥글게 만들기
+        let parameters: [String: Any] = [
+            "email": email,
+            "password": password
+        ]
+        
+        request.httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: [])
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard let data = data, error == nil else {
+                DispatchQueue.main.async {
+                    self.showAlert(message: "네트워크 오류가 발생했습니다. 다시 시도해주세요.")
+                }
+                return
+            }
+            
+            if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
+                DispatchQueue.main.async {
+                    // 새로운 코드: 서버 응답이 성공일 경우 ScrapStatsViewController로 이동
+                    self.navigateToScrapStatsViewController()
+                }
+            } else {
+                DispatchQueue.main.async {
+                    // 새로운 코드: 서버 응답이 실패일 경우 경고창 표시
+                    self.showAlert(message: "이메일과 비밀번호를 다시 한 번 확인해주세요.")
+                }
+            }
+        }
+        
+        task.resume()
+    }
+    
+    private func configureLoginButton() {
         LoginButton.layer.cornerRadius = 10.0
         LoginButton.clipsToBounds = true
     }
     
+    private func navigateToScrapStatsViewController() {
+        guard let scrapStatsViewController = self.storyboard?.instantiateViewController(withIdentifier: "ScrapStatsVC") as? UITabBarController else { return }
+        scrapStatsViewController.modalTransitionStyle = .coverVertical
+        scrapStatsViewController.modalPresentationStyle = .fullScreen
+        self.present(scrapStatsViewController, animated: true, completion: nil)
+    }
     
-//    //  MainViewController로 화면전환 (단,서버에 저장된 이메일과 비밀번호와 사용자가 입력한 데이터가 일치할 때만)_아직 MainVC와 API가 없음
-//       private func navigateToMainViewController() {
-//           guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainViewController else { return }
-//           mainVC.modalTransitionStyle = .coverVertical
-//           mainVC.modalPresentationStyle = .fullScreen
-//           self.present(mainVC, animated: true, completion: nil)
-//       }
-       
-       // 로그인이 안될 시 "로그인 오류"라는 팝업 띄우기
-       private func showAlert(message: String) {
-           let alert = UIAlertController(title: "로그인 오류", message: message, preferredStyle: .alert)
-           alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
-           self.present(alert, animated: true, completion: nil)
-       }
-    
-  
+    private func showAlert(message: String) {
+        let alert = UIAlertController(title: "로그인 오류", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
-    
+
+

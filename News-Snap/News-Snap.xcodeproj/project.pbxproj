@@ -18,17 +18,6 @@
 		9D13D6DF2C6B92F20064B42A /* Scrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6DD2C6B92F20064B42A /* Scrap.swift */; };
 		9DEBA35E2C71133E00281CBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA35D2C71133E00281CBA /* ViewController.swift */; };
 		9DEBA3602C7114E400281CBA /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA35F2C7114E400281CBA /* Member.swift */; };
-		9DEBA37B2C71153800281CBA /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3732C71153700281CBA /* AlarmViewController.swift */; };
-		9DEBA37C2C71153800281CBA /* EmailVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3742C71153700281CBA /* EmailVerificationViewController.swift */; };
-		9DEBA37D2C71153800281CBA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3752C71153700281CBA /* LoginViewController.swift */; };
-		9DEBA37E2C71153800281CBA /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3762C71153700281CBA /* NewPasswordViewController.swift */; };
-		9DEBA37F2C71153800281CBA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3772C71153700281CBA /* RegisterViewController.swift */; };
-		9DEBA3802C71153800281CBA /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3782C71153700281CBA /* SelectViewController.swift */; };
-		9DEBA3812C71153800281CBA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3792C71153700281CBA /* StartViewController.swift */; };
-		9DEBA3882C71154000281CBA /* FirstCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3822C71154000281CBA /* FirstCellTableViewCell.swift */; };
-		9DEBA3892C71154000281CBA /* FirstCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBA3832C71154000281CBA /* FirstCellTableViewCell.xib */; };
-		9DEBA38A2C71154000281CBA /* MyScrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3852C71154000281CBA /* MyScrapViewController.swift */; };
-		9DEBA38B2C71154000281CBA /* ScrapStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3862C71154000281CBA /* ScrapStatsViewController.swift */; };
 		9DEBA3912C7DC08200281CBA /* ScrapDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3902C7DC08200281CBA /* ScrapDetailedViewController.swift */; };
 		9DEBA3952C7E09B900281CBA /* KeywordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3932C7E09B900281CBA /* KeywordCollectionViewCell.swift */; };
 		9DEBA3962C7E09B900281CBA /* KeywordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBA3942C7E09B900281CBA /* KeywordCollectionViewCell.xib */; };
@@ -37,15 +26,22 @@
 		9DEBA39F2C7F217400281CBA /* RelatedMediaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA39D2C7F217400281CBA /* RelatedMediaCollectionViewCell.swift */; };
 		9DEBA3A02C7F217400281CBA /* RelatedMediaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBA39E2C7F217400281CBA /* RelatedMediaCollectionViewCell.xib */; };
 		9DEBA3A22C809D3E00281CBA /* popularStocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3A12C809D3E00281CBA /* popularStocks.swift */; };
-		9DEBA3A82C80A1DB00281CBA /* DaySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3A32C80A1DB00281CBA /* DaySettingsViewController.swift */; };
-		9DEBA3A92C80A1DB00281CBA /* ImprovementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3A42C80A1DB00281CBA /* ImprovementsViewController.swift */; };
-		9DEBA3AA2C80A1DB00281CBA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3A52C80A1DB00281CBA /* SettingsViewController.swift */; };
-		9DEBA3AB2C80A1DB00281CBA /* TimeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3A62C80A1DB00281CBA /* TimeSettingsViewController.swift */; };
 		9DEBA3CA2C80B1B900281CBA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3C52C80B1B900281CBA /* HomeViewController.swift */; };
 		9DEBA3CB2C80B1B900281CBA /* KeywordBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3C62C80B1B900281CBA /* KeywordBoardTableViewCell.swift */; };
 		9DEBA3CC2C80B1B900281CBA /* KeywordBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBA3C72C80B1B900281CBA /* KeywordBoardTableViewCell.xib */; };
 		9DEBA3CD2C80B1B900281CBA /* KeywordBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3C82C80B1B900281CBA /* KeywordBoardViewController.swift */; };
 		9DEBA3D02C80B24700281CBA /* ContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3CE2C80B24700281CBA /* ContentsViewController.swift */; };
+		9DEBA3D72C80B2F200281CBA /* EachNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3D12C80B2F200281CBA /* EachNewsTableViewCell.swift */; };
+		9DEBA3D82C80B2F200281CBA /* EachNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBA3D22C80B2F200281CBA /* EachNewsTableViewCell.xib */; };
+		9DEBA3D92C80B2F200281CBA /* MyScrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3D42C80B2F200281CBA /* MyScrapViewController.swift */; };
+		9DEBA3DA2C80B2F200281CBA /* ScrapStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3D52C80B2F200281CBA /* ScrapStatsViewController.swift */; };
+		9DEBA3E32C80B30700281CBA /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3DB2C80B30700281CBA /* AlarmViewController.swift */; };
+		9DEBA3E42C80B30700281CBA /* EmailVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3DC2C80B30700281CBA /* EmailVerificationViewController.swift */; };
+		9DEBA3E52C80B30700281CBA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3DD2C80B30700281CBA /* LoginViewController.swift */; };
+		9DEBA3E62C80B30700281CBA /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3DE2C80B30700281CBA /* NewPasswordViewController.swift */; };
+		9DEBA3E72C80B30700281CBA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3DF2C80B30700281CBA /* RegisterViewController.swift */; };
+		9DEBA3E82C80B30700281CBA /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3E02C80B30700281CBA /* SelectViewController.swift */; };
+		9DEBA3E92C80B30700281CBA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3E12C80B30700281CBA /* StartViewController.swift */; };
 		9DEBADE52C465AB700A8C8B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBADE42C465AB700A8C8B4 /* AppDelegate.swift */; };
 		9DEBADE72C465AB700A8C8B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBADE62C465AB700A8C8B4 /* SceneDelegate.swift */; };
 		9DEBADEC2C465AB700A8C8B4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBADEB2C465AB700A8C8B4 /* Base */; };
@@ -65,17 +61,6 @@
 		9D13D6DD2C6B92F20064B42A /* Scrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scrap.swift; sourceTree = "<group>"; };
 		9DEBA35D2C71133E00281CBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9DEBA35F2C7114E400281CBA /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
-		9DEBA3732C71153700281CBA /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
-		9DEBA3742C71153700281CBA /* EmailVerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailVerificationViewController.swift; sourceTree = "<group>"; };
-		9DEBA3752C71153700281CBA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		9DEBA3762C71153700281CBA /* NewPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
-		9DEBA3772C71153700281CBA /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		9DEBA3782C71153700281CBA /* SelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
-		9DEBA3792C71153700281CBA /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
-		9DEBA3822C71154000281CBA /* FirstCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCellTableViewCell.swift; sourceTree = "<group>"; };
-		9DEBA3832C71154000281CBA /* FirstCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstCellTableViewCell.xib; sourceTree = "<group>"; };
-		9DEBA3852C71154000281CBA /* MyScrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyScrapViewController.swift; sourceTree = "<group>"; };
-		9DEBA3862C71154000281CBA /* ScrapStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrapStatsViewController.swift; sourceTree = "<group>"; };
 		9DEBA3902C7DC08200281CBA /* ScrapDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrapDetailedViewController.swift; sourceTree = "<group>"; };
 		9DEBA3932C7E09B900281CBA /* KeywordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordCollectionViewCell.swift; sourceTree = "<group>"; };
 		9DEBA3942C7E09B900281CBA /* KeywordCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeywordCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -84,10 +69,6 @@
 		9DEBA39D2C7F217400281CBA /* RelatedMediaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedMediaCollectionViewCell.swift; sourceTree = "<group>"; };
 		9DEBA39E2C7F217400281CBA /* RelatedMediaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RelatedMediaCollectionViewCell.xib; sourceTree = "<group>"; };
 		9DEBA3A12C809D3E00281CBA /* popularStocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popularStocks.swift; sourceTree = "<group>"; };
-		9DEBA3A32C80A1DB00281CBA /* DaySettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaySettingsViewController.swift; sourceTree = "<group>"; };
-		9DEBA3A42C80A1DB00281CBA /* ImprovementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImprovementsViewController.swift; sourceTree = "<group>"; };
-		9DEBA3A52C80A1DB00281CBA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		9DEBA3A62C80A1DB00281CBA /* TimeSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSettingsViewController.swift; sourceTree = "<group>"; };
 		9DEBA3B62C80A1EB00281CBA /* TimeSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingsViewController.swift; sourceTree = "<group>"; };
 		9DEBA3B72C80A1EB00281CBA /* DaySettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySettingsViewController.swift; sourceTree = "<group>"; };
 		9DEBA3B82C80A1EB00281CBA /* ImprovementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImprovementsViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +78,17 @@
 		9DEBA3C72C80B1B900281CBA /* KeywordBoardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeywordBoardTableViewCell.xib; sourceTree = "<group>"; };
 		9DEBA3C82C80B1B900281CBA /* KeywordBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeywordBoardViewController.swift; sourceTree = "<group>"; };
 		9DEBA3CE2C80B24700281CBA /* ContentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentsViewController.swift; sourceTree = "<group>"; };
+		9DEBA3D12C80B2F200281CBA /* EachNewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EachNewsTableViewCell.swift; sourceTree = "<group>"; };
+		9DEBA3D22C80B2F200281CBA /* EachNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EachNewsTableViewCell.xib; sourceTree = "<group>"; };
+		9DEBA3D42C80B2F200281CBA /* MyScrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyScrapViewController.swift; sourceTree = "<group>"; };
+		9DEBA3D52C80B2F200281CBA /* ScrapStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrapStatsViewController.swift; sourceTree = "<group>"; };
+		9DEBA3DB2C80B30700281CBA /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		9DEBA3DC2C80B30700281CBA /* EmailVerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailVerificationViewController.swift; sourceTree = "<group>"; };
+		9DEBA3DD2C80B30700281CBA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9DEBA3DE2C80B30700281CBA /* NewPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
+		9DEBA3DF2C80B30700281CBA /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9DEBA3E02C80B30700281CBA /* SelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
+		9DEBA3E12C80B30700281CBA /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		9DEBADE12C465AB700A8C8B4 /* News-Snap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News-Snap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DEBADE42C465AB700A8C8B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DEBADE62C465AB700A8C8B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,41 +139,6 @@
 				9DEBA3A12C809D3E00281CBA /* popularStocks.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		9DEBA37A2C71153700281CBA /* Register */ = {
-			isa = PBXGroup;
-			children = (
-				9DEBA3A72C80A1DB00281CBA /* settings */,
-				9DEBA3732C71153700281CBA /* AlarmViewController.swift */,
-				9DEBA3742C71153700281CBA /* EmailVerificationViewController.swift */,
-				9DEBA3752C71153700281CBA /* LoginViewController.swift */,
-				9DEBA3762C71153700281CBA /* NewPasswordViewController.swift */,
-				9DEBA3772C71153700281CBA /* RegisterViewController.swift */,
-				9DEBA3782C71153700281CBA /* SelectViewController.swift */,
-				9DEBA3792C71153700281CBA /* StartViewController.swift */,
-			);
-			name = Register;
-			path = "News-Snap/Register";
-			sourceTree = SOURCE_ROOT;
-		};
-		9DEBA3842C71154000281CBA /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				9DEBA3822C71154000281CBA /* FirstCellTableViewCell.swift */,
-				9DEBA3832C71154000281CBA /* FirstCellTableViewCell.xib */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		9DEBA3872C71154000281CBA /* Scrap_DB */ = {
-			isa = PBXGroup;
-			children = (
-				9DEBA3842C71154000281CBA /* Cell */,
-				9DEBA3852C71154000281CBA /* MyScrapViewController.swift */,
-				9DEBA3862C71154000281CBA /* ScrapStatsViewController.swift */,
-			);
-			path = Scrap_DB;
 			sourceTree = "<group>";
 		};
 		9DEBA38D2C7CC1BF00281CBA /* Scrap_CRUD */ = {
@@ -240,18 +197,6 @@
 			path = RelatedMedia_Cell;
 			sourceTree = "<group>";
 		};
-		9DEBA3A72C80A1DB00281CBA /* settings */ = {
-			isa = PBXGroup;
-			children = (
-				9DEBA3A32C80A1DB00281CBA /* DaySettingsViewController.swift */,
-				9DEBA3A42C80A1DB00281CBA /* ImprovementsViewController.swift */,
-				9DEBA3A52C80A1DB00281CBA /* SettingsViewController.swift */,
-				9DEBA3A62C80A1DB00281CBA /* TimeSettingsViewController.swift */,
-			);
-			name = settings;
-			path = "../../../../../News-Snap-Frontend/News-Snap/News-Snap/settings";
-			sourceTree = "<group>";
-		};
 		9DEBA3B52C80A1EB00281CBA /* settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +227,39 @@
 			path = Contents;
 			sourceTree = "<group>";
 		};
+		9DEBA3D32C80B2F200281CBA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9DEBA3D12C80B2F200281CBA /* EachNewsTableViewCell.swift */,
+				9DEBA3D22C80B2F200281CBA /* EachNewsTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9DEBA3D62C80B2F200281CBA /* Scrap_DB */ = {
+			isa = PBXGroup;
+			children = (
+				9DEBA3D32C80B2F200281CBA /* Cell */,
+				9DEBA3D42C80B2F200281CBA /* MyScrapViewController.swift */,
+				9DEBA3D52C80B2F200281CBA /* ScrapStatsViewController.swift */,
+			);
+			path = Scrap_DB;
+			sourceTree = "<group>";
+		};
+		9DEBA3E22C80B30700281CBA /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				9DEBA3DB2C80B30700281CBA /* AlarmViewController.swift */,
+				9DEBA3DC2C80B30700281CBA /* EmailVerificationViewController.swift */,
+				9DEBA3DD2C80B30700281CBA /* LoginViewController.swift */,
+				9DEBA3DE2C80B30700281CBA /* NewPasswordViewController.swift */,
+				9DEBA3DF2C80B30700281CBA /* RegisterViewController.swift */,
+				9DEBA3E02C80B30700281CBA /* SelectViewController.swift */,
+				9DEBA3E12C80B30700281CBA /* StartViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		9DEBADD82C465AB700A8C8B4 = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +279,8 @@
 		9DEBADE32C465AB700A8C8B4 /* News-Snap */ = {
 			isa = PBXGroup;
 			children = (
+				9DEBA3E22C80B30700281CBA /* Register */,
+				9DEBA3D62C80B2F200281CBA /* Scrap_DB */,
 				9DEBA3CF2C80B24700281CBA /* Contents */,
 				9DEBA3C92C80B1B900281CBA /* home */,
 				9DEBA3B52C80A1EB00281CBA /* settings */,
@@ -313,8 +293,6 @@
 				9DEBADED2C465AB900A8C8B4 /* Assets.xcassets */,
 				9DEBADEF2C465AB900A8C8B4 /* LaunchScreen.storyboard */,
 				9DEBADF22C465AB900A8C8B4 /* Info.plist */,
-				9DEBA3872C71154000281CBA /* Scrap_DB */,
-				9DEBA37A2C71153700281CBA /* Register */,
 			);
 			path = "News-Snap";
 			sourceTree = "<group>";
@@ -378,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DEBADEE2C465AB900A8C8B4 /* Assets.xcassets in Resources */,
+				9DEBA3D82C80B2F200281CBA /* EachNewsTableViewCell.xib in Resources */,
 				9DEBA3A02C7F217400281CBA /* RelatedMediaCollectionViewCell.xib in Resources */,
 				9D13D6D02C6B91AE0064B42A /* AttachmentFileTableViewCell.xib in Resources */,
 				9DEBA3962C7E09B900281CBA /* KeywordCollectionViewCell.xib in Resources */,
@@ -385,7 +364,6 @@
 				9DEBADF12C465AB900A8C8B4 /* Base in Resources */,
 				9D13D6D22C6B91AE0064B42A /* ReferenceLinklTableViewCell.xib in Resources */,
 				9DEBA39B2C7F1ECD00281CBA /* ContentTableViewCell.xib in Resources */,
-				9DEBA3892C71154000281CBA /* FirstCellTableViewCell.xib in Resources */,
 				9DEBADEC2C465AB700A8C8B4 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,39 +375,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DEBA3E42C80B30700281CBA /* EmailVerificationViewController.swift in Sources */,
 				9DEBA3952C7E09B900281CBA /* KeywordCollectionViewCell.swift in Sources */,
-				9DEBA37D2C71153800281CBA /* LoginViewController.swift in Sources */,
-				9DEBA3AB2C80A1DB00281CBA /* TimeSettingsViewController.swift in Sources */,
-				9DEBA3882C71154000281CBA /* FirstCellTableViewCell.swift in Sources */,
-				9DEBA3802C71153800281CBA /* SelectViewController.swift in Sources */,
+				9DEBA3D92C80B2F200281CBA /* MyScrapViewController.swift in Sources */,
 				9DEBA3CA2C80B1B900281CBA /* HomeViewController.swift in Sources */,
-				9DEBA3A92C80A1DB00281CBA /* ImprovementsViewController.swift in Sources */,
-				9DEBA3AA2C80A1DB00281CBA /* SettingsViewController.swift in Sources */,
-				9DEBA3A82C80A1DB00281CBA /* DaySettingsViewController.swift in Sources */,
+				9DEBA3D72C80B2F200281CBA /* EachNewsTableViewCell.swift in Sources */,
+				9DEBA3E92C80B30700281CBA /* StartViewController.swift in Sources */,
+				9DEBA3DA2C80B2F200281CBA /* ScrapStatsViewController.swift in Sources */,
 				9DEBA35E2C71133E00281CBA /* ViewController.swift in Sources */,
-				9DEBA38A2C71154000281CBA /* MyScrapViewController.swift in Sources */,
 				9D13D6DF2C6B92F20064B42A /* Scrap.swift in Sources */,
-				9DEBA37B2C71153800281CBA /* AlarmViewController.swift in Sources */,
 				9D13D6CF2C6B91AE0064B42A /* AttachmentFileTableViewCell.swift in Sources */,
+				9DEBA3E32C80B30700281CBA /* AlarmViewController.swift in Sources */,
 				9D13D6DC2C6B92E90064B42A /* ScrapSearchByDateViewController.swift in Sources */,
-				9DEBA38B2C71154000281CBA /* ScrapStatsViewController.swift in Sources */,
 				9DEBA3D02C80B24700281CBA /* ContentsViewController.swift in Sources */,
 				9DEBA3912C7DC08200281CBA /* ScrapDetailedViewController.swift in Sources */,
-				9DEBA37C2C71153800281CBA /* EmailVerificationViewController.swift in Sources */,
+				9DEBA3E82C80B30700281CBA /* SelectViewController.swift in Sources */,
 				9DEBADE52C465AB700A8C8B4 /* AppDelegate.swift in Sources */,
 				9D13D6D92C6B92E90064B42A /* AttachmentFileModalViewController.swift in Sources */,
-				9DEBA37F2C71153800281CBA /* RegisterViewController.swift in Sources */,
 				9DEBA3CD2C80B1B900281CBA /* KeywordBoardViewController.swift in Sources */,
 				9DEBADE72C465AB700A8C8B4 /* SceneDelegate.swift in Sources */,
+				9DEBA3E62C80B30700281CBA /* NewPasswordViewController.swift in Sources */,
 				9DEBA39A2C7F1ECD00281CBA /* ContentTableViewCell.swift in Sources */,
 				9DEBA39F2C7F217400281CBA /* RelatedMediaCollectionViewCell.swift in Sources */,
 				9DEBA3CB2C80B1B900281CBA /* KeywordBoardTableViewCell.swift in Sources */,
 				9D13D6D12C6B91AE0064B42A /* ReferenceLinklTableViewCell.swift in Sources */,
 				9DEBA3A22C809D3E00281CBA /* popularStocks.swift in Sources */,
-				9DEBA37E2C71153800281CBA /* NewPasswordViewController.swift in Sources */,
-				9DEBA3812C71153800281CBA /* StartViewController.swift in Sources */,
+				9DEBA3E72C80B30700281CBA /* RegisterViewController.swift in Sources */,
 				9D13D6DB2C6B92E90064B42A /* ReferenceLinkModalViewController.swift in Sources */,
 				9D13D6DA2C6B92E90064B42A /* CreateScrapViewController.swift in Sources */,
+				9DEBA3E52C80B30700281CBA /* LoginViewController.swift in Sources */,
 				9DEBA3602C7114E400281CBA /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
