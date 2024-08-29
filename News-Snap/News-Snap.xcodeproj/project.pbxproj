@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C7AAE292C80E8A800622A11 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3B92C80A1EB00281CBA /* SettingsViewController.swift */; };
+		2C7AAE2A2C80E8B900622A11 /* ImprovementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3B82C80A1EB00281CBA /* ImprovementsViewController.swift */; };
+		2C7AAE2B2C80E8BB00622A11 /* DaySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3B72C80A1EB00281CBA /* DaySettingsViewController.swift */; };
+		2C7AAE2C2C80E8BD00622A11 /* TimeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3B62C80A1EB00281CBA /* TimeSettingsViewController.swift */; };
+		2C7AAE2D2C80E98100622A11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBADEA2C465AB700A8C8B4 /* Main.storyboard */; };
 		9D13D6CF2C6B91AE0064B42A /* AttachmentFileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6C92C6B91AE0064B42A /* AttachmentFileTableViewCell.swift */; };
 		9D13D6D02C6B91AE0064B42A /* AttachmentFileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D13D6CA2C6B91AE0064B42A /* AttachmentFileTableViewCell.xib */; };
 		9D13D6D12C6B91AE0064B42A /* ReferenceLinklTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6CB2C6B91AE0064B42A /* ReferenceLinklTableViewCell.swift */; };
@@ -360,6 +365,7 @@
 				9DEBA3A02C7F217400281CBA /* RelatedMediaCollectionViewCell.xib in Resources */,
 				9D13D6D02C6B91AE0064B42A /* AttachmentFileTableViewCell.xib in Resources */,
 				9DEBA3962C7E09B900281CBA /* KeywordCollectionViewCell.xib in Resources */,
+				2C7AAE2D2C80E98100622A11 /* Main.storyboard in Resources */,
 				9DEBA3CC2C80B1B900281CBA /* KeywordBoardTableViewCell.xib in Resources */,
 				9DEBADF12C465AB900A8C8B4 /* Base in Resources */,
 				9D13D6D22C6B91AE0064B42A /* ReferenceLinklTableViewCell.xib in Resources */,
@@ -378,9 +384,11 @@
 				9DEBA3E42C80B30700281CBA /* EmailVerificationViewController.swift in Sources */,
 				9DEBA3952C7E09B900281CBA /* KeywordCollectionViewCell.swift in Sources */,
 				9DEBA3D92C80B2F200281CBA /* MyScrapViewController.swift in Sources */,
+				2C7AAE2B2C80E8BB00622A11 /* DaySettingsViewController.swift in Sources */,
 				9DEBA3CA2C80B1B900281CBA /* HomeViewController.swift in Sources */,
 				9DEBA3D72C80B2F200281CBA /* EachNewsTableViewCell.swift in Sources */,
 				9DEBA3E92C80B30700281CBA /* StartViewController.swift in Sources */,
+				2C7AAE2A2C80E8B900622A11 /* ImprovementsViewController.swift in Sources */,
 				9DEBA3DA2C80B2F200281CBA /* ScrapStatsViewController.swift in Sources */,
 				9DEBA35E2C71133E00281CBA /* ViewController.swift in Sources */,
 				9D13D6DF2C6B92F20064B42A /* Scrap.swift in Sources */,
@@ -395,7 +403,9 @@
 				9DEBA3CD2C80B1B900281CBA /* KeywordBoardViewController.swift in Sources */,
 				9DEBADE72C465AB700A8C8B4 /* SceneDelegate.swift in Sources */,
 				9DEBA3E62C80B30700281CBA /* NewPasswordViewController.swift in Sources */,
+				2C7AAE292C80E8A800622A11 /* SettingsViewController.swift in Sources */,
 				9DEBA39A2C7F1ECD00281CBA /* ContentTableViewCell.swift in Sources */,
+				2C7AAE2C2C80E8BD00622A11 /* TimeSettingsViewController.swift in Sources */,
 				9DEBA39F2C7F217400281CBA /* RelatedMediaCollectionViewCell.swift in Sources */,
 				9DEBA3CB2C80B1B900281CBA /* KeywordBoardTableViewCell.swift in Sources */,
 				9D13D6D12C6B91AE0064B42A /* ReferenceLinklTableViewCell.swift in Sources */,
