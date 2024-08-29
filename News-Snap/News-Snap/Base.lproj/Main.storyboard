@@ -589,7 +589,7 @@
                             <constraint firstItem="fgu-td-4jj" firstAttribute="bottom" secondItem="R5c-Ht-Ted" secondAttribute="bottom" id="t1z-I4-02n"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="콘텐츠" image="news" selectedImage="news" id="5ng-n6-I1J"/>
+                    <tabBarItem key="tabBarItem" title="콘텐츠" image="newspaper" catalog="system" id="5ng-n6-I1J"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13Z-KG-34B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -606,9 +606,9 @@
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="tXu-rN-q8a" kind="relationship" relationship="viewControllers" id="rZ2-F2-KFi"/>
-                        <segue destination="jVt-id-6V0" kind="relationship" relationship="viewControllers" id="sVR-vh-xbu"/>
                         <segue destination="Tpo-IA-8Z6" kind="relationship" relationship="viewControllers" id="Ydp-Dd-UHS"/>
+                        <segue destination="jVt-id-6V0" kind="relationship" relationship="viewControllers" id="sVR-vh-xbu"/>
+                        <segue destination="tXu-rN-q8a" kind="relationship" relationship="viewControllers" id="rZ2-F2-KFi"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOi-co-uub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3146,7 +3146,7 @@
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="menu" width="48" height="48"/>
-        <image name="news" width="33" height="30"/>
+        <image name="newspaper" catalog="system" width="128" height="111"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="toggle-left" width="24" height="24"/>
         <image name="toggle-right" width="24" height="24"/>

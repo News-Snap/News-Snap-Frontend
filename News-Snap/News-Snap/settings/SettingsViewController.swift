@@ -10,29 +10,16 @@ import UIKit
 class SettingsViewController: UIViewController, DaySettingsDelegate, TimeSettingsDelegate {
     
     // 요일 설정 체크박스 상태 유지, 푸시 알림
-    
     @IBOutlet weak var contentView: UIView!
-    
     @IBOutlet weak var usernameLabel: UILabel!
-    
     @IBOutlet weak var usernameChangeBtn: UIButton!
-    
     @IBOutlet weak var logoutBtn: UIButton!
-    
     @IBOutlet weak var pushAlertBtn: UIButton!
-    
     @IBOutlet weak var settingDayBtn: UIButton!
-    
     @IBOutlet weak var selectecDayLabel: UILabel!
-    
     @IBOutlet weak var settingTimeBtn: UIButton!
-    
     @IBOutlet weak var selectedTimeLabel: UILabel!
-    
-    @IBOutlet weak var ImprovementsBtn: UIButton!
-    
-//    @IBOutlet weak var toMainBtn: UIButton!
-    
+
     var selectedDays: [String] = []
     var selectedTime: String = ""
     
@@ -42,8 +29,6 @@ class SettingsViewController: UIViewController, DaySettingsDelegate, TimeSetting
         // 모서리 둥글게 설정
         contentView.layer.cornerRadius = 15
         contentView.layer.masksToBounds = true
-//        toMainBtn.layer.cornerRadius = 10
-//        toMainBtn.layer.masksToBounds = true
     }
     
     // 닉네임 수정 버튼
@@ -83,7 +68,6 @@ class SettingsViewController: UIViewController, DaySettingsDelegate, TimeSetting
         nextVC.delegate = self
         nextVC.modalTransitionStyle = .coverVertical
         nextVC.modalPresentationStyle = .overFullScreen
-        // nextVC.preferredContentSize = CGSize(width: 300, height: 400)
         self.present(nextVC, animated: true, completion: nil)
     }
     
@@ -92,15 +76,6 @@ class SettingsViewController: UIViewController, DaySettingsDelegate, TimeSetting
         guard let nextVC = self.storyboard?.instantiateViewController(identifier: "TimeSettingsViewController") as? TimeSettingsViewController else { return }
         
         nextVC.delegate = self
-        nextVC.modalTransitionStyle = .coverVertical
-        nextVC.modalPresentationStyle = .overFullScreen
-        self.present(nextVC, animated: true, completion: nil)
-    }
-    
-    // 개선 사항 버튼
-    @IBAction func ImprovementsDidTap(_ sender: UIButton) {
-        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "ImprovementsViewController") as? ImprovementsViewController else { return }
-        
         nextVC.modalTransitionStyle = .coverVertical
         nextVC.modalPresentationStyle = .overFullScreen
         self.present(nextVC, animated: true, completion: nil)
