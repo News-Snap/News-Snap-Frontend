@@ -103,7 +103,7 @@ class LoginViewController: UIViewController {
     }
     
     private func login(email: String, password: String) {
-        let url = URL(string: "https://yourserver.com/login")!
+        let url = URL(string: "http://52.78.37.90:8080/api/v1/auth/login")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
