@@ -16,11 +16,8 @@ class TimeSettingsViewController: UIViewController {
     weak var delegate: TimeSettingsDelegate?
     
     @IBOutlet weak var contentView: UIView!
-    
     @IBOutlet weak var datePicker: UIDatePicker!
-    
     @IBOutlet weak var cancelBtn: UIButton!
-    
     @IBOutlet weak var saveBtn: UIButton!
     
     
@@ -45,13 +42,12 @@ class TimeSettingsViewController: UIViewController {
     @IBAction func saveDidTap(_ sender: UIButton) {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ko_KR")
-        formatter.timeStyle = .short
+        formatter.dateFormat = "HH:mm:ss"
+        
         let selectedTime = formatter.string(from: datePicker.date)
                 
         delegate?.didSelectTime(selectedTime)
         dismiss(animated: true, completion: nil)
     }
-    
-    
     
 }

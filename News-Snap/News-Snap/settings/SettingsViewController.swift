@@ -23,6 +23,8 @@ class SettingsViewController: UIViewController, DaySettingsDelegate, TimeSetting
     var selectedDays: [String] = []
     var selectedTime: String = ""
     
+    let token = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,14 +35,13 @@ class SettingsViewController: UIViewController, DaySettingsDelegate, TimeSetting
         fetchSettingsData()
     }
     
+    // 설정사항 조회
     func fetchSettingsData() {
         let urlString = "http://52.78.37.90:8080/api/v1/setting"
         guard let url = URL(string: urlString) else {
             print("Invalid URL")
             return
         }
-        
-        let token = ""
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -77,6 +78,86 @@ class SettingsViewController: UIViewController, DaySettingsDelegate, TimeSetting
         task.resume()
     }
     
+    func updateAlarmDays() {
+        let urlString = "http://52.78.37.90:8080/api/v1/setting/day"
+        guard let url = URL(string: urlString) else {
+            print("Invalid URL")
+            return
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "PATCH"
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        // 설정된 알람 요일 데이터를 JSON으로 변환
+        let alarmDays = ["alarmDay": selectedDays]
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: alarmDays, options: [])
+            request.httpBody = jsonData
+        } catch {
+            print("Error converting alarm days to JSON: \(error.localizedDescription)")
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let httpResponse = response as? HTTPURLResponse {
+                print("HTTP Status Code: \(httpResponse.statusCode)")
+            }
+
+            guard let data = data, error == nil else {
+                print("Error sending data: \(error?.localizedDescription ?? "Unknown error")")
+                return
+            }
+
+            if let dataString = String(data: data, encoding: .utf8) {
+                print("Received Data: \(dataString)")
+            }
+        }
+        
+        task.resume()
+    }
+
+    func updateAlarmTime() {
+        let urlString = "http://52.78.37.90:8080/api/v1/setting/time"
+        guard let url = URL(string: urlString) else {
+            print("Invalid URL")
+            return
+        }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "PATCH"
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        // 설정된 알람 시간을 JSON으로 변환
+        let alarmTime = ["alarmTime": selectedTime]
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: alarmTime, options: [])
+            request.httpBody = jsonData
+        } catch {
+            print("Error converting alarm time to JSON: \(error.localizedDescription)")
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let httpResponse = response as? HTTPURLResponse {
+                print("HTTP Status Code: \(httpResponse.statusCode)")
+            }
+
+            guard let data = data, error == nil else {
+                print("Error sending data: \(error?.localizedDescription ?? "Unknown error")")
+                return
+            }
+
+            if let dataString = String(data: data, encoding: .utf8) {
+                print("Received Data: \(dataString)")
+            }
+        }
+        
+        task.resume()
+    }
+
     func updateUI(with result: [String: Any]) {
         // 닉네임 설정
         if let nickname = result["nickname"] as? String {
@@ -95,12 +176,9 @@ class SettingsViewController: UIViewController, DaySettingsDelegate, TimeSetting
         }
         
         // 알림 시간 설정
-        if let alarmTime = result["alarmTime"] as? [String: Any],
-           let hour = alarmTime["hour"] as? Int,
-           let minute = alarmTime["minute"] as? Int {
-            let timeString = String(format: "%02d:%02d", hour, minute)
-            selectedTime = timeString
-            selectedTimeLabel.text = timeString
+        if let alarmTime = result["alarmTime"] as? String {
+            selectedTime = alarmTime
+            selectedTimeLabel.text = alarmTime
         }
     }
     
@@ -127,18 +205,24 @@ class SettingsViewController: UIViewController, DaySettingsDelegate, TimeSetting
     func didSelectDays(_ selectedDays: [String]) {
         self.selectedDays = selectedDays
         selectecDayLabel.text = selectedDays.joined(separator: ", ")
+        
+        updateAlarmDays()
     }
     
     func didSelectTime(_ selectedTime: String) {
-            self.selectedTime = selectedTime
-            selectedTimeLabel.text = selectedTime
+        self.selectedTime = selectedTime
+        selectedTimeLabel.text = selectedTime
+        
+        updateAlarmTime()
     }
     
     // 요일 설정 버튼
     @IBAction func settingDayDidTap(_ sender: UIButton) {
-        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "DaySettingsViewController") as? DaySettingsViewController else { return }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let nextVC = storyboard.instantiateViewController(identifier: "DaySettingsViewController") as? DaySettingsViewController else { return }
         
         nextVC.delegate = self
+        nextVC.selectedDays = self.selectedDays
         nextVC.modalTransitionStyle = .coverVertical
         nextVC.modalPresentationStyle = .overFullScreen
         self.present(nextVC, animated: true, completion: nil)
