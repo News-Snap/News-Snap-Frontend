@@ -118,17 +118,56 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate, Refere
     
     // MARK: - Functions
     func keywordFunc() {
-        let INTEREST_RATE = UIAction(title: "INTEREST_RATE", handler: { [weak self] _ in
+        let INTEREST_RATE = UIAction(title: "금리", handler: { [weak self] _ in
             self?.addKeyword("INTEREST_RATE")
         })
-        let BIG_TECH = UIAction(title: "BIG_TECH", handler: { [weak self] _ in
+        let BIG_TECH = UIAction(title: "빅테크", handler: { [weak self] _ in
             self?.addKeyword("BIG_TECH")
         })
+        let STARTUP = UIAction(title: "스타트업", handler: { [weak self] _ in
+            self?.addKeyword("STARTUP")
+        })
+//        let INTERNATIONAL_EXCHANGE_RATE = UIAction(title: "국제 환율", handler: { [weak self] _ in
+//            self?.addKeyword("INTERNATIONAL_EXCHANGE_RATE")
+//        })
+        let BLOCK_CHAIN = UIAction(title: "블록체인", handler: { [weak self] _ in
+            self?.addKeyword("BLOCK_CHAIN")
+        })
+        let FINANCE = UIAction(title: "금융", handler: { [weak self] _ in
+            self?.addKeyword("FINANCE")
+        })
+        let CERTIFICATE = UIAction(title: "증권", handler: { [weak self] _ in
+            self?.addKeyword("CERTIFICATE")
+        })
+        let ECONOMIC_POLICY = UIAction(title: "경제정책", handler: { [weak self] _ in
+            self?.addKeyword("ECONOMIC_POLICY")
+        })
+        let DOMESTIC = UIAction(title: "국내", handler: { [weak self] _ in
+            self?.addKeyword("DOMESTIC")
+        })
+        let GLOBAL = UIAction(title: "국제", handler: { [weak self] _ in
+            self?.addKeyword("GLOBAL")
+        })
+        let REAL_ESTATE = UIAction(title: "부동산", handler: { [weak self] _ in
+            self?.addKeyword("REAL_ESTATE")
+        })
+        let SEMICONDUCTOR = UIAction(title: "반도체", handler: { [weak self] _ in
+            self?.addKeyword("SEMICONDUCTOR")
+        })
+        let AUTOMOBILE = UIAction(title: "자동차", handler: { [weak self] _ in
+            self?.addKeyword("AUTOMOBILE")
+        })
+        let FOOD = UIAction(title: "식료품", handler: { [weak self] _ in
+            self?.addKeyword("FOOD")
+        })
+        let CONSTRUCTION = UIAction(title: "건설", handler: { [weak self] _ in
+            self?.addKeyword("CONSTRUCTION")
+        })
         
-        
-        let menu = UIMenu(title: "", children: [INTEREST_RATE, BIG_TECH])
+        let menu = UIMenu(title: "", children: [INTEREST_RATE, BIG_TECH, STARTUP, BLOCK_CHAIN, FINANCE, CERTIFICATE, ECONOMIC_POLICY, DOMESTIC, GLOBAL, REAL_ESTATE, SEMICONDUCTOR, AUTOMOBILE, FOOD, CONSTRUCTION])
         keywordButton.menu = menu
     }
+
     
     private func addKeyword(_ keyword: String) {
         if !keywords.contains(keyword) {
