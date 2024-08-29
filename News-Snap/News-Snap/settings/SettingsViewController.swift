@@ -29,6 +29,79 @@ class SettingsViewController: UIViewController, DaySettingsDelegate, TimeSetting
         // 모서리 둥글게 설정
         contentView.layer.cornerRadius = 15
         contentView.layer.masksToBounds = true
+        
+        fetchSettingsData()
+    }
+    
+    func fetchSettingsData() {
+        let urlString = "http://52.78.37.90:8080/api/v1/setting"
+        guard let url = URL(string: urlString) else {
+            print("Invalid URL")
+            return
+        }
+        
+        let token = ""
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let httpResponse = response as? HTTPURLResponse {
+                print("HTTP Status Code: \(httpResponse.statusCode)")
+            }
+            
+            guard let data = data, error == nil else {
+                print("Error fetching data: \(error?.localizedDescription ?? "Unknown error")")
+                return
+            }
+            
+            do {
+                let jsonResponse = try JSONSerialization.jsonObject(with: data, options: [])
+                print("JSON Response: \(jsonResponse)")
+                
+                if let dictionary = jsonResponse as? [String: Any],
+                   let result = dictionary["result"] as? [String: Any] {
+                    DispatchQueue.main.async {
+                        self.updateUI(with: result)
+                    }
+                }
+            } catch {
+                print("Error decoding JSON: \(error.localizedDescription)")
+                if let dataString = String(data: data, encoding: .utf8) {
+                    print("Received data: \(dataString)")
+                }
+            }
+        }
+        
+        task.resume()
+    }
+    
+    func updateUI(with result: [String: Any]) {
+        // 닉네임 설정
+        if let nickname = result["nickname"] as? String {
+            usernameLabel.text = nickname
+        }
+        
+        // 푸시 알림 설정
+        if let pushAlarm = result["pushAlarm"] as? Bool {
+            pushAlertBtn.isSelected = pushAlarm
+        }
+        
+        // 알림 요일 설정
+        if let alarmDays = result["alarmDay"] as? [String] {
+            selectedDays = alarmDays
+            selectecDayLabel.text = alarmDays.joined(separator: ", ")
+        }
+        
+        // 알림 시간 설정
+        if let alarmTime = result["alarmTime"] as? [String: Any],
+           let hour = alarmTime["hour"] as? Int,
+           let minute = alarmTime["minute"] as? Int {
+            let timeString = String(format: "%02d:%02d", hour, minute)
+            selectedTime = timeString
+            selectedTimeLabel.text = timeString
+        }
     }
     
     // 닉네임 수정 버튼
