@@ -1,5 +1,4 @@
-Main.storyboard
-.DS_Store
+*.DS_Store
 *.xcuserdatad
 # Created by https://www.toptal.com/developers/gitignore/api/xcode,swift,cocoapods
 # Edit at https://www.toptal.com/developers/gitignore?templates=xcode,swift,cocoapods

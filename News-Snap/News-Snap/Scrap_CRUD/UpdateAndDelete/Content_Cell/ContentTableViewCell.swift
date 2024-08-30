@@ -1,16 +1,13 @@
 //
-//  ReferenceLinklTableViewCell.swift
+//  ContentTableViewCell.swift
 //  News-Snap
 //
-//  Created by Jinyoung Leem on 8/8/24.
+//  Created by Jinyoung Leem on 8/28/24.
 //
 
 import UIKit
 
-class ReferenceLinklTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var referenceLabel: UILabel!
-    
+class ContentTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

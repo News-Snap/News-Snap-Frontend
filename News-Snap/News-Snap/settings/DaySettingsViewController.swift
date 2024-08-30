@@ -17,23 +17,14 @@ class DaySettingsViewController: UIViewController {
     var selectedDays: [String] = []
     
     @IBOutlet weak var contentView: UIView!
-    
     @IBOutlet weak var mondayBtn: UIButton!
-    
-    @IBOutlet weak var tuesday: UIButton!
-    
+    @IBOutlet weak var tuesdayBtn: UIButton!
     @IBOutlet weak var wednesdayBtn: UIButton!
-    
     @IBOutlet weak var thursdayBtn: UIButton!
-    
     @IBOutlet weak var fridayBtn: UIButton!
-    
     @IBOutlet weak var saturdayBtn: UIButton!
-    
     @IBOutlet weak var sundayBtn: UIButton!
-    
     @IBOutlet weak var cancelBtn: UIButton!
-    
     @IBOutlet weak var saveBtn: UIButton!
     
     
@@ -50,7 +41,20 @@ class DaySettingsViewController: UIViewController {
         cancelBtn.layer.borderWidth = 1
         saveBtn.layer.borderWidth = 1
         
-        // initializeButtonStates()
+        initializeButtonStates()
+    }
+    
+    // 버튼 선택 상태 초기화
+    func initializeButtonStates() {
+        print("selectedDays: \(selectedDays)")
+        
+        if selectedDays.contains("MONDAY") { mondayBtn.isSelected = true }
+        if selectedDays.contains("TUESDAY") { tuesdayBtn.isSelected = true }
+        if selectedDays.contains("WEDNESDAY") { wednesdayBtn.isSelected = true }
+        if selectedDays.contains("THURSDAY") { thursdayBtn.isSelected = true }
+        if selectedDays.contains("FRIDAY") { fridayBtn.isSelected = true }
+        if selectedDays.contains("SATURDAY") { saturdayBtn.isSelected = true }
+        if selectedDays.contains("SUNDAY") { sundayBtn.isSelected = true }
     }
     
     @IBAction func mondayDidTap(_ sender: UIButton) {
@@ -63,11 +67,11 @@ class DaySettingsViewController: UIViewController {
     }
     
     @IBAction func tuesdayDidTap(_ sender: UIButton) {
-        if thursdayBtn.isSelected {
-            thursdayBtn.isSelected = false
+        if tuesdayBtn.isSelected {
+            tuesdayBtn.isSelected = false
         }
         else {
-            thursdayBtn.isSelected = true
+            tuesdayBtn.isSelected = true
         }
     }
     
@@ -122,13 +126,13 @@ class DaySettingsViewController: UIViewController {
     
     @IBAction func saveDidTap(_ sender: UIButton) {
         var selectedDays = [String]()
-        if mondayBtn.isSelected { selectedDays.append("월") }
-        if tuesday.isSelected { selectedDays.append("화") }
-        if wednesdayBtn.isSelected { selectedDays.append("수") }
-        if thursdayBtn.isSelected { selectedDays.append("목") }
-        if fridayBtn.isSelected { selectedDays.append("금") }
-        if saturdayBtn.isSelected { selectedDays.append("토") }
-        if sundayBtn.isSelected { selectedDays.append("일") }
+        if mondayBtn.isSelected { selectedDays.append("MONDAY") }
+        if tuesdayBtn.isSelected { selectedDays.append("TUESDAY") }
+        if wednesdayBtn.isSelected { selectedDays.append("WEDNESDAY") }
+        if thursdayBtn.isSelected { selectedDays.append("THURSDAY") }
+        if fridayBtn.isSelected { selectedDays.append("FRIDAY") }
+        if saturdayBtn.isSelected { selectedDays.append("SATURDAY") }
+        if sundayBtn.isSelected { selectedDays.append("SUNDAY") }
 
         delegate?.didSelectDays(selectedDays)
         dismiss(animated: true, completion: nil)

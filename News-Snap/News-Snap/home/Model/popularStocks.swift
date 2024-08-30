@@ -15,9 +15,8 @@ struct PopularStocksResponse: Decodable {
     let code: String
     let message: String
     let result: ResultData
-    
+
     struct ResultData: Decodable {
         let popularStocks: [Stock]
     }
 }
-

@@ -7,7 +7,21 @@
 
 import UIKit
 
+protocol ReferenceLinkDelegate : AnyObject {
+    func linkEntered(_ referenceLink : [String])
+}
+
+protocol RefereceLinkCountDelegate : AnyObject {
+    func referenceLinkCount(_ referenceLinkCount : Int)
+}
+
 class ReferenceLinkModalViewController: UIViewController {
+    weak var delegate : ReferenceLinkDelegate?
+    var referenceLinkList : [String] = []
+    
+    weak var countDelegate : RefereceLinkCountDelegate?
+    var referenceLinkCount : Int = 1
+    
     @IBOutlet weak var referenceLinkTextField: UITextField!
     @IBOutlet var rootView: UIView!
     @IBOutlet weak var mainView: UIView!
@@ -27,6 +41,16 @@ class ReferenceLinkModalViewController: UIViewController {
     }
     
     @IBAction func confirmButtonTapped(_ sender: Any) {
+        guard let referenceLink = referenceLinkTextField.text else { return }
+        // print("Reference link: \(referenceLink)") // 디버깅용 출력
+        
+        referenceLinkList.append(referenceLink)
+        print(referenceLinkList)
+
+        delegate?.linkEntered(referenceLinkList)
+        referenceLinkCount += 1
+        countDelegate?.referenceLinkCount(referenceLinkCount)
+        self.dismiss(animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation

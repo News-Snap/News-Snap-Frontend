@@ -7,23 +7,23 @@
 
 import Foundation
 
-struct Scrap {
-    var id : Int
+struct Scrap : Encodable {
+    var title : String
     var link : String
     var contents : String
     var keywords : [String]
     var date : Date
-    var attachmentFile : URL?
-    var referenceFile : URL?
+    var attachmentFile : String
+    var referenceLink : [String]
     
-    init(id: Int, link: String, contents: String, keywords: [String], date : Date) {
-        self.id = id
+    init(title: String, link: String, contents: String, keywords: [String], date : Date, attachmentFile : String, referenceLink : [String]) {
+        self.title = title
         self.link = link
         self.contents = contents
         self.keywords = keywords
         self.date = date
+        self.attachmentFile = attachmentFile
+        self.referenceLink = referenceLink
     }
-    
-    
 }
 
