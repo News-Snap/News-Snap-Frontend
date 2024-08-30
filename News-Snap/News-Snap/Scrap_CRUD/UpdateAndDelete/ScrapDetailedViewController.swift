@@ -18,15 +18,38 @@ class ScrapDetailedViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var menuButton: UIButton!
     
+    let keywordTranslations: [String: String] = [
+        "INTEREST_RATE": "금리",
+        "BIG_TECH": "빅테크",
+        "STARTUP": "스타트업",
+        "BLOCK_CHAIN": "블록체인",
+        "FINANCE": "금융",
+        "CERTIFICATE": "증권",
+        "ECONOMIC_POLICY": "경제정책",
+        "DOMESTIC": "국내",
+        "GLOBAL": "국제",
+        "REAL_ESTATE": "부동산",
+        "SEMICONDUCTOR": "반도체",
+        "AUTOMOBILE": "자동차",
+        "FOOD": "식료품",
+        "CONSTRUCTION": "건설"
+    ]
+
+    
+    var scrap : Scrap?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        testButton()
+        deleteButton()
+        fetchScrapData()
         
         // 키워드 생성
         keywordCollectionView.delegate = self
         keywordCollectionView.dataSource = self
         let keywordNib = UINib(nibName: "KeywordCollectionViewCell", bundle: nil)
         keywordCollectionView.register(keywordNib, forCellWithReuseIdentifier: "KeywordCollectionViewCell")
+        // Layout invalidation
+        keywordCollectionView.collectionViewLayout.invalidateLayout()
 
         // Content 설정
         contentTableView.delegate = self
@@ -39,13 +62,8 @@ class ScrapDetailedViewController: UIViewController, UITextFieldDelegate {
         relatedMediaCollectionView.dataSource = self
         let relatedNib = UINib(nibName: "RelatedMediaCollectionViewCell", bundle: nil)
         relatedMediaCollectionView.register(relatedNib, forCellWithReuseIdentifier: "RelatedMediaCollectionViewCell")
-        
-        
     }
     
-
-
-
     // MARK: - Action
     @IBAction func closeButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -55,9 +73,95 @@ class ScrapDetailedViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    // MARK: - Function
+
     
-    func testButton() {
+    // MARK: - Function
+    func updateCollectionViewLayout() {
+        keywordCollectionView.collectionViewLayout.invalidateLayout()
+    }
+    
+    func setupUI(with scrap: Scrap) {
+        // UI 요소에 Scrap 모델 데이터 바인딩
+        articleTitle.text = scrap.title
+        
+        // Date를 문자열로 변환하여 표시
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        articleDate.text = dateFormatter.string(from: scrap.date)
+        
+        // Keywords와 관련된 UI 업데이트
+        keywordCollectionView.reloadData()
+        
+        // 첨부파일이 있을 경우 버튼에 파일명 설정
+        if !scrap.attachmentFile.isEmpty {
+            attachmentFile.setTitle(scrap.attachmentFile, for: .normal)
+        } else {
+            attachmentFile.isHidden = true // 파일이 없으면 버튼 숨김
+        }
+        
+        // 관련 미디어 CollectionView 업데이트
+        relatedMediaCollectionView.reloadData()
+    }
+    
+    // MARK: - API 호출
+    func fetchScrapData() {
+        guard let url = URL(string: "http://52.78.37.90:8080/api/v1/scrap/2") else {
+            print("Invalid URL")
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("Error fetching data: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let data = data else {
+                print("No data received")
+                return
+            }
+            
+            // 실제 JSON 응답을 출력
+            if let jsonString = String(data: data, encoding: .utf8) {
+                print("Received JSON: \(jsonString)")
+            }
+            
+            do {
+                // JSONDecoder 설정
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .iso8601 // ISO8601 형식으로 날짜 디코딩
+                
+                // JSON 데이터를 APIResponse로 디코딩
+                let apiResponse = try decoder.decode(APIResponse.self, from: data)
+                let result = apiResponse.result
+                
+                // Scrap 모델로 변환
+                let scrap = Scrap(
+                    title: result.title,
+                    link: result.articleUrl,
+                    contents: result.content,
+                    keywords: result.keywords,
+                    date: ISO8601DateFormatter().date(from: result.modifiedAt) ?? Date(),
+                    attachmentFile: result.fileUrl ?? "",
+                    referenceLink: result.relatedUrlList
+                )
+                
+                // 메인 스레드에서 UI 업데이트
+                DispatchQueue.main.async {
+                    self.scrap = scrap
+                    self.contentTableView.reloadData() // 데이터 새로고침
+                    self.setupUI(with: scrap)
+                }
+                
+            } catch {
+                print("Failed to decode JSON: \(error.localizedDescription)")
+            }
+        }
+        task.resume()
+    }
+
+    
+    func deleteButton() {
         let update = UIAction(title: "수정하기", handler: { [weak self] _ in
             print("수정하기")
             self?.navigateToUpdateVC()
@@ -154,18 +258,50 @@ class ScrapDetailedViewController: UIViewController, UITextFieldDelegate {
 extension ScrapDetailedViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView.tag == 0 {
-            return 3
+            return scrap?.keywords.count ?? 0
         }
         else {
             return 2
         }
     }
     
+//    func collectionView(_ collectionView: UICollectionView, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        if collectionView.tag == 0 {
+//            // 셀의 너비와 높이를 계산합니다.
+//            let maxWidth = collectionView.frame.width - 16 // 여백을 고려하여 최대 너비를 설정합니다.
+//            let keyword = scrap?.keywords[indexPath.row] ?? ""
+//            
+//            // 텍스트의 크기를 계산하여 셀의 높이를 결정합니다.
+//            let font = UIFont.systemFont(ofSize: 16) // 사용할 폰트와 크기
+//            let textSize = (keyword as NSString).boundingRect(with: CGSize(width: maxWidth, height: CGFloat.greatestFiniteMagnitude),
+//                                                              options: .usesLineFragmentOrigin,
+//                                                              attributes: [NSAttributedString.Key.font: font],
+//                                                              context: nil).size
+//            
+//            // 셀의 크기를 결정합니다.
+//            let cellWidth = textSize.width + 16 // 패딩을 추가
+//            let cellHeight = textSize.height + 16 // 패딩을 추가
+//
+//            return CGSize(width: cellWidth, height: cellHeight)
+//        }
+//        else {
+//            return CGSize(width: 160, height: 153)
+//        }
+//        
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView.tag == 0 {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "KeywordCollectionViewCell", for: indexPath) as? KeywordCollectionViewCell else {
                 return UICollectionViewCell()
             }
+            // 키워드 데이터 설정
+            // 키워드 데이터 설정
+            if let keyword = scrap?.keywords[indexPath.row] {
+                let koreanKeyword = keywordTranslations[keyword] ?? keyword
+                cell.configure(with: koreanKeyword)
+            }
+            
             return cell
         }
         else {
@@ -176,21 +312,21 @@ extension ScrapDetailedViewController : UICollectionViewDelegate, UICollectionVi
         }
     }
     
-    
-//    // 셀 간의 간격 설정
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        if collectionView.tag == 0 {
-//            return 4
-//        }
-//        else {
-//            return 5
-//        }
-//    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 160, height: 153)
+        if collectionView.tag == 0 {
+            // 적절한 셀 사이즈 계산 로직 추가
+            let keyword = scrap?.keywords[indexPath.row] ?? ""
+            let label = UILabel()
+            label.text = "#\(keyword)"
+            label.numberOfLines = 0
+            label.lineBreakMode = .byWordWrapping
+            let size = label.sizeThatFits(CGSize(width: collectionView.bounds.width, height: CGFloat.greatestFiniteMagnitude))
+            return CGSize(width: size.width + 20, height: size.height + 20) // 여백 추가
+        }
+        else {
+            return CGSize(width: 160, height: 153)
+        }
     }
-    
     
     // 셀 선택 시 호출되는 메서드
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -209,13 +345,19 @@ extension ScrapDetailedViewController : UICollectionViewDelegate, UICollectionVi
 // Content TableView 설정
 extension ScrapDetailedViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContentTableViewCell", for: indexPath) as? ContentTableViewCell else {
             return UITableViewCell()
         }
+        
+        // 셀에 콘텐츠 설정
+        if let content = scrap?.contents {
+            cell.configure(with: content)
+        }
+        
         return cell
     }
     

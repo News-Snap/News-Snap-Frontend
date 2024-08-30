@@ -8,7 +8,13 @@
 import UIKit
 
 class ContentTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var contentLabel: UILabel!
+    
+    // Configure 메서드 추가
+    func configure(with content: String) {
+        contentLabel.text = content
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

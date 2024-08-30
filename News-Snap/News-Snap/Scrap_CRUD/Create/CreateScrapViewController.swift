@@ -9,9 +9,6 @@ import Foundation
 import UIKit
 
 class CreateScrapViewController : UIViewController , UITextFieldDelegate, ReferenceLinkDelegate, AttachmentFileDelegatge {
-    
-    
-    
     func fileEntered(_ fileLink: String) {
         self.fileLink = fileLink
     }

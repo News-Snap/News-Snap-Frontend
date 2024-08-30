@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SbG-N0-MAE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Knn-gW-oFe">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
@@ -77,7 +77,7 @@
         <!--홈-->
         <scene sceneID="UU5-z0-2AA">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="tXu-rN-q8a" customClass="HomeViewController" customModule="News_Snap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tXu-rN-q8a" customClass="HomeViewController" customModule="News_Snap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jg9-n2-YAM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -592,7 +592,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13Z-KG-34B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-150.38167938931298" y="1517.605633802817"/>
+            <point key="canvasLocation" x="-240" y="1210"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="us1-dd-NEp">
@@ -613,10 +613,10 @@
             </objects>
             <point key="canvasLocation" x="1706" y="782"/>
         </scene>
-        <!--설정-->
+        <!--SettingsViewController-->
         <scene sceneID="GpE-BT-I6Z">
             <objects>
-                <viewController storyboardIdentifier="SettingsViewController" id="jVt-id-6V0" customClass="SettingsViewController" customModule="News_Snap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" title="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jVt-id-6V0" customClass="SettingsViewController" customModule="News_Snap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9UF-kX-m3C">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -745,8 +745,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="ImprovementsDidTap:" destination="jVt-id-6V0" eventType="touchUpInside" id="siS-jl-aI6"/>
-                                            <action selector="settingTimeDidTap:" destination="jVt-id-6V0" eventType="touchUpInside" id="1op-Aw-Ekr"/>
+                                            <action selector="ImprovementsDidTap:" destination="jVt-id-6V0" eventType="touchUpInside" id="uqC-Eg-vau"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="버전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7V-RG-hoh">
@@ -834,7 +833,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="설정" image="gearshape" catalog="system" id="0BA-w1-6X3"/>
                     <connections>
-                        <outlet property="ImprovementsBtn" destination="VPN-fa-7As" id="DcG-Ez-dyX"/>
+                        <outlet property="ImprovementsBtn" destination="VPN-fa-7As" id="Pbs-dt-6Pe"/>
                         <outlet property="contentView" destination="ddS-wn-Jto" id="dIc-EP-V7k"/>
                         <outlet property="logoutBtn" destination="y5A-fc-ayT" id="2iv-W6-tnR"/>
                         <outlet property="pushAlertBtn" destination="acr-E1-0Fd" id="8Aj-Lj-XTV"/>
@@ -1066,7 +1065,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2f-qD-NXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="201" y="27"/>
+            <point key="canvasLocation" x="-306" y="-846"/>
         </scene>
         <!--CreateScrapViewController-->
         <scene sceneID="JEz-WX-NHM">
@@ -1438,7 +1437,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uA9-fp-IcU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2874" y="732"/>
+            <point key="canvasLocation" x="2677" y="782"/>
         </scene>
         <!--Scrap Detailed View Controller-->
         <scene sceneID="7i2-j7-j6E">
@@ -1624,7 +1623,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nkb-JV-aps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3726" y="801"/>
+            <point key="canvasLocation" x="3537" y="782"/>
         </scene>
         <!--Time Settings View Controller-->
         <scene sceneID="7jL-2H-tPZ">
@@ -1809,7 +1808,7 @@
         <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="StartVC" id="BYZ-38-t0r" customClass="StartViewController" customModule="News_Snap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="StartViewController" customModule="News_Snap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1832,7 +1831,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="23.664122137404579" y="46.478873239436624"/>
+            <point key="canvasLocation" x="-486" y="-158"/>
         </scene>
         <!--ScrapStatsViewController-->
         <scene sceneID="3nJ-Hh-xwj">
@@ -1956,7 +1955,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pa6-fe-jzp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="23.664122137404579" y="881.69014084507046"/>
+            <point key="canvasLocation" x="-985" y="1210"/>
         </scene>
         <!--My Scrap View Controller-->
         <scene sceneID="zrm-qR-yTM">
@@ -2260,7 +2259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uhw-n3-fgb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954.96183206106866" y="881.69014084507046"/>
+            <point key="canvasLocation" x="856" y="782"/>
         </scene>
         <!--Alarm View Controller-->
         <scene sceneID="4X1-KC-gOK">
@@ -2367,7 +2366,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZh-1g-ZPI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1705" y="-504"/>
+            <point key="canvasLocation" x="1996" y="-667"/>
         </scene>
         <!--Select View Controller-->
         <scene sceneID="qth-uj-Eie">
@@ -2528,7 +2527,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qvd-WT-mKW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1881.679389312977" y="45.774647887323944"/>
+            <point key="canvasLocation" x="382" y="-158"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="MeQ-aw-6HD">
@@ -2727,7 +2726,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fbn-m1-3j9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3611" y="-504"/>
+            <point key="canvasLocation" x="-1466" y="-167"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="bBV-Q1-NmR">
@@ -2882,7 +2881,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MrV-RI-wja" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3852.6717557251909" y="45.774647887323944"/>
+            <point key="canvasLocation" x="-1960" y="513"/>
         </scene>
         <!--Email Verification View Controller-->
         <scene sceneID="eHp-Te-jGb">
@@ -3018,7 +3017,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekE-i4-YXU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4828" y="46"/>
+            <point key="canvasLocation" x="-985" y="513"/>
         </scene>
         <!--New Password View Controller-->
         <scene sceneID="X3v-Ik-2WK">
@@ -3136,7 +3135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XCo-yP-q3e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5767" y="46"/>
+            <point key="canvasLocation" x="-240" y="513"/>
         </scene>
     </scenes>
     <resources>

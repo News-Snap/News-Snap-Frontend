@@ -26,7 +26,6 @@
 		9DEBA39F2C7F217400281CBA /* RelatedMediaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA39D2C7F217400281CBA /* RelatedMediaCollectionViewCell.swift */; };
 		9DEBA3A02C7F217400281CBA /* RelatedMediaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBA39E2C7F217400281CBA /* RelatedMediaCollectionViewCell.xib */; };
 		9DEBA3A22C809D3E00281CBA /* popularStocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3A12C809D3E00281CBA /* popularStocks.swift */; };
-		9DEBA3CA2C80B1B900281CBA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3C52C80B1B900281CBA /* HomeViewController.swift */; };
 		9DEBA3CB2C80B1B900281CBA /* KeywordBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3C62C80B1B900281CBA /* KeywordBoardTableViewCell.swift */; };
 		9DEBA3CC2C80B1B900281CBA /* KeywordBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBA3C72C80B1B900281CBA /* KeywordBoardTableViewCell.xib */; };
 		9DEBA3CD2C80B1B900281CBA /* KeywordBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3C82C80B1B900281CBA /* KeywordBoardViewController.swift */; };
@@ -42,6 +41,11 @@
 		9DEBA3E72C80B30700281CBA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3DF2C80B30700281CBA /* RegisterViewController.swift */; };
 		9DEBA3E82C80B30700281CBA /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3E02C80B30700281CBA /* SelectViewController.swift */; };
 		9DEBA3E92C80B30700281CBA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3E12C80B30700281CBA /* StartViewController.swift */; };
+		9DEBA3EE2C80E74800281CBA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3C52C80B1B900281CBA /* HomeViewController.swift */; };
+		9DEBA3EF2C80E79900281CBA /* DaySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3B72C80A1EB00281CBA /* DaySettingsViewController.swift */; };
+		9DEBA3F02C80E7A500281CBA /* TimeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3B62C80A1EB00281CBA /* TimeSettingsViewController.swift */; };
+		9DEBA3F12C80E7C500281CBA /* ImprovementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3B82C80A1EB00281CBA /* ImprovementsViewController.swift */; };
+		9DEBA3F52C80E89800281CBA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3B92C80A1EB00281CBA /* SettingsViewController.swift */; };
 		9DEBADE52C465AB700A8C8B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBADE42C465AB700A8C8B4 /* AppDelegate.swift */; };
 		9DEBADE72C465AB700A8C8B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBADE62C465AB700A8C8B4 /* SceneDelegate.swift */; };
 		9DEBADEC2C465AB700A8C8B4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBADEB2C465AB700A8C8B4 /* Base */; };
@@ -377,12 +381,15 @@
 			files = (
 				9DEBA3E42C80B30700281CBA /* EmailVerificationViewController.swift in Sources */,
 				9DEBA3952C7E09B900281CBA /* KeywordCollectionViewCell.swift in Sources */,
+				9DEBA3F02C80E7A500281CBA /* TimeSettingsViewController.swift in Sources */,
+				9DEBA3EE2C80E74800281CBA /* HomeViewController.swift in Sources */,
+				9DEBA3F12C80E7C500281CBA /* ImprovementsViewController.swift in Sources */,
 				9DEBA3D92C80B2F200281CBA /* MyScrapViewController.swift in Sources */,
-				9DEBA3CA2C80B1B900281CBA /* HomeViewController.swift in Sources */,
 				9DEBA3D72C80B2F200281CBA /* EachNewsTableViewCell.swift in Sources */,
 				9DEBA3E92C80B30700281CBA /* StartViewController.swift in Sources */,
 				9DEBA3DA2C80B2F200281CBA /* ScrapStatsViewController.swift in Sources */,
 				9DEBA35E2C71133E00281CBA /* ViewController.swift in Sources */,
+				9DEBA3EF2C80E79900281CBA /* DaySettingsViewController.swift in Sources */,
 				9D13D6DF2C6B92F20064B42A /* Scrap.swift in Sources */,
 				9D13D6CF2C6B91AE0064B42A /* AttachmentFileTableViewCell.swift in Sources */,
 				9DEBA3E32C80B30700281CBA /* AlarmViewController.swift in Sources */,
@@ -401,6 +408,7 @@
 				9D13D6D12C6B91AE0064B42A /* ReferenceLinklTableViewCell.swift in Sources */,
 				9DEBA3A22C809D3E00281CBA /* popularStocks.swift in Sources */,
 				9DEBA3E72C80B30700281CBA /* RegisterViewController.swift in Sources */,
+				9DEBA3F52C80E89800281CBA /* SettingsViewController.swift in Sources */,
 				9D13D6DB2C6B92E90064B42A /* ReferenceLinkModalViewController.swift in Sources */,
 				9D13D6DA2C6B92E90064B42A /* CreateScrapViewController.swift in Sources */,
 				9DEBA3E52C80B30700281CBA /* LoginViewController.swift in Sources */,

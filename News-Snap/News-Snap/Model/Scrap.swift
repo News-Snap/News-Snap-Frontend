@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Scrap : Encodable {
+struct Scrap : Codable {
     var title : String
     var link : String
     var contents : String
@@ -27,3 +27,27 @@ struct Scrap : Encodable {
     }
 }
 
+struct APIResponse: Codable {
+    let result: ScrapResult
+}
+
+struct ScrapResult: Codable {
+    let title: String
+    let content: String
+    let articleUrl: String
+    let keywords: [String]
+    let modifiedAt: String
+    let fileUrl: String?
+    let relatedUrlList: [String]
+}
+
+struct APIScrapDataResponse: Codable {
+    let result: [SearchNewsItemResult]
+}
+
+struct SearchNewsItemResult: Codable {
+    let scrapId: String
+    let title: String
+    var keywords : [String]
+    let updatedAt: Date
+}

@@ -56,8 +56,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         PasswordConfirmTextField.delegate = self
         
         // 키보드가 나타나고 사라지는 알림 등록
-            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         
     }
     
@@ -77,7 +76,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         super.viewWillDisappear(animated)
         
         // 키보드 알림 제거
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
         
