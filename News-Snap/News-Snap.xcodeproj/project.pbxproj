@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0339992C814F9800B9F250 /* popularStocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0339982C814F9800B9F250 /* popularStocks.swift */; };
+		2C03399B2C814F9E00B9F250 /* Scrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03399A2C814F9E00B9F250 /* Scrap.swift */; };
+		2C03399D2C814FA200B9F250 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03399C2C814FA200B9F250 /* Member.swift */; };
+		2C03399F2C81510C00B9F250 /* Keywords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03399E2C81510C00B9F250 /* Keywords.swift */; };
 		2C7AAE292C80E8A800622A11 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3B92C80A1EB00281CBA /* SettingsViewController.swift */; };
 		2C7AAE2A2C80E8B900622A11 /* ImprovementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3B82C80A1EB00281CBA /* ImprovementsViewController.swift */; };
 		2C7AAE2B2C80E8BB00622A11 /* DaySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3B72C80A1EB00281CBA /* DaySettingsViewController.swift */; };
@@ -20,9 +24,7 @@
 		9D13D6DA2C6B92E90064B42A /* CreateScrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6D42C6B92E90064B42A /* CreateScrapViewController.swift */; };
 		9D13D6DB2C6B92E90064B42A /* ReferenceLinkModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6D62C6B92E90064B42A /* ReferenceLinkModalViewController.swift */; };
 		9D13D6DC2C6B92E90064B42A /* ScrapSearchByDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6D72C6B92E90064B42A /* ScrapSearchByDateViewController.swift */; };
-		9D13D6DF2C6B92F20064B42A /* Scrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D13D6DD2C6B92F20064B42A /* Scrap.swift */; };
 		9DEBA35E2C71133E00281CBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA35D2C71133E00281CBA /* ViewController.swift */; };
-		9DEBA3602C7114E400281CBA /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA35F2C7114E400281CBA /* Member.swift */; };
 		9DEBA3912C7DC08200281CBA /* ScrapDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3902C7DC08200281CBA /* ScrapDetailedViewController.swift */; };
 		9DEBA3952C7E09B900281CBA /* KeywordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3932C7E09B900281CBA /* KeywordCollectionViewCell.swift */; };
 		9DEBA3962C7E09B900281CBA /* KeywordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBA3942C7E09B900281CBA /* KeywordCollectionViewCell.xib */; };
@@ -30,7 +32,6 @@
 		9DEBA39B2C7F1ECD00281CBA /* ContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBA3992C7F1ECD00281CBA /* ContentTableViewCell.xib */; };
 		9DEBA39F2C7F217400281CBA /* RelatedMediaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA39D2C7F217400281CBA /* RelatedMediaCollectionViewCell.swift */; };
 		9DEBA3A02C7F217400281CBA /* RelatedMediaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBA39E2C7F217400281CBA /* RelatedMediaCollectionViewCell.xib */; };
-		9DEBA3A22C809D3E00281CBA /* popularStocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3A12C809D3E00281CBA /* popularStocks.swift */; };
 		9DEBA3CA2C80B1B900281CBA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3C52C80B1B900281CBA /* HomeViewController.swift */; };
 		9DEBA3CB2C80B1B900281CBA /* KeywordBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBA3C62C80B1B900281CBA /* KeywordBoardTableViewCell.swift */; };
 		9DEBA3CC2C80B1B900281CBA /* KeywordBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DEBA3C72C80B1B900281CBA /* KeywordBoardTableViewCell.xib */; };
@@ -55,6 +56,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C0339982C814F9800B9F250 /* popularStocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = popularStocks.swift; path = ../../../../../Downloads/popularStocks.swift; sourceTree = "<group>"; };
+		2C03399A2C814F9E00B9F250 /* Scrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scrap.swift; path = ../../../../../Downloads/Scrap.swift; sourceTree = "<group>"; };
+		2C03399C2C814FA200B9F250 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Member.swift; path = ../../../../../Downloads/Member.swift; sourceTree = "<group>"; };
+		2C03399E2C81510C00B9F250 /* Keywords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keywords.swift; sourceTree = "<group>"; };
 		9D13D6C92C6B91AE0064B42A /* AttachmentFileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentFileTableViewCell.swift; sourceTree = "<group>"; };
 		9D13D6CA2C6B91AE0064B42A /* AttachmentFileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttachmentFileTableViewCell.xib; sourceTree = "<group>"; };
 		9D13D6CB2C6B91AE0064B42A /* ReferenceLinklTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceLinklTableViewCell.swift; sourceTree = "<group>"; };
@@ -63,9 +68,7 @@
 		9D13D6D42C6B92E90064B42A /* CreateScrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateScrapViewController.swift; sourceTree = "<group>"; };
 		9D13D6D62C6B92E90064B42A /* ReferenceLinkModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceLinkModalViewController.swift; sourceTree = "<group>"; };
 		9D13D6D72C6B92E90064B42A /* ScrapSearchByDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrapSearchByDateViewController.swift; sourceTree = "<group>"; };
-		9D13D6DD2C6B92F20064B42A /* Scrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scrap.swift; sourceTree = "<group>"; };
 		9DEBA35D2C71133E00281CBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9DEBA35F2C7114E400281CBA /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		9DEBA3902C7DC08200281CBA /* ScrapDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrapDetailedViewController.swift; sourceTree = "<group>"; };
 		9DEBA3932C7E09B900281CBA /* KeywordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordCollectionViewCell.swift; sourceTree = "<group>"; };
 		9DEBA3942C7E09B900281CBA /* KeywordCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeywordCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -73,7 +76,6 @@
 		9DEBA3992C7F1ECD00281CBA /* ContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentTableViewCell.xib; sourceTree = "<group>"; };
 		9DEBA39D2C7F217400281CBA /* RelatedMediaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedMediaCollectionViewCell.swift; sourceTree = "<group>"; };
 		9DEBA39E2C7F217400281CBA /* RelatedMediaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RelatedMediaCollectionViewCell.xib; sourceTree = "<group>"; };
-		9DEBA3A12C809D3E00281CBA /* popularStocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popularStocks.swift; sourceTree = "<group>"; };
 		9DEBA3B62C80A1EB00281CBA /* TimeSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingsViewController.swift; sourceTree = "<group>"; };
 		9DEBA3B72C80A1EB00281CBA /* DaySettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySettingsViewController.swift; sourceTree = "<group>"; };
 		9DEBA3B82C80A1EB00281CBA /* ImprovementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImprovementsViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C0339972C814F8200B9F250 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C03399C2C814FA200B9F250 /* Member.swift */,
+				2C03399A2C814F9E00B9F250 /* Scrap.swift */,
+				2C0339982C814F9800B9F250 /* popularStocks.swift */,
+				2C03399E2C81510C00B9F250 /* Keywords.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9D13D6CD2C6B91AE0064B42A /* Scrap_Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,16 +147,6 @@
 				9D13D6D62C6B92E90064B42A /* ReferenceLinkModalViewController.swift */,
 			);
 			path = Create;
-			sourceTree = "<group>";
-		};
-		9D13D6DE2C6B92F20064B42A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				9DEBA35F2C7114E400281CBA /* Member.swift */,
-				9D13D6DD2C6B92F20064B42A /* Scrap.swift */,
-				9DEBA3A12C809D3E00281CBA /* popularStocks.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		9DEBA38D2C7CC1BF00281CBA /* Scrap_CRUD */ = {
@@ -284,13 +287,13 @@
 		9DEBADE32C465AB700A8C8B4 /* News-Snap */ = {
 			isa = PBXGroup;
 			children = (
+				2C0339972C814F8200B9F250 /* Model */,
 				9DEBA3E22C80B30700281CBA /* Register */,
 				9DEBA3D62C80B2F200281CBA /* Scrap_DB */,
 				9DEBA3CF2C80B24700281CBA /* Contents */,
 				9DEBA3C92C80B1B900281CBA /* home */,
 				9DEBA3B52C80A1EB00281CBA /* settings */,
 				9DEBA38D2C7CC1BF00281CBA /* Scrap_CRUD */,
-				9D13D6DE2C6B92F20064B42A /* Model */,
 				9DEBADE42C465AB700A8C8B4 /* AppDelegate.swift */,
 				9DEBADE62C465AB700A8C8B4 /* SceneDelegate.swift */,
 				9DEBADEA2C465AB700A8C8B4 /* Main.storyboard */,
@@ -388,20 +391,23 @@
 				9DEBA3CA2C80B1B900281CBA /* HomeViewController.swift in Sources */,
 				9DEBA3D72C80B2F200281CBA /* EachNewsTableViewCell.swift in Sources */,
 				9DEBA3E92C80B30700281CBA /* StartViewController.swift in Sources */,
+				2C03399D2C814FA200B9F250 /* Member.swift in Sources */,
 				2C7AAE2A2C80E8B900622A11 /* ImprovementsViewController.swift in Sources */,
+				2C0339992C814F9800B9F250 /* popularStocks.swift in Sources */,
 				9DEBA3DA2C80B2F200281CBA /* ScrapStatsViewController.swift in Sources */,
 				9DEBA35E2C71133E00281CBA /* ViewController.swift in Sources */,
-				9D13D6DF2C6B92F20064B42A /* Scrap.swift in Sources */,
 				9D13D6CF2C6B91AE0064B42A /* AttachmentFileTableViewCell.swift in Sources */,
 				9DEBA3E32C80B30700281CBA /* AlarmViewController.swift in Sources */,
 				9D13D6DC2C6B92E90064B42A /* ScrapSearchByDateViewController.swift in Sources */,
 				9DEBA3D02C80B24700281CBA /* ContentsViewController.swift in Sources */,
 				9DEBA3912C7DC08200281CBA /* ScrapDetailedViewController.swift in Sources */,
+				2C03399B2C814F9E00B9F250 /* Scrap.swift in Sources */,
 				9DEBA3E82C80B30700281CBA /* SelectViewController.swift in Sources */,
 				9DEBADE52C465AB700A8C8B4 /* AppDelegate.swift in Sources */,
 				9D13D6D92C6B92E90064B42A /* AttachmentFileModalViewController.swift in Sources */,
 				9DEBA3CD2C80B1B900281CBA /* KeywordBoardViewController.swift in Sources */,
 				9DEBADE72C465AB700A8C8B4 /* SceneDelegate.swift in Sources */,
+				2C03399F2C81510C00B9F250 /* Keywords.swift in Sources */,
 				9DEBA3E62C80B30700281CBA /* NewPasswordViewController.swift in Sources */,
 				2C7AAE292C80E8A800622A11 /* SettingsViewController.swift in Sources */,
 				9DEBA39A2C7F1ECD00281CBA /* ContentTableViewCell.swift in Sources */,
@@ -409,12 +415,10 @@
 				9DEBA39F2C7F217400281CBA /* RelatedMediaCollectionViewCell.swift in Sources */,
 				9DEBA3CB2C80B1B900281CBA /* KeywordBoardTableViewCell.swift in Sources */,
 				9D13D6D12C6B91AE0064B42A /* ReferenceLinklTableViewCell.swift in Sources */,
-				9DEBA3A22C809D3E00281CBA /* popularStocks.swift in Sources */,
 				9DEBA3E72C80B30700281CBA /* RegisterViewController.swift in Sources */,
 				9D13D6DB2C6B92E90064B42A /* ReferenceLinkModalViewController.swift in Sources */,
 				9D13D6DA2C6B92E90064B42A /* CreateScrapViewController.swift in Sources */,
 				9DEBA3E52C80B30700281CBA /* LoginViewController.swift in Sources */,
-				9DEBA3602C7114E400281CBA /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

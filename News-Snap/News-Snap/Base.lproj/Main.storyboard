@@ -273,12 +273,12 @@
                         <outlet property="key3Btn" destination="Q8k-bb-LRh" id="eLO-hZ-r7Y"/>
                         <outlet property="key4Btn" destination="0qn-f1-WwB" id="k7Y-xN-x8V"/>
                         <outlet property="myScrapBtn" destination="lrH-kx-Yl1" id="fQc-SF-u2Z"/>
-                        <outlet property="news1ContentLabel" destination="zej-eA-frj" id="oZ6-iz-Ut9"/>
                         <outlet property="news1ImageView" destination="3ts-Hw-VDV" id="Lof-aR-kEf"/>
+                        <outlet property="news1KeywordLabel" destination="zej-eA-frj" id="oZ6-iz-Ut9"/>
                         <outlet property="news1TitleLabel" destination="YwK-Gh-lma" id="Qoq-rJ-8nr"/>
                         <outlet property="news1View" destination="3iE-Rj-jNj" id="Rm2-YX-BF6"/>
-                        <outlet property="news2ContentLabel" destination="xOY-4Q-0hK" id="40i-wd-Q6Z"/>
                         <outlet property="news2ImageView" destination="GBQ-8f-I4r" id="fqB-yc-NhK"/>
+                        <outlet property="news2KeywordLabel" destination="xOY-4Q-0hK" id="40i-wd-Q6Z"/>
                         <outlet property="news2TitleLabel" destination="A4f-9L-i7N" id="qmy-y6-UBT"/>
                         <outlet property="news2View" destination="9JA-UC-XV6" id="NR0-ly-g36"/>
                     </connections>
