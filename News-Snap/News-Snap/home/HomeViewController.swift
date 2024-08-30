@@ -78,6 +78,8 @@ class HomeViewController: UIViewController {
         }
     }
     
+    let token = ""
+    
     // 키워드 버튼 클릭했을 시 동작
     @IBAction func key1DidTap(_ sender: UIButton) {
         guard let keyword = sender.titleLabel?.text else { return }
@@ -112,13 +114,6 @@ class HomeViewController: UIViewController {
             keywordBoardVC.selectedKeyword = keyword
             self.present(keywordBoardVC, animated: true, completion: nil)
         }
-        
-//        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "KeywordBoardViewController") as? KeywordBoardViewController else { return }
-//        
-//        // nextVC.delegate = self
-//        nextVC.modalTransitionStyle = .coverVertical
-//        nextVC.modalPresentationStyle = .overFullScreen
-//        self.present(nextVC, animated: true, completion: nil)
     }
     
     // TOP 4 키워드 조회 GET 요청
@@ -126,7 +121,12 @@ class HomeViewController: UIViewController {
         let urlString = "http://52.78.37.90:8080/api/v1/scrap/keywords"
         guard let url = URL(string: urlString) else { return }
         
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
                 print("Error fetching keywords: \(String(describing: error))")
                 completion([])
@@ -134,7 +134,11 @@ class HomeViewController: UIViewController {
             }
             
             do {
-                let keywords = try JSONDecoder().decode([String].self, from: data)
+                let decodedResponse = try JSONDecoder().decode(KeywordsResponse.self, from: data)
+                
+                print(decodedResponse)
+                
+                let keywords = decodedResponse.result.map { $0.keyword }
                 completion(keywords)
             } catch {
                 print("Error decoding keywords: \(error)")
@@ -144,6 +148,8 @@ class HomeViewController: UIViewController {
         
         task.resume()
     }
+
+
         
         //    func fetchScraps(for keyword: String) {
         //        let urlString = "https://yourserver.com/api/scraps?keyword=\(keyword)"
