@@ -14,10 +14,10 @@ class KeywordBoardViewController: UIViewController {
 
     let token = ""
     
+    
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var keywordLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var dissmissBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,9 +71,14 @@ class KeywordBoardViewController: UIViewController {
                 print("Error decoding data: \(error)")
             }
         }
-
+        
         task.resume()
     }
+    
+    @IBAction func backBtnDidtap(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension KeywordBoardViewController : UITableViewDelegate, UITableViewDataSource {
