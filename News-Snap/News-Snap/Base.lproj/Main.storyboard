@@ -31,6 +31,10 @@
                                 <state key="normal">
                                     <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
                                 </state>
+                                <connections>
+                                    <action selector="backBtnDidtap:" destination="g3c-WL-cm5" eventType="touchUpInside" id="fjm-Km-en3"/>
+                                    <action selector="dissmissDidTap:" destination="g3c-WL-cm5" eventType="touchUpInside" id="5Vb-nZ-yPC"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xTN-Sl-3bE">
                                 <rect key="frame" x="0.0" y="109" width="393" height="743"/>
@@ -65,7 +69,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backBtn" destination="oRE-Dq-bT4" id="HVx-Ud-DWe"/>
+                        <outlet property="backBtn" destination="oRE-Dq-bT4" id="eSJ-Be-hbi"/>
                         <outlet property="keywordLabel" destination="HNl-AH-wam" id="3po-eN-SWQ"/>
                         <outlet property="tableView" destination="xTN-Sl-3bE" id="gRf-W3-RYS"/>
                     </connections>

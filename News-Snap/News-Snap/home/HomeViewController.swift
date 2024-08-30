@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var news2KeywordLabel: UILabel!
     @IBOutlet weak var news2ImageView: UIImageView!
     
-    let token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0QG5hdmVyLmNvbSIsImlzcyI6Ik5FV1NTTkFQIiwiaWF0IjoxNzI0OTU0MTI5LCJleHAiOjE3MjUwNDA1Mjl9.8W6rtTnbaa9_iHUk9zfCtzosLwZsUYBCzCof1uCztQsIYcr-_UjJruf8u6BQZ0gDLjkIAexMFTA3HR5nQxJxEg"
+    let token = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
