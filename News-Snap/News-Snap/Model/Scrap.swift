@@ -46,8 +46,8 @@ struct APIScrapDataResponse: Codable {
 }
 
 struct SearchNewsItemResult: Codable {
-    let scrapId: String
+    let scrapId: Int
     let title: String
     var keywords : [String]
-    let updatedAt: Date
+    let updatedAt: String
 }

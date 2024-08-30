@@ -265,37 +265,11 @@ extension ScrapDetailedViewController : UICollectionViewDelegate, UICollectionVi
         }
     }
     
-//    func collectionView(_ collectionView: UICollectionView, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        if collectionView.tag == 0 {
-//            // 셀의 너비와 높이를 계산합니다.
-//            let maxWidth = collectionView.frame.width - 16 // 여백을 고려하여 최대 너비를 설정합니다.
-//            let keyword = scrap?.keywords[indexPath.row] ?? ""
-//            
-//            // 텍스트의 크기를 계산하여 셀의 높이를 결정합니다.
-//            let font = UIFont.systemFont(ofSize: 16) // 사용할 폰트와 크기
-//            let textSize = (keyword as NSString).boundingRect(with: CGSize(width: maxWidth, height: CGFloat.greatestFiniteMagnitude),
-//                                                              options: .usesLineFragmentOrigin,
-//                                                              attributes: [NSAttributedString.Key.font: font],
-//                                                              context: nil).size
-//            
-//            // 셀의 크기를 결정합니다.
-//            let cellWidth = textSize.width + 16 // 패딩을 추가
-//            let cellHeight = textSize.height + 16 // 패딩을 추가
-//
-//            return CGSize(width: cellWidth, height: cellHeight)
-//        }
-//        else {
-//            return CGSize(width: 160, height: 153)
-//        }
-//        
-//    }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView.tag == 0 {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "KeywordCollectionViewCell", for: indexPath) as? KeywordCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            // 키워드 데이터 설정
             // 키워드 데이터 설정
             if let keyword = scrap?.keywords[indexPath.row] {
                 let koreanKeyword = keywordTranslations[keyword] ?? keyword

@@ -1,12 +1,14 @@
 import UIKit
 
 class MyScrapViewController: UIViewController, UITextFieldDelegate {
+    
+    var scrapItems: [SearchNewsItemResult] = []
+
 
     // Outlet
     @IBOutlet weak var NewsTableView: UITableView!
 
     // Properties
-    private var newsItems: [SearchNewsItemResult] = []
 
     // Action
     @IBAction func SearchByCalenderTapped(_ sender: Any) {
@@ -58,20 +60,26 @@ class MyScrapViewController: UIViewController, UITextFieldDelegate {
                 print("Error fetching data: \(error?.localizedDescription ?? "Unknown error")")
                 return
             }
+            
+            if let jsonString = String(data: data, encoding: .utf8) {
+                print("Received JSON: \(jsonString)")
+            }
 
             do {
                 let decoder = JSONDecoder()
-                let apiResponse = try decoder.decode(APIScrapDataResponse.self, from: data)
                 
-                // API 응답에서 데이터 가져오기
-                self.newsItems = apiResponse.result
-
+                // JSON 응답을 APIResponse로 디코딩
+                let apiResponse = try decoder.decode(APIScrapDataResponse.self, from: data)
+                self.scrapItems = apiResponse.result // 배열 할당
+                
                 DispatchQueue.main.async {
                     self.NewsTableView.reloadData()
                 }
             } catch {
                 print("Error decoding data: \(error)")
             }
+
+
         }
 
         task.resume()
@@ -80,7 +88,7 @@ class MyScrapViewController: UIViewController, UITextFieldDelegate {
 
 extension MyScrapViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newsItems.count
+        return scrapItems.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -88,14 +96,25 @@ extension MyScrapViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
 
-        let newsItem = newsItems[indexPath.row]
-        cell.NewsTitle.text = newsItem.title
-        cell.Keyword.text = newsItem.keywords.joined(separator: ", ")
-        
-        // 이미지 설정이 필요한 경우, 적절한 이미지 URL을 처리
-        // cell.imageViewFeed.image = UIImage(named: "placeholder")
 
-        cell.selectionStyle = .none
+        // `scrapList` 배열의 특정 요소에 접근
+        let scrapItem = scrapItems[indexPath.row]
+
+        // 각 필드에 접근하여 셀에 데이터 설정
+        cell.NewsTitle.text = scrapItem.title
+        cell.Keyword.text = scrapItem.keywords.joined(separator: ", ")
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        if let date = dateFormatter.date(from: scrapItem.updatedAt) {
+            // 날짜를 원하는 형식으로 변환하여 UILabel에 설정
+            let displayDateFormatter = DateFormatter()
+            displayDateFormatter.dateStyle = .medium
+            displayDateFormatter.timeStyle = .short
+            cell.Date.text = displayDateFormatter.string(from: date)
+        } else {
+            cell.Date.text = "N/A" // 변환 실패 시 기본값
+        }
+        
         return cell
     }
 

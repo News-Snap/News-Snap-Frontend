@@ -2256,6 +2256,9 @@
                         <viewLayoutGuide key="safeArea" id="K5K-K6-ch1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="NewsTableView" destination="MId-YJ-G7v" id="3ET-fm-gnf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uhw-n3-fgb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
