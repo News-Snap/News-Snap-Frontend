@@ -23,7 +23,7 @@ class SettingsViewController: UIViewController, DaySettingsDelegate, TimeSetting
     var selectedDays: [String] = []
     var selectedTime: String = ""
     
-    let token = ""
+    let token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0QG5hdmVyLmNvbSIsImlzcyI6Ik5FV1NTTkFQIiwiaWF0IjoxNzI0OTU0MTI5LCJleHAiOjE3MjUwNDA1Mjl9.8W6rtTnbaa9_iHUk9zfCtzosLwZsUYBCzCof1uCztQsIYcr-_UjJruf8u6BQZ0gDLjkIAexMFTA3HR5nQxJxEg"
     
     override func viewDidLoad() {
         super.viewDidLoad()
