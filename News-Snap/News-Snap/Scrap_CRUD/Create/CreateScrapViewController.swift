@@ -217,8 +217,12 @@ class CreateScrapViewController : UIViewController , UITextFieldDelegate, Refere
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
+        var formattedDate = ""
         // 날짜를 변환된 형식으로 변환
-        let formattedDate = dateFormatter.string(from: scrap.date)
+        if let date = scrap.date {
+            formattedDate = dateFormatter.string(from: date)
+        }
+
         
         // let temp : [String] = ["1"]
         // JSON 데이터로 변환

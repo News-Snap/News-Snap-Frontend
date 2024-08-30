@@ -14,6 +14,7 @@ class KeywordBoardViewController: UIViewController {
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var keywordLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var dissmissBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,12 @@ class KeywordBoardViewController: UIViewController {
             // 키워드에 맞는 데이터 로드
         }
     }
+    
+    @IBAction func dissmissDidTap(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
 
 extension KeywordBoardViewController : UITableViewDelegate, UITableViewDataSource {
